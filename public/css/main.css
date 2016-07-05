@@ -195,7 +195,7 @@
 }
 /* AD Block*/
 #offers{
-
+    margin-bottom: 15px;
 }
 .offers-top{
     padding: 5px 15px;
@@ -206,21 +206,23 @@
 .offers-content{
     clear: both;
     padding: 10px 0;
-    text-align: center;
 }
 .offers-block{
     display: inline-block;
-    width: 281px;
+    width: 281.8px;
     vertical-align: top;
+}
+.offers-block div.offers-square:nth-child(2n){
+
 }
 .offers-rect{
     width: 280px;
-    height: 135px;
+    height: 136px;
     margin-bottom: 5px;
 }
 .offers-square{
-    width: 135px;
-    height: 135px;
+    width: 136px;
+    height: 136px;
     margin-bottom: 5px;
 }
 .offers-rect, .offers-square{
@@ -232,7 +234,13 @@
     display: block;
     height: 100%;
 }
-
+.offers-rect a img, .offers-square a img{
+    width: 100%;
+}
+.offers-link{
+    color: #4caf50;
+    margin-left: 5px;
+}
 
 /* Others */
 .btn{
@@ -283,4 +291,8 @@
 }
 .btn-add:hover .fa-plus{
     color: #fff;
+}
+/* Text align*/
+.text-center{
+    text-align: center;
 }

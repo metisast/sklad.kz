@@ -49,3 +49,6 @@ a{
 a:hover{
     text-decoration: underline;
 }
+p{
+    font-size: 12px;
+}
