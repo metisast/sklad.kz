@@ -16,16 +16,52 @@
             <div class="offers-rect">
                 <a href="#">
                     <img src="/img/offers/1.png">
+                    <div class="offers-hidden text-left">
+                        <div class="offers-hidden-content">
+                            <h5>Вентилятор радиальный ВР 80-75</h5>
+                            <div>
+                                <p class="offers-city left">Астана</p>
+                                <p class="offers-price right">135 000 т</p>
+                            </div>
+                        </div>
+                        <div class="offers-hidden-status">
+                            <img src="/img/offers/product.png" alt="">
+                        </div>
+                    </div>
                 </a>
             </div>
             <div class="offers-square">
                 <a href="#">
                     <img src="/img/offers/6.png">
+                    <div class="offers-hidden text-left">
+                        <div class="offers-hidden-content">
+                            <h5>Вентилятор радиальный ВР 80-75</h5>
+                            <div>
+                                <p class="offers-city left">Астана</p>
+                                <p class="offers-price right">135 000 т</p>
+                            </div>
+                        </div>
+                        <div class="offers-hidden-status">
+                            <img src="/img/offers/material.png" alt="">
+                        </div>
+                    </div>
                 </a>
             </div>
             <div class="offers-square">
                 <a href="#">
                     <img src="/img/offers/3.png">
+                    <div class="offers-hidden text-left">
+                        <div class="offers-hidden-content">
+                            <h5>Вентилятор радиальный ВР 80-75</h5>
+                            <div>
+                                <p class="offers-city left">Астана</p>
+                                <p class="offers-price right">135 000 т</p>
+                            </div>
+                        </div>
+                        <div class="offers-hidden-status">
+                            <img src="/img/offers/service.png" alt="">
+                        </div>
+                    </div>
                 </a>
             </div>
             <div class="offers-square">
@@ -44,6 +80,18 @@
             <div class="offers-rect">
                 <a href="#">
                     <img src="/img/offers/8.png">
+                    <div class="offers-hidden text-left">
+                        <div class="offers-hidden-content">
+                            <h5>Вентилятор радиальный ВР 80-75</h5>
+                            <div>
+                                <p class="offers-city left">Астана</p>
+                                <p class="offers-price right">135 000 т</p>
+                            </div>
+                        </div>
+                        <div class="offers-hidden-status">
+                            <img src="/img/offers/service.png" alt="">
+                        </div>
+                    </div>
                 </a>
             </div>
             <div class="offers-square">

@@ -212,9 +212,6 @@
     width: 281.8px;
     vertical-align: top;
 }
-.offers-block div.offers-square:nth-child(2n){
-
-}
 .offers-rect{
     width: 280px;
     height: 136px;
@@ -229,13 +226,43 @@
     border: 1px solid #e0e0e0;
     display: inline-block;
     vertical-align: top;
+    position: relative;
+}
+.offers-rect:hover .offers-hidden, .offers-square:hover .offers-hidden{
+    opacity: 1;
+    transition: all 0.3s ease;
 }
 .offers-rect a, .offers-square a{
     display: block;
     height: 100%;
 }
-.offers-rect a img, .offers-square a img{
+.offers-rect > a > img, .offers-square > a > img{
     width: 100%;
+}
+.offers-hidden{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+}
+.offers-hidden p, .offers-hidden h5{
+    color: #fff;
+    padding: 5px;
+}
+.offers-hidden h5{
+    margin-top: 25px;
+    height: 60px;
+}
+.offers-hidden div{
+    margin-top: 15px;
+}
+.offers-hidden-status{
+    position: absolute;
+    top: -12px;
+    right: -4px;
 }
 .offers-link{
     color: #4caf50;
@@ -293,6 +320,12 @@
     color: #fff;
 }
 /* Text align*/
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
 .text-center{
     text-align: center;
 }
