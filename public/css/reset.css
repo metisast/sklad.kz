@@ -44,14 +44,23 @@ blockquote, q {
 a{
     color: #3F51B5;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
 }
 a:hover{
     text-decoration: underline;
 }
 p{
-    font-size: 12px;
+    font-size: 13px;
+}
+h3{
+    font-size: 18px;
+}
+h4{
+    font-size: 16px;
 }
 h5{
-    font-size: 14px;
+    font-size: 13px;
+}
+h4 a{
+    font-size: 16px;
 }
