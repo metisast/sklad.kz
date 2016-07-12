@@ -31,12 +31,15 @@
         @include('includes.guest.rightSide')
     </div>
     <!-- Pagination start -->
+    <div class="clear"></div>
     @include('includes.guest.pagination')
     <!-- Socials -->
+    <div class="clear"></div>
     @include('includes.guest.socials')
-    <!-- Footer -->
-    @include('includes.guest.footer')
 </div>
+<!-- Footer -->
+<div class="clear"></div>
+@include('includes.guest.footer')
 
 <!-- Include javascript -->
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
