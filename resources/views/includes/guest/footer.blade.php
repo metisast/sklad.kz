@@ -8,7 +8,8 @@
                         <img src="/img/logo-footer.png" alt="logo">
                     </a>
                     <div class="footer-copyright">
-                        <p>2016 год  ТОО «Esen-group» Права защищены законом</p>
+                        <p>2016 год  ТОО «Esen-group»</p>
+                        <p>Права защищены законом</p>
                     </div>
                     <div class="footer-licence">
                         <a href="#">Пользовательское соглашение</a>

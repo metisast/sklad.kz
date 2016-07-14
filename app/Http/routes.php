@@ -18,3 +18,19 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+/*
+|--------------------------------------------------------------------------
+| Profile Routes
+|--------------------------------------------------------------------------
+|
+*/
+Route::group(['middleware' => 'auth', 'as' => 'profile::'], function(){
+
+    /* Index profile page */
+    Route::get('/profile',[
+        'as' => 'index',
+        'uses' => 'ProfileController@index'
+    ]);
+
+});

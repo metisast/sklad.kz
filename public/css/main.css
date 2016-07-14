@@ -446,6 +446,76 @@
 .socials-links img{
     margin-top: -7px;
 }
+/* Full side */
+/* Auth block */
+.auth-block{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #e0e0e0;
+    display: inline-block;
+    width: 100%;
+}
+.auth-img{
+    width: 450px;
+}
+.auth-img h2{
+    margin-top: 50px;
+    padding: 0 80px;
+}
+.auth-img h4{
+    margin-top: 30px;
+    padding: 0 80px;
+    line-height: 20px;
+}
+.auth-img img{
+    margin-top: 50px;
+    position: relative;
+    top: 2px;
+}
+.auth-content{
+    width: 680px;
+}
+.auth-content form{
+    margin: 50px 0 0 50px;
+}
+.come-here{
+    margin-left: 80px;
+}
+.come-here p{
+    margin-top: 15px;
+}
+/* Form inputs */
+.form-input{
+    margin-bottom: 15px;
+}
+.form-input input[type='text'], .form-input input[type='email'], .form-input input[type='password']{
+    width: 270px;
+    border-radius: 3px;
+    padding: 7px 5px;
+    border: 1px solid #aaa;
+}
+.form-input label{
+    font-size: 13px;
+}
+.form-error{
+    float: right;
+    text-align: left;
+    width: 335px;
+    padding-top: 6px;
+}
+.form-error span strong{
+    font-size: 13px;
+    color: red;
+}
+label + .form-error{
+    padding-top: 0;
+}
+.confirm-block{
+    width: 270px;
+    text-align: center;
+    margin-left: 50px;
+}
+
 /* Footer */
 .footer-block{
     background: #e0e0e0;
@@ -464,6 +534,9 @@
 .footer-copyright{
     margin-top: 15px;
 }
+.footer-copyright p{
+    margin-bottom: 5px;
+}
 .footer-licence{
     margin-top: 15px;
 }
@@ -480,7 +553,6 @@
 /* Others */
 .btn{
     text-align: center;
-    margin: 15px 0 15px 600px ;
     padding: 10px 30px;
     cursor: pointer;
     border: none;
@@ -544,4 +616,8 @@
 /* Colors */
 .grey{
     color: #aaa;
+}
+/* Text align */
+.text-center{
+    text-align: center;
 }
