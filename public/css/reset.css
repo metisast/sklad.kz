@@ -70,3 +70,6 @@ h4 a{
 input{
     color: #333;
 }
+strong{
+    font-weight: bold;
+}
