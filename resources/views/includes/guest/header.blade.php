@@ -1,7 +1,7 @@
 <!-- Logo start -->
 <div class="logo">
-    <a href="#">
-        <img src="img/logo.png" alt="Склад"/>
+    <a href="/">
+        <img src="/img/logo.png" alt="Склад"/>
     </a>
 </div><!-- Logo end -->
 <!-- Auth links start-->

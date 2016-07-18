@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>Добро пожаловать</title>
     <!-- Include styles -->
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/carousel.css">
 </head>
 <body>
 <div class="wrapper">
@@ -45,6 +46,7 @@
 
 <!-- Include javascript -->
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/js/tabs.js"></script>
 <script src="/js/filter.js"></script>
 <script src="/bower_components/jquery-touchswipe/jquery.touchSwipe.min.js"></script>

@@ -65,7 +65,7 @@
         <div class="profile-company">
             <div class="profile-company-title">
                 <h4>Мои компании</h4>
-                <a href="#"><i class="fa fa-plus"></i> Добавить компанию</a>
+                <a href="{{route('company.create')}}"><i class="fa fa-plus"></i> Добавить компанию</a>
             </div>
             <div class="profile-list-sort">
                 <a href="#"><i class="fa fa-th-list"></i> Список</a>

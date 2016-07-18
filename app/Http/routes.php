@@ -25,12 +25,22 @@ Route::get('/home', 'HomeController@index');
 |--------------------------------------------------------------------------
 |
 */
-Route::group(['middleware' => 'auth', 'as' => 'profile::'], function(){
+Route::group(['middleware' => 'auth'], function(){
 
-    /* Index profile page */
-    Route::get('/profile',[
-        'as' => 'index',
-        'uses' => 'ProfileController@index'
-    ]);
+    Route::group(['as' => 'profile::'], function(){
+        /* Index profile page */
+        Route::get('/profile',[
+            'as' => 'index',
+            'uses' => 'ProfileController@index'
+        ]);
+        /* Index profile page */
+        Route::get('/profile/test',[
+            'as' => 'create',
+            'uses' => 'ProfileController@create'
+        ]);
+    });
+
+    /* Create company REST*/
+    Route::resource('company', 'CompanyController');
 
 });
