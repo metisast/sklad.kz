@@ -33,11 +33,6 @@ Route::group(['middleware' => 'auth'], function(){
             'as' => 'index',
             'uses' => 'ProfileController@index'
         ]);
-        /* Index profile page */
-        Route::get('/profile/test',[
-            'as' => 'create',
-            'uses' => 'ProfileController@create'
-        ]);
     });
 
     /* Create company REST*/
