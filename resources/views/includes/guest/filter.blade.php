@@ -3,7 +3,7 @@
     <div class="col-xs-12">
         <div class="row">
             <!-- Tabs start-->
-            <div class="col-xs12">
+            <div class="col-xs-12">
                 <ul class="tabs__caption nav-pills" data-show="false">
                     <li>Товары</li>
                     <li>Материалы</li>
@@ -120,24 +120,27 @@
                                 </div>
                                 <div class="filter-sub">
                                     <div class="col-xs-3">
-                                        <a href="#">Вентилятор радиальный</a>
-                                        <a href="#">Вентилятор канальный</a>
-                                        <a href="#">Дымосос</a>
+                                        <a href="#">Приточная установка</a>
+                                        <a href="#">Вентиляторы канальные</a>
+                                        <a href="#">Вентиляторы осевые</a>
+                                        <a href="#">Вентиляторы радиальные</a>
                                     </div>
                                     <div class="col-xs-3">
-                                        <a href="#">Вентилятор радиальный</a>
-                                        <a href="#">Вентилятор канальный</a>
-                                        <a href="#">Дымосос</a>
+                                        <a href="#">Воздуховоды и фасонные части</a>
+                                        <a href="#">Воздуховоды и фасонные части</a>
+                                        <a href="#">Детали систем вентиляции</a>
+                                        <a href="#">Клапаны</a>
                                     </div>
                                     <div class="col-xs-3">
-                                        <a href="#">Вентилятор радиальный</a>
-                                        <a href="#">Вентилятор канальный</a>
+                                        <a href="#">Тепловентиляционное оборудование</a>
+                                        <a href="#">Щиты управления</a>
                                         <a href="#">Дымосос</a>
+                                        <a href="#">Воздухораспределительные устройства</a>
                                     </div>
                                     <div class="col-xs-3">
-                                        <a href="#">Вентилятор радиальный</a>
-                                        <a href="#">Вентилятор канальный</a>
-                                        <a href="#">Дымосос</a>
+                                        <a href="#">Вентиляторы крышные</a>
+                                        <a href="#">Вентиляторы дымоудаления</a>
+                                        <a href="#">Пылеуловители и фильтры</a>
                                     </div>
                                 </div>
                             </div>
@@ -154,29 +157,51 @@
                                 <div class="filter-sub">
                                     <div class="row">
                                         <div class="col-xs-12">
-                                            <form class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label class="col-xs-3 control-label">Производительность:</label>
-                                                    <div class="col-xs-3">
-                                                        <input type="text" class="form-control" name="pressure">
+                                            <form class="" id="advance-search">
+                                                <div class="row">
+                                                    <div class="col-xs-12 form-group">
+                                                        <div class="col-xs-3">
+                                                            <label class="control-label">Производительность:</label>
+                                                        </div>
+                                                        <div class="col-xs-3">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" name="pressure">
+                                                                <div class="input-group-addon">м/куб.</div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="col-xs-3 control-label">Давление:</label>
-                                                    <div class="col-xs-3">
-                                                        <input type="text" class="form-control" name="pressure">
+                                                    <div class="col-xs-12 form-group">
+                                                        <div class="col-xs-3">
+                                                            <label class="control-label">Давление:</label>
+                                                        </div>
+                                                        <div class="col-xs-3">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" name="pressure">
+                                                                <div class="input-group-addon">Па</div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="col-xs-3 control-label">Мощность:</label>
-                                                    <div class="col-xs-3">
-                                                        <input type="text" class="form-control" name="pressure">
+                                                    <div class="col-xs-12 form-group">
+                                                        <div class="col-xs-3">
+                                                            <label class="control-label">Мощность:</label>
+                                                        </div>
+                                                        <div class="col-xs-3">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" name="pressure">
+                                                                <div class="input-group-addon">W</div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="col-xs-3 control-label">Обороты:</label>
-                                                    <div class="col-xs-3">
-                                                        <input type="text" class="form-control" name="pressure">
+                                                    <div class="col-xs-12 form-group">
+                                                        <div class="col-xs-3">
+                                                            <label class="control-label">Обороты:</label>
+                                                        </div>
+                                                        <div class="col-xs-3">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" name="pressure">
+                                                                <div class="input-group-addon">об/мин</div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -241,11 +266,43 @@
             </div>
             <div class="col-xs-3">
                 <div class="filter-right">
-                    <div class="filter-right-item">
-                        <label for="check1">Неликвид</label><input type="checkbox" name="unmarketable" id="check1"/>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul class="nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="z-index: 2">
+                                        <i class="fa fa-map-marker"></i> Выберите город
+                                    </a>
+                                    <div class="dropdown-menu" id="top-region-cities" style="z-index: 1">
+                                        <div class="col-xs-12">
+                                            <ul>
+                                                <li><a href="#">Астана</a></li>
+                                                <li><a href="#">Акколь</a></li>
+                                                <li><a href="#">Атбасар</a></li>
+                                                <li><a href="#">Державинск</a></li>
+                                                <li><a href="#">Ерейментау</a></li>
+                                                <li><a href="#">Есиль</a></li>
+                                                <li><a href="#">Кокшетау</a></li>
+                                                <li><a href="#">Макинск</a></li>
+                                                <li><a href="#">Щучинск</a></li>
+                                                <li><a href="#">Степногорск</a></li>
+                                                <li><a href="#">Степняк</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="filter-right-item">
-                        <label for="check2">Сделано в Казахстане</label><input type="checkbox" name="made-in-kz" id="check2"/>
+                    <div class="checkbox col-xs-12">
+                        <label>
+                            <input type="checkbox" name="unmarketable"/>Неликвид
+                        </label>
+                    </div>
+                    <div class="checkbox col-xs-12">
+                        <label>
+                            <input type="checkbox" name="made-in-kz"/>Сделано в Казахстане
+                        </label>
                     </div>
                 </div>
             </div>
