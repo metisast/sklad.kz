@@ -15,10 +15,11 @@
                 <div class="company-form">
                     <!-- Form company start -->
                     <form action="{{route('company.store')}}" method="post" class="form-horizontal">
+                        {{ csrf_field() }}
                         <div class="col-xs-12">
                             <div class="form-group">
                                 <div class="col-xs-4">
-                                    <input type="text" name="short_name" class="form-control" placeholder="Краткое наименование">
+                                    <input type="text" name="short_name" value="{{ old('short_name') }}" class="form-control" placeholder="Краткое наименование">
                                 </div>
                                 <div class="col-xs-8">
                                     <p>Оно будет отображаться на сайте!</p>
@@ -28,15 +29,10 @@
                         <div class="col-xs-12">
                             <div class="form-group">
                                 <div class="col-xs-4">
-                                    <select name="opf" id="opf" class="form-control">
-                                        <option value="0">Организационно правовая форма</option>
-                                        <option value="1">ИП</option>
-                                        <option value="2">ТОО</option>
-                                        <option value="3">АО</option>
-                                    </select>
+                                    {!! Helpers::select($opfs, 'short_name', old('opf_id'), 'Организационно правовая форма', ['class' => 'form-control', 'id' => 'opf', 'name' => 'opf_id']) !!}
                                 </div>
                                 <div class="form-input col-xs-4">
-                                    <input type="text" class="form-control" name="full_name" placeholder="Полное наименование">
+                                    <input type="text" class="form-control" value="{{ old('name') }}" name="name" placeholder="Полное наименование">
                                 </div>
                             </div>
                         </div>

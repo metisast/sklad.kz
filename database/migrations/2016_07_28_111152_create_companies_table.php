@@ -16,6 +16,7 @@ class CreateCompaniesTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('short_name', 60);
+            $table->tinyInteger('opf_id');
             $table->string('name', 255);
             $table->timestamps();
         });

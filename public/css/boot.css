@@ -3,10 +3,6 @@
     width: 1140px;
     max-width: none !important;
 }
-.col-xs-3, .col-xs-2, .col-xs-4, .col-xs-6, .col-xs-9, .col-xs-12{
-    
-}
-
 /* Default */
 ul{
     list-style: none;
@@ -25,6 +21,18 @@ a.btn{
 }
 p{
     font-size: 13px;
+}
+.btn:active{
+    outline: none;
+}
+.btn:focus{
+    outline: none;
+}
+.btn.btn-success{
+    background: #4caf50;
+}
+.btn.btn-success:active{
+    background: #4caf50;
 }
 .form-control{
     border-radius: 3px;
@@ -118,7 +126,6 @@ input[type=checkbox], input[type=radio]{
     height: 28px;
     line-height: 25px;
     list-style: none;
-    border-bottom: 1px solid #DDD;
     background: #FFF;
 }
 .tabs__caption li {
@@ -152,12 +159,12 @@ input[type=checkbox], input[type=radio]{
     border-bottom: 3px solid #ff2d55;
 }
 .tabs-third:hover{
-    color: #5ac8fa;
-    border-bottom: 3px solid #5ac8fa;
+    color: #673AB7;
+    border-bottom: 3px solid #673AB7;
 }
 .tabs-third.active{
-    color: #5ac8fa;
-    border-bottom: 3px solid #5ac8fa;
+    color: #673AB7;
+    border-bottom: 3px solid #673AB7;
 }
 .tabs-fourth:hover{
     color: #ff9500;
@@ -213,9 +220,9 @@ input[type=checkbox], input[type=radio]{
     line-height: 10px;
 }
 .active-down{
-    border-top: 1px solid #e0e0e0;
+    /*border-top: 1px solid #e0e0e0;
     border-left: 1px solid #e0e0e0;
-    border-right: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;*/
     padding: 5px 5px 13px 5px;
     background: #fff;
     margin-top: -5px;
@@ -234,13 +241,15 @@ input[type=checkbox], input[type=radio]{
     display: none;
     width: 775px;
     border: 1px solid #e0e0e0;
-    margin-top: -1px;
+    /*margin-top: -1px;*/
     overflow: hidden;
-    padding-bottom: 10px;
+    padding: 10px 0;
 }
 .filter-sub a{
     display: block;
-    padding: 10px 0 0 0;
+    padding: 10px 15px;
+    line-height: 15px;
+    height: 40px;
 }
 /* Filter right layer */
 /* AD Block*/
@@ -317,6 +326,9 @@ input[type=checkbox], input[type=radio]{
 .offers-link{
     color: #4caf50;
     margin-left: 5px;
+}
+.offers-link:hover{
+    color: #4caf50;
 }
 /*Left content*/
 
@@ -418,11 +430,11 @@ input[type=checkbox], input[type=radio]{
     padding: 0 20px;
 }
 #top-region{
-    width: 320px;
+    width: 340px;
 }
 #top-region ul li a, #top-region-cities ul li a{
     display: block;
-    padding: 10px;
+    padding: 5px 15px;
 }
 /* Profile */
 .profile-title{
@@ -655,10 +667,4 @@ input[type=checkbox], input[type=radio]{
 }
 .filter-layer button{
     margin: 10px 0;
-}
-.filter-layer button.btn-success{
-    background: #4caf50;
-}
-.filter-layer button.btn-success:active{
-    background: #4caf50;
 }

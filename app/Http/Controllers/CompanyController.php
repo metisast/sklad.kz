@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Company;
+use App\Models\Opf;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -20,23 +22,32 @@ class CompanyController extends Controller
 
     /**
      * Show the form for creating a new resource.
+     * @param Opf $opf
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Opf $opf)
     {
-        return view('company.create');
+        $opfs = $opf->getAllOpfs();
+
+        return view('company.create')
+            ->with('opfs', $opfs);
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
+     * @param  Company $company
+     * @param  Requests\CompaniesPublishRequest $cpr
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Company $company, Requests\CompaniesPublishRequest $cpr)
     {
-        //
+        //dd($request->all());
+        $create = $company->createCompany($request);
+
+        return redirect(route('company.show',  $create->id));
     }
 
     /**

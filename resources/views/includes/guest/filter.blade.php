@@ -24,12 +24,12 @@
                                     </div>
                                     <div class="col-xs-10">
                                         <div class="filter-layer-list">
-                                            <div class="filter-layer-item more-down"><a href="#" >Добавить отрасль <i class="fa fa-angle-down"></i></a></div>
+                                            <div class="filter-layer-item more-down"><a href="#" >Выбрать отрасль <i class="fa fa-angle-down"></i></a></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="filter-sub">
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-4">
                                         <a href="#">Геодезия</a>
                                         <a href="#">Геология и разведка недр</a>
                                         <a href="#">Гидрометеорология</a>
@@ -37,8 +37,10 @@
                                         <a href="#">Здравоохранение и медицина</a>
                                         <a href="#">Инженерия</a>
                                         <a href="#">Информационные технологии</a>
+                                        <a href="#">Транспорт</a>
+                                        <a href="#">Тяжелая промышленность</a>
                                     </div>
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-4">
                                         <a href="#">Консалтинг</a>
                                         <a href="#">Культура и искусство</a>
                                         <a href="#">Легкая промышленность</a>
@@ -46,8 +48,10 @@
                                         <a href="#">Наука</a>
                                         <a href="#">Образование и обучение</a>
                                         <a href="#">Пищевая промышленность</a>
+                                        <a href="#">Физ. культура и спорт</a>
+                                        <a href="#">Финансы</a>
                                     </div>
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-4">
                                         <a href="#">Реклама</a>
                                         <a href="#">Связь и коммуникации</a>
                                         <a href="#">Сельское хозяйство</a>
@@ -55,12 +59,6 @@
                                         <a href="#">Страхование</a>
                                         <a href="#">Строительство</a>
                                         <a href="#">Торговля</a>
-                                    </div>
-                                    <div class="col-xs-3">
-                                        <a href="#">Транспорт</a>
-                                        <a href="#">Тяжелая промышленность</a>
-                                        <a href="#">Физ. культура и спорт</a>
-                                        <a href="#">Финансы</a>
                                         <a href="#">Юриспруденция и право</a>
                                     </div>
                                 </div>
@@ -75,28 +73,23 @@
                                     <div class="col-xs-10">
                                         <div class="filter-layer-list ">
                                             <div class="filter-layer-item more-down">
-                                                <a href="#" >Добавить категорию <i class="fa fa-angle-down"></i></a>
+                                                <a href="#" >Выбрать категорию <i class="fa fa-angle-down"></i></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="filter-sub">
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-4">
                                         <a href="#">Вентиляторы</a>
                                         <a href="#">Электродвигатели</a>
                                         <a href="#">Насосы</a>
                                     </div>
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-4">
                                         <a href="#">Вентиляторы</a>
                                         <a href="#">Электродвигатели</a>
                                         <a href="#">Насосы</a>
                                     </div>
-                                    <div class="col-xs-3">
-                                        <a href="#">Вентиляторы</a>
-                                        <a href="#">Электродвигатели</a>
-                                        <a href="#">Насосы</a>
-                                    </div>
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-4">
                                         <a href="#">Вентиляторы</a>
                                         <a href="#">Электродвигатели</a>
                                         <a href="#">Насосы</a>
@@ -113,33 +106,31 @@
                                     <div class="col-xs-10">
                                         <div class="filter-layer-list left">
                                             <div class="filter-layer-item more-down">
-                                                <a href="#" >Добавить тип товара <i class="fa fa-angle-down"></i></a>
+                                                <a href="#" >Выбрать тип товара <i class="fa fa-angle-down"></i></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="filter-sub">
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-4">
                                         <a href="#">Приточная установка</a>
                                         <a href="#">Вентиляторы канальные</a>
                                         <a href="#">Вентиляторы осевые</a>
                                         <a href="#">Вентиляторы радиальные</a>
+                                        <a href="#">Вентиляторы крышные</a>
                                     </div>
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-4">
                                         <a href="#">Воздуховоды и фасонные части</a>
                                         <a href="#">Воздуховоды и фасонные части</a>
                                         <a href="#">Детали систем вентиляции</a>
                                         <a href="#">Клапаны</a>
+                                        <a href="#">Вентиляторы дымоудаления</a>
                                     </div>
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-4">
                                         <a href="#">Тепловентиляционное оборудование</a>
                                         <a href="#">Щиты управления</a>
                                         <a href="#">Дымосос</a>
                                         <a href="#">Воздухораспределительные устройства</a>
-                                    </div>
-                                    <div class="col-xs-3">
-                                        <a href="#">Вентиляторы крышные</a>
-                                        <a href="#">Вентиляторы дымоудаления</a>
                                         <a href="#">Пылеуловители и фильтры</a>
                                     </div>
                                 </div>
