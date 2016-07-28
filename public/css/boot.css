@@ -576,6 +576,9 @@ input[type=checkbox], input[type=radio]{
     margin-top: 70px;
 }
 /*Right side bar*/
+#right-side{
+    margin-top: 30px;
+}
 .side-bar{
     height: 380px;
     background: #e0e0e0;

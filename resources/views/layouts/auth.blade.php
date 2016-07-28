@@ -13,9 +13,9 @@
 <div class="container">
     <!-- Header start-->
     <div id="header">
-            @include('includes.guest.header')
-            <!-- Filter start-->
-            @include('includes.guest.filter')
+        @include('includes.guest.header')
+        <!-- Filter start-->
+        @include('includes.guest.filter')
     </div><!-- Header end -->
     <!-- Content start-->
     <div id="content">
@@ -32,6 +32,7 @@
 
 <!-- Include javascript -->
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/js/tabs.js"></script>
 <script src="/js/filter.js"></script>
 <script src="/bower_components/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
