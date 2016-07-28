@@ -213,7 +213,7 @@ input[type=checkbox], input[type=radio]{
     text-decoration: none;
 }
 .filter-layer-item.more-down > a:hover{
-    border-bottom: 1px dashed #3F51B5;
+    border-bottom: 1px dashed #007AFF;
     text-decoration: none;
 }
 .filter-layer-item.more-down > a i{
