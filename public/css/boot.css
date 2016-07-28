@@ -3,9 +3,8 @@
     width: 1140px;
     max-width: none !important;
 }
-.col-xs-3, .col-xs-4, .col-xs-6, .col-xs-12, .col-xs-2, .col-xs-9{
-    padding-right: 10px;
-    padding-left: 10px;
+.col-xs-3, .col-xs-2, .col-xs-4, .col-xs-6, .col-xs-9, .col-xs-12{
+    
 }
 
 /* Default */
@@ -14,7 +13,12 @@ ul{
     padding: 0;
 }
 a{
+    color: #007AFF;
     font-size: 13px;
+}
+a:hover, a:active, a:focus{
+    text-decoration: underline;
+    color: #007AFF;
 }
 a.btn{
     font-size: 13px;
@@ -41,7 +45,7 @@ p{
     padding-top: 30px;
 }
 .navbar-right .dropdown-menu{
-    left: 0;
+    right: 0;
 }
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
     background: transparent;
@@ -126,18 +130,44 @@ input[type=checkbox], input[type=radio]{
     background: #fff;
     position: relative;
     font-size: 14px;
-    color: #3F51B5;
+    color: #007AFF;
 }
-.tabs__caption li:hover, .tabs__caption li:hover {
-    color: #3F51B5;
+.tabs__caption li:hover{
     padding: 0 30px;
-    border-bottom: 3px solid #3F51B5;
 }
-.tabs__caption .active {
+.tabs-first:hover{
     color: #4caf50;
     border-bottom: 3px solid #4caf50;
-    padding: 0 30px;
 }
+.tabs-first.active{
+    color: #4caf50;
+    border-bottom: 3px solid #4caf50;
+}
+.tabs-second:hover{
+    color: #ff2d55;
+    border-bottom: 3px solid #ff2d55;
+}
+.tabs-second.active{
+    color: #ff2d55;
+    border-bottom: 3px solid #ff2d55;
+}
+.tabs-third:hover{
+    color: #5ac8fa;
+    border-bottom: 3px solid #5ac8fa;
+}
+.tabs-third.active{
+    color: #5ac8fa;
+    border-bottom: 3px solid #5ac8fa;
+}
+.tabs-fourth:hover{
+    color: #ff9500;
+    border-bottom: 3px solid #ff9500;
+}
+.tabs-fourth.active{
+    color: #ff9500;
+    border-bottom: 3px solid #ff9500;
+}
+
 .tabs__content {
     display: none;
     background: #fff;
@@ -388,11 +418,11 @@ input[type=checkbox], input[type=radio]{
     padding: 0 20px;
 }
 #top-region{
-    width: 300px;
+    width: 320px;
 }
 #top-region ul li a, #top-region-cities ul li a{
     display: block;
-    padding: 5px 0;
+    padding: 10px;
 }
 /* Profile */
 .profile-title{
@@ -624,5 +654,8 @@ input[type=checkbox], input[type=radio]{
     margin: 10px 0;
 }
 .filter-layer button.btn-success{
+    background: #4caf50;
+}
+.filter-layer button.btn-success:active{
     background: #4caf50;
 }

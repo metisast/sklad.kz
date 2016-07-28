@@ -5,10 +5,10 @@
             <!-- Tabs start-->
             <div class="col-xs-12">
                 <ul class="tabs__caption nav-pills" data-show="false">
-                    <li>Товары</li>
-                    <li>Материалы</li>
-                    <li>Услуги</li>
-                    <li>Компании</li>
+                    <li class="tabs-first">Товары</li>
+                    <li class="tabs-second">Материалы</li>
+                    <li class="tabs-third">Услуги</li>
+                    <li class="tabs-fourth">Компании</li>
                 </ul>
             </div>
             <div class="col-xs-9">

@@ -13,9 +13,9 @@
 <div class="container">
     <!-- Header start-->
     <div id="header">
-        @include('includes.guest.header')
-        <!-- Filter start-->
-        @include('includes.guest.filter')
+            @include('includes.guest.header')
+            <!-- Filter start-->
+            @include('includes.guest.filter')
     </div><!-- Header end -->
     <!-- Content start-->
     <div id="content">

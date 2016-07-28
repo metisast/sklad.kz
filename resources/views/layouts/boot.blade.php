@@ -13,9 +13,11 @@
 <div class="container">
     <!-- Header start-->
     <div id="header">
-        @include('includes.guest.header')
-        <!-- Filter start-->
-        @include('includes.guest.filter')
+        <div class="col-xs-12">
+            @include('includes.guest.header')
+                    <!-- Filter start-->
+            @include('includes.guest.filter')
+        </div>
     </div><!-- Header end -->
     <!-- AD block start -->
     @if(Route::getCurrentRoute()->getPath() == '/'){{-- Include AD only mail page --}}

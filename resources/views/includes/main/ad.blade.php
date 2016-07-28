@@ -6,7 +6,7 @@
             <div class="offers-top">
                 <div class="col-xs-6">
                     <div class="offers-region">
-                        <a href="#">Выберите регион <i class="fa fa-angle-down"></i></a>
+                        
                     </div>
                 </div>
                 <div class="col-xs-6 text-right">

@@ -1,3 +1,4 @@
+<div class="col-xs-12">
 <div class="col-xs-6">
     <!-- Logo start -->
     <div class="logo">
@@ -13,7 +14,7 @@
         <ul class="nav nav-pills navbar-right">
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="z-index: 4">
-                    <i class="fa fa-map-marker"></i> Ваш регион
+                    <i class="fa fa-map-marker"></i> Ваш регион <i class="fa fa-angle-down"></i>
                 </a>
                 <div class="dropdown-menu" id="top-region" style="z-index: 3">
                     <div class="col-xs-6">
@@ -71,3 +72,4 @@
         </div>
     </div><!-- Auth links end -->
 </div>
+    </div>
