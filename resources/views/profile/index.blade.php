@@ -36,7 +36,7 @@
                                         <p>На сайте</p>
                                     </td>
                                     <td>
-                                        <p>с 03.06.2016 года</p>
+                                        <p>с {{ Auth::user()->created_at }}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -94,162 +94,63 @@
                 </div>
             </div>
 
-            <!-- View list company start -->
-            <div class="profile-company-block">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <!-- list 1 -->
-                        <div class="profile-company-list-item">
-                            <div class="profile-company-list-img">
-                                <a href="#">
-                                    <img src="/img/bi.jpg" alt="bi">
-                                </a>
-                            </div>
-                            <div class="profile-company-list-name">
-                                <h5><strong><a href="#">BI-group</a></strong></h5>
-                            </div>
-                            <div class="profile-company-list-city">
-                                <p><i class="fa fa-map-marker"></i> Астана</p>
-                            </div>
-                            <div class="profile-company-list-status">
-                                <table>
-                                    <tbody>
-                                    <tr>
-                                        <td><p>Товаров</p></td>
-                                        <td><p>215</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Материалов</p></td>
-                                        <td><p>80</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Услуг</p></td>
-                                        <td><p>15</p></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <div class="profile-company-list-status-title">
-                                    <p>Статус: Продавец</p>
+            @if(count($companies) > 0)
+                <!-- View list company start -->
+                <div class="profile-company-block">
+                    <div class="row">
+                @foreach($companies as $company)
+                            <div class="col-xs-3">
+                                <!-- list 1 -->
+                                <div class="profile-company-list-item">
+                                    <div class="profile-company-list-img">
+                                        <a href="#">
+                                            <img src="/img/bi.jpg" alt="bi">
+                                        </a>
+                                    </div>
+                                    <div class="profile-company-list-name">
+                                        <h5><strong><a href="{{ route('company.show', $company->id) }}">{{ $company->short_name }}</a></strong></h5>
+                                    </div>
+                                    <div class="profile-company-list-city">
+                                        <p><i class="fa fa-map-marker"></i> Астана</p>
+                                    </div>
+                                    <div class="profile-company-list-status">
+                                        <table>
+                                            <tbody>
+                                            <tr>
+                                                <td><p>Товаров</p></td>
+                                                <td><p>215</p></td>
+                                            </tr>
+                                            <tr>
+                                                <td><p>Материалов</p></td>
+                                                <td><p>80</p></td>
+                                            </tr>
+                                            <tr>
+                                                <td><p>Услуг</p></td>
+                                                <td><p>15</p></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="profile-company-list-status-title">
+                                            <p>Статус: Продавец</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                @endforeach
                     </div>
-                    <div class="col-xs-3">
-                        <!-- list 2 -->
-                        <div class="profile-company-list-item">
-                            <div class="profile-company-list-img">
-                                <a href="#">
-                                    <img src="/img/bi.jpg" alt="bi">
-                                </a>
-                            </div>
-                            <div class="profile-company-list-name">
-                                <h5><strong><a href="#">Lorem ipsum dolor sit amet.</a></strong></h5>
-                            </div>
-                            <div class="profile-company-list-city">
-                                <p><i class="fa fa-map-marker"></i> Астана</p>
-                            </div>
-                            <div class="profile-company-list-status">
-                                <table>
-                                    <tbody>
-                                    <tr>
-                                        <td><p>Товаров</p></td>
-                                        <td><p>215</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Материалов</p></td>
-                                        <td><p>80</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Услуг</p></td>
-                                        <td><p>15</p></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <div class="profile-company-list-status-title">
-                                    <p>Статус: Продавец</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-3">
-                        <!-- list 3 -->
-                        <div class="profile-company-list-item">
-                            <div class="profile-company-list-img">
-                                <a href="#">
-                                    <img src="/img/bi.jpg" alt="bi">
-                                </a>
-                            </div>
-                            <div class="profile-company-list-name">
-                                <h5><strong><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></strong></h5>
-                            </div>
-                            <div class="profile-company-list-city">
-                                <p><i class="fa fa-map-marker"></i> Астана</p>
-                            </div>
-                            <div class="profile-company-list-status">
-                                <table>
-                                    <tbody>
-                                    <tr>
-                                        <td><p>Товаров</p></td>
-                                        <td><p>215</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Материалов</p></td>
-                                        <td><p>80</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Услуг</p></td>
-                                        <td><p>15</p></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <div class="profile-company-list-status-title">
-                                    <p>Статус: Продавец</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-3">
-                        <!-- list 4 -->
-                        <div class="profile-company-list-item">
-                            <div class="profile-company-list-img">
-                                <a href="#">
-                                    <img src="/img/bi.jpg" alt="bi">
-                                </a>
-                            </div>
-                            <div class="profile-company-list-name">
-                                <h5><strong><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing.</a></strong></h5>
-                            </div>
-                            <div class="profile-company-list-city">
-                                <p><i class="fa fa-map-marker"></i> Астана</p>
-                            </div>
-                            <div class="profile-company-list-status">
-                                <table>
-                                    <tbody>
-                                    <tr>
-                                        <td><p>Товаров</p></td>
-                                        <td><p>215</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Материалов</p></td>
-                                        <td><p>80</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Услуг</p></td>
-                                        <td><p>15</p></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <div class="profile-company-list-status-title">
-                                    <p>Статус: Продавец</p>
-                                </div>
-                            </div>
+                </div><!-- View list company end -->
+            @else
+                <div class="profile-company-block text-center">
+                    <div class="row">
+                        <div class="profile-company-no">
+                            <h5>У вас еще нет ни одной компании, <a href="{{ route('company.create') }}">создать</a></h5>
                         </div>
                     </div>
                 </div>
-            </div><!-- View list company end -->
+            @endif
 
             <!-- View table company start -->
-            <div class="profile-company-block">
+            {{--<div class="profile-company-block">
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- table 1 -->
@@ -339,7 +240,7 @@
                         </div>
                     </div>
                 </div>
-            </div><!-- View table company end -->
+            </div>--}}<!-- View table company end -->
 
             <!-- Profile status -->
             <div class="row">

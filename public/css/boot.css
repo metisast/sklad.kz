@@ -68,9 +68,6 @@ p{
     color: #3F51B5;
     background: transparent;
 }
-.text-muted .fa-map-marker{
-    color: #ff9800;
-}
 input[type=checkbox], input[type=radio]{
     margin: 2px 0 0;
 }
@@ -89,6 +86,15 @@ input[type=checkbox], input[type=radio]{
 }
 .fa-map-marker{
     color: #ff9800;
+}
+.fa-phone{
+    color: #4cb034;
+}
+.fa-envelope{
+    color: #a644e4;
+}
+.fa-globe{
+    color: #22b0d3;
 }
 .form-control-feedback{
     margin-top: 7px;
@@ -420,6 +426,8 @@ input[type=checkbox], input[type=radio]{
     margin-top: 25px;
     margin-bottom: 25px;
     border: 1px solid #e0e0e0;
+    display: inline-block;
+    width: 100%;
 }
 .auth-img h3{
     margin-top: 70px;
@@ -572,6 +580,9 @@ input[type=checkbox], input[type=radio]{
     margin-right: 20px;
     margin-top: 10px;
 }
+.profile-company-no a{
+    font-size: 14px;
+}
 /* Company */
 .company-contacts, .company-logo, .company-city, .industry{
     margin-top: 15px;
@@ -582,6 +593,97 @@ input[type=checkbox], input[type=radio]{
     border-top: 1px solid #e0e0e0;
     height: 50px;
     padding-top: 10px;
+}
+#company-screen{
+    margin-top: 20px;
+}
+.company-screen{
+    background: #aaaaaa;
+    height: 225px;
+    color: #fff;
+}
+.company-screen-info{
+    margin-top: 100px;
+}
+#company-info{
+    margin-top: 30px;
+}
+.company-profile-logo{
+    width: 150px;
+    height: 150px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+}
+.company-profile-logo a{
+    padding-top: 30px;
+    display: block;
+    color: #aaa;
+    text-align: center;
+}
+.company-profile-logo p{
+    line-height: 15px;
+}
+.company-profile-port{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.company-profile-data h4{
+    margin-top: 0;
+}
+.company-profile-data > div{
+    margin-left: 30px;
+}
+.company-profile-data-title p{
+
+}
+.company-profile-data-category-items p{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.company-profile-data-category{
+    padding: 5px 0;
+}
+.company-divider{
+    border-bottom: 1px dashed #e0e0e0;
+}
+.company-about{
+    margin-top: 30px;
+}
+.company-about h4{
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+.company-about div a{
+    margin-right: 20px;
+}
+.company-contacts-header{
+    border-bottom: 1px solid #e0e0e0;
+}
+.company-contacts-header a{
+    display: block;
+    padding-top: 13px;
+}
+.contacts-table{
+    margin-top: 5px;
+}
+.contacts-table table{
+    width: 100%;
+}
+.contacts-table table tr{
+    vertical-align: top;
+}
+.contacts-table table tr td{
+    padding: 10px 15px 5px 0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+.contacts-table table tr:last-child td{
+    border: none;
+}
+.contacts-table table tr td p{
+    margin-bottom: 5px;
+}
+.contacts-table table tr td p a{
+    display: block;
 }
 
 #form-auth{

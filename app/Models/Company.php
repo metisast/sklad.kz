@@ -18,4 +18,9 @@ class Company extends Model
             'name' => $request->name
         ]);
     }
+
+    public function getCompaniesByUser()
+    {
+        return parent::where('user_id', '=', Auth::user()->id)->get();
+    }
 }

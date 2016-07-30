@@ -31,7 +31,9 @@
             <!-- Left side start-->
             @include('includes.guest.leftSide')
             <!-- Right side start-->
-            @include('includes.guest.rightSide')
+            <div class="col-xs-3">
+                @include('includes.guest.rightSide')
+            </div>
         </div>
     </div>
     <!-- Pagination start -->
