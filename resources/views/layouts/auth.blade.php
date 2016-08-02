@@ -6,7 +6,9 @@
     <!-- Include styles -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/css/boot.css">
+    <link rel="stylesheet" href="/css/tabs_filter.css">
     <link rel="stylesheet" href="/css/carousel.css">
 </head>
 <body>
@@ -17,6 +19,9 @@
         <!-- Filter start-->
         @include('includes.guest.filter')
     </div><!-- Header end -->
+    <div id="bread-crumbs">
+        @yield('bread_crumbs')
+    </div><!-- Bread-crumbs end -->
     <!-- Content start-->
     <div id="content">
         <div class="row">

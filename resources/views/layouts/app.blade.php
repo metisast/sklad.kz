@@ -20,12 +20,10 @@
         <!-- Filter start-->
         @include('includes.guest.filter')
     </div><!-- Header end -->
-    <!-- AD block start -->
-    @if(Route::getCurrentRoute()->getPath() == '/'){{-- Include AD only mail page --}}
-        @include('includes.main.ad')
-    @endif
     <!-- Bread-crumbs start-->
-    @include('includes.guest.bread')
+    <div id="bread-crumbs">
+        @yield('bread_crumbs')
+    </div><!-- Bread-crumbs end -->
     <!-- Content start-->
     <div id="content">
         <!-- Left side start-->

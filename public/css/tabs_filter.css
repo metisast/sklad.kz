@@ -1,0 +1,139 @@
+/* Tabs */
+.tabs {
+
+}
+.tabs__caption {
+    margin-top: 15px;
+    margin-bottom: 0;
+    height: 30px;
+    list-style: none;
+    background: #FFF;
+}
+.tabs__caption li {
+    float: left;
+    display: inline;
+    margin: 0 1px -1px 0;
+    padding: 0 30px;
+    cursor: pointer;
+    background: #fff;
+    position: relative;
+    font-size: 14px;
+    color: #007AFF;
+    line-height: 28px;
+    border-bottom: 3px solid transparent;
+}
+.tabs__caption li:hover{
+    padding: 0 30px;
+    line-height: 28px;
+}
+.tabs-first:hover{
+    color: #4caf50;
+    border-bottom: 3px solid #4caf50;
+}
+.tabs-first.active{
+    color: #4caf50;
+    border-bottom: 3px solid #4caf50;
+}
+.tabs-second:hover{
+    color: #ff2d55;
+    border-bottom: 3px solid #ff2d55;
+}
+.tabs-second.active{
+    color: #ff2d55;
+    border-bottom: 3px solid #ff2d55;
+}
+.tabs-third:hover{
+    color: #673AB7;
+    border-bottom: 3px solid #673AB7;
+}
+.tabs-third.active{
+    color: #673AB7;
+    border-bottom: 3px solid #673AB7;
+}
+.tabs-fourth:hover{
+    color: #ff9500;
+    border-bottom: 3px solid #ff9500;
+}
+.tabs-fourth.active{
+    color: #ff9500;
+    border-bottom: 3px solid #ff9500;
+}
+
+.tabs__content {
+    display: none;
+    background: #fff;
+    padding: 0 15px;
+}
+.tabs__content.active {
+    display: block;
+}
+/* Filter layer*/
+#filter{
+
+}
+.filter-left{
+    width: 800px;
+    display: none;
+}
+.filter-right{
+    display: none;
+}
+.filter-layer-title{
+    font-size: 13px;
+    width: 120px;
+    margin-top: 15px;
+}
+.filter-layer-list{
+    margin-top: 15px;
+}
+.filter-layer-item{
+    float: left;
+    margin-right: 30px;
+    line-height: 16px;
+    position: relative;
+    z-index: 3;
+}
+.filter-layer-item.more-down > a{
+    text-decoration: none;
+}
+.filter-layer-item.more-down > a:hover{
+    border-bottom: 1px dashed #007AFF;
+    text-decoration: none;
+}
+.filter-layer-item.more-down > a i{
+    line-height: 10px;
+}
+.active-down{
+    /*border-top: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;*/
+    padding: 5px 5px 13px 5px;
+    background: #fff;
+    margin-top: -5px;
+}
+.active-filter-item{
+    color: #333;
+    font-weight: bold;
+    display: block;
+}
+.active-filter-item:hover{
+    text-decoration: none;
+    cursor: text;
+}
+/*Filter sub*/
+.filter-sub{
+    display: none;
+    width: 775px;
+    border: 1px solid #e0e0e0;
+    /*margin-top: -1px;*/
+    overflow: hidden;
+    padding: 10px 0;
+}
+.filter-sub a{
+    display: block;
+    padding: 10px 15px;
+    line-height: 15px;
+    height: 40px;
+    color: #333;
+}
+/* Filter right layer */

@@ -10,6 +10,12 @@ use App\Http\Requests;
 
 class CompanyController extends Controller
 {
+    protected $company;
+    
+    public function __construct(Company $company)
+    {
+        $this->company = $company;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -38,14 +44,13 @@ class CompanyController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  Company $company
      * @param  Requests\CompaniesPublishRequest $cpr
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Company $company, Requests\CompaniesPublishRequest $cpr)
+    public function store(Request $request, Requests\CompaniesPublishRequest $cpr)
     {
         //dd($request->all());
-        $create = $company->createCompany($request);
+        $create = $this->company->createCompany($request);
 
         return redirect(route('company.show',  $create->id));
     }
@@ -58,7 +63,8 @@ class CompanyController extends Controller
      */
     public function show($id)
     {
-        return view('company.show');
+        return view('company.show')
+            ->with('company', $this->company->getCompanyByUser($id));
     }
 
     /**

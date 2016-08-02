@@ -6,25 +6,31 @@
     <!-- Include styles -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/css/boot.css">
+    <link rel="stylesheet" href="/css/tabs_filter.css">
     <link rel="stylesheet" href="/css/carousel.css">
 </head>
 <body>
 <div class="container">
     <!-- Header start-->
     <div id="header">
-        <div class="col-xs-12">
-            @include('includes.guest.header')
-                    <!-- Filter start-->
-            @include('includes.guest.filter')
+        <div class="row">
+            <div class="col-xs-12">
+                @include('includes.guest.header')
+                        <!-- Filter start-->
+                @include('includes.guest.filter')
+            </div>
         </div>
     </div><!-- Header end -->
     <!-- AD block start -->
     @if(Route::getCurrentRoute()->getPath() == '/'){{-- Include AD only mail page --}}
         @include('includes.main.ad')
     @endif
-    <!-- Bread-crumbs start-->
-    @include('includes.guest.bread')
+    {{-- Bread-crumbs --}}
+    <div id="bread-crumbs">
+        @yield('bread_crumbs')
+    </div><!-- Bread-crumbs end -->
     <!-- Content start-->
     <div id="content">
         <div class="row">

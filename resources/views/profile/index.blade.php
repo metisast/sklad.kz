@@ -68,7 +68,7 @@
                 </div>
                 <div class="col-xs-3">
                     <div class="profile-edit">
-                        <a href="#"><i class="fa fa-gear"></i> редактировать</a>
+                        <a href="#"><i class="fa fa-gear" style="padding-right: 5px"></i>редактировать</a>
                     </div>
                 </div>
             </div>
@@ -76,18 +76,20 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="profile-company">
-                        <div class="profile-company-title text-center">
-                            <div class="col-xs-9">
-                                <h4 style="margin-left: 200px;">Мои компании</h4>
+                        <div class="row">
+                            <div class="profile-company-title text-center">
+                                <div class="col-xs-9">
+                                    <h4 style="margin-left: 200px;">Мои компании</h4>
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                    <a href="{{route('company.create')}}"><i class="fa fa-plus" style="padding-right: 5px"></i>Добавить компанию</a>
+                                </div>
                             </div>
-                            <div class="col-xs-3 text-right">
-                                <a href="{{route('company.create')}}"><i class="fa fa-plus"></i> Добавить компанию</a>
-                            </div>
-                        </div>
-                        <div class="profile-list-sort text-right">
-                            <div class="col-xs-12">
-                                <a href="#"><i class="fa fa-th-list"></i> Список</a>
-                                <a href="#"><i class="fa fa-table"></i> Таблица</a>
+                            <div class="profile-list-sort text-right">
+                                <div class="col-xs-12">
+                                    <a href="#"><i class="fa fa-th-list" style="padding-right: 5px"></i>Список</a>
+                                    <a href="#"><i class="fa fa-table" style="padding-right: 5px"></i>Таблица</a>
+                                </div>
                             </div>
                         </div>
                     </div>

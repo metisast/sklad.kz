@@ -3,12 +3,12 @@
     margin-top: 30px;
 }
 .film_roll_wrapper img {
-    border: 1px solid #e0e0e0;
+
     margin-right: 5px;
     /*transition: all 1s ease;*/
 }
 .film_roll_wrapper .active img {
-    border: 1px solid #e0e0e0;
+
 }
 .film_roll_container {
     position: relative;
@@ -44,7 +44,7 @@
     -webkit-transform: skew(-2deg, 0) translate(3px,0);
 }*/
 #film_roll_2 .film_roll_child.active, #film_roll_3 .film_roll_child.active {
-    top: -10px;
+
 }
 .btn-slide{
     height: 100px;

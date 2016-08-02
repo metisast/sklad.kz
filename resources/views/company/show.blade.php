@@ -1,6 +1,16 @@
 {{-- Show companies --}}
 @extends('layouts.auth')
 
+@section('bread_crumbs')
+    <div class="bread-crumbs">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">
+                <a href="#">{{ $company->opf->short_name.' '.$company->name }}</a>
+            </li>
+        </ol>
+    </div>
+@endsection
+
 @section('content')
     <!-- Show company start -->
         <!-- Show company screen start -->
@@ -9,7 +19,7 @@
                 <div class="col-xs-12">
                     <div class="company-screen">
                         <div class="col-xs-6 company-screen-name">
-                            <h3>BI group</h3>
+                            <h3>{{ $company->short_name }}</h3>
                             <h4>Здесь строится счастье!</h4>
                         </div>
                         <div class="col-xs-6 text-right company-screen-info">
@@ -50,47 +60,29 @@
                                         </a>
                                     </div>
                                     <div class="company-profile-port">
-                                        <div class="row">
-                                            <div class="col-xs-12">
-                                                <a href="#">Фото <span class="text-muted">6</span></a>
-                                            </div>
-                                            <div class="col-xs-12">
-                                                <a href="#">Портфолио <span class="text-muted">12</span></a>
-                                            </div>
-                                        </div>
+                                        <a href="#">Фото <span>6</span></a>
                                     </div>
                                 </div>
                                 <!-- Company profile info -->
-                                <div class="col-xs-8 company-profile-data">
-                                    <div class="col-xs-12 company-profile-data-title">
-                                        <h4>BI-group</h4>
-                                        <p>Товарищество с ограниченной ответственностью</p>
-                                        <div class="col-xs-12 company-divider"></div>
-                                    </div>
-                                    <div class="col-xs-12">
-                                        <div class="company-profile-data-category">
-                                            <div class="row">
-                                                <div class="col-xs-3">
-                                                    <p class="text-muted">Категории</p>
-                                                </div>
-                                                <div class="col-xs-9 company-profile-data-category-items">
-                                                    <p>Вентиляция</p>
-                                                    <p>Отопление</p>
-                                                    <p>Насосы</p>
-                                                    <p>Электродвигатели</p>
-                                                </div>
-                                            </div>
+                                <div class="col-xs-10 company-profile-data">
+                                    <div class="row">
+                                        <div class="col-xs-12 company-profile-data-title">
+                                            <h4>{{ $company->short_name }}</h4>
+                                            <p>{{ $company->opf->name }}</p>
+                                            <p><i class="fa fa-map-marker"></i> Астана</p>
                                         </div>
-                                        <div class="col-xs-12 company-divider"></div>
-                                    </div>
-                                    <div class="col-xs-12">
-                                        <div class="company-profile-data-category">
-                                            <div class="row">
-                                                <div class="col-xs-3">
-                                                    <p class="text-muted">На сайте</p>
-                                                </div>
-                                                <div class="col-xs-9 company-profile-data-category-items">
-                                                    <p>3 года</p>
+                                        <div class="col-xs-12">
+                                            <div class="company-profile-data-category">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <ul class="list-inline">
+                                                            <li><p class="text-muted">Деятельность: </p></li>
+                                                            <li><p>Вентиляция </p></li>
+                                                            <li><p>Отопление </p></li>
+                                                            <li><p>Насосы </p></li>
+                                                            <li><p>Электродвигатели </p></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -99,12 +91,32 @@
                                 <!-- About of company -->
                                 <div class="col-xs-12">
                                     <div class="company-about">
-                                        <h4>О компании</h4>
+                                        <h4 class="text-center">О компании</h4>
                                         <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
-                                        <div>
-                                            <a href="#">Сертификаты  <span class="text-muted">4</span></a>
-                                            <a href="#">Рекомендации <span class="text-muted">13</span></a>
-                                        </div>
+                                        <ul class="list-inline company-about-links">
+                                            <li>
+                                                <a href="#">
+                                                    <div class="about-view">
+                                                        <i class="fa fa-wpforms"></i> Сертификаты
+                                                    </div>
+                                                    <div class="about-hidden">
+                                                        10 сертификатов
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-trademark"></i> Лицензий</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-comments"></i> Рекомендации</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-trophy"></i> Награды</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-book"></i> Портфолио</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                                 <!-- Company contacts -->
@@ -114,12 +126,12 @@
                                             <div class="col-xs-12">
                                                 <div class="company-contacts-header">
                                                     <div class="row">
-                                                        <div class="col-xs-6">
-                                                            <h4>Контакты</h4>
+                                                        <div class="col-xs-10">
+                                                            <h4 class="text-center" style="margin-left: 140px;">Контакты</h4>
                                                         </div>
-                                                        <div class="col-xs-6 block-vis text-right">
+                                                        <div class="col-xs-2 block-vis text-right">
                                                             <a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                                                <i class="fa fa-angle-down"></i> показать
+                                                                <i class="fa fa-angle-down" style="padding-right: 5px"></i>показать
                                                             </a>
                                                         </div>
                                                     </div>
@@ -128,7 +140,7 @@
                                             <div class="col-xs-12 collapse" id="collapseExample">
                                                 <div class="contacts-table">
                                                     <div class="row">
-                                                        <div class="col-xs-10">
+                                                        <div class="col-xs-11">
                                                             <table>
                                                                 <tr>
                                                                     <td>
@@ -157,16 +169,16 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <p>Веб-сайт</p>
+                                                                        <p>Адрес</p>
                                                                     </td>
                                                                     <td>
                                                                         <p>
                                                                             <i class="fa fa-map-marker"></i> г. Астана, мкр. Коктал-1, ул. Ардагерлер 24 - <span class="text-muted">офис</span>
-                                                                            <a href="#">помотреть на карте</a>
+                                                                            <a href="#"><i class="fa fa-map"></i> <span>помотреть на карте</span></a>
                                                                         </p>
                                                                         <p>
                                                                             <i class="fa fa-map-marker"></i> г. Астана, ул. Алаш 22 - <span class="text-muted">склад</span>
-                                                                            <a href="#">помотреть на карте</a>
+                                                                            <a href="#"><i class="fa fa-map"></i> <span>помотреть на карте</span></a>
                                                                         </p>
                                                                     </td>
                                                                 </tr>
@@ -176,19 +188,207 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xs-12">
-                                            <div class="collapse" id="collapseExample">
-                                                Lorem ipsum dolor sit amet.
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- Company catalog -->
                                 <div class="col-xs-12">
-                                    <div class="company-about">
-                                        <h4>Каталог</h4>
-
+                                    <div class="company-contacts">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="company-contacts-header">
+                                                    <div class="row">
+                                                        <div class="col-xs-10">
+                                                            <h4 class="text-center" style="margin-left: 140px;">Каталог</h4>
+                                                        </div>
+                                                        <div class="col-xs-2 block-vis text-right">
+                                                            <a role="button" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                                                                <i class="fa fa-angle-down" style="padding-right: 5px"></i>показать
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="profile-list-sort text-right">
+                                                <div class="col-xs-12">
+                                                    <a href="#"><i class="fa fa-th-list" style="padding-right: 5px"></i>Список</a>
+                                                    <a href="#"><i class="fa fa-table" style="padding-right: 5px"></i>Таблица</a>
+                                                </div>
+                                            </div>
+                                            <!-- Company profile catalogs -->
+                                            <div class="col-xs-12 collapse" id="collapseExample1">
+                                                <!--  Table view -->
+                                                <div class="company-catalog">
+                                                    <div class="row">
+                                                        <!-- T1 -->
+                                                        <div class="col-xs-3">
+                                                            <div class="company-catalog-table-item text-center">
+                                                                <div class="company-catalog-table-item-logo">
+                                                                    <i class="fa fa-yelp fa-3x text-muted"></i>
+                                                                </div>
+                                                                <div class="company-catalog-table-item-title">
+                                                                    <a href="#">Вентиляция</a>
+                                                                </div>
+                                                                <table class="text-left text-muted">
+                                                                    <tr>
+                                                                        <td>Товаров</td>
+                                                                        <td>5</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Материалов</td>
+                                                                        <td>17</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Услуг</td>
+                                                                        <td>2</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <!-- T2 -->
+                                                        <div class="col-xs-3">
+                                                            <div class="company-catalog-table-item text-center">
+                                                                <div class="company-catalog-table-item-logo">
+                                                                    <i class="fa fa-industry fa-3x text-muted"></i>
+                                                                </div>
+                                                                <div class="company-catalog-table-item-title">
+                                                                    <a href="#">Строительство инженерных сооружений</a>
+                                                                </div>
+                                                                <table class="text-left text-muted">
+                                                                    <tr>
+                                                                        <td>Товаров</td>
+                                                                        <td>5</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Материалов</td>
+                                                                        <td>17</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Услуг</td>
+                                                                        <td>2</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <!-- T3 -->
+                                                        <div class="col-xs-3">
+                                                            <div class="company-catalog-table-item text-center">
+                                                                <div class="company-catalog-table-item-logo">
+                                                                    <i class="fa fa-fire-extinguisher fa-3x text-muted"></i>
+                                                                </div>
+                                                                <div class="company-catalog-table-item-title">
+                                                                    <a href="#">Противопожарное оборудование</a>
+                                                                </div>
+                                                                <table class="text-left text-muted">
+                                                                    <tr>
+                                                                        <td>Товаров</td>
+                                                                        <td>5</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Материалов</td>
+                                                                        <td>17</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Услуг</td>
+                                                                        <td>2</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <!-- T4 -->
+                                                        <div class="col-xs-3">
+                                                            <div class="company-catalog-table-item text-center">
+                                                                <div class="company-catalog-table-item-logo">
+                                                                    <i class="fa fa-gavel fa-3x text-muted"></i>
+                                                                </div>
+                                                                <div class="company-catalog-table-item-title">
+                                                                    <a href="#">Юриспруденция</a>
+                                                                </div>
+                                                                <table class="text-left text-muted">
+                                                                    <tr>
+                                                                        <td>Товаров</td>
+                                                                        <td>5</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Материалов</td>
+                                                                        <td>17</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Услуг</td>
+                                                                        <td>2</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--  List view -->
+                                                <div class="company-catalog">
+                                                    <div class="row">
+                                                        <!-- L1 -->
+                                                        <div class="col-xs-12">
+                                                            <div class="company-catalog-list-item">
+                                                                <div class="col-xs-2">
+                                                                    <div class="company-catalog-list-item-logo text-center">
+                                                                        <i class="fa fa-black-tie fa-3x text-muted"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-10">
+                                                                    <div class="company-catalog-list-item-title">
+                                                                        <a href="#">Делопроизводство</a>
+                                                                    </div>
+                                                                    <ul class="list-inline text-muted">
+                                                                        <li><p>Товаров 5</p></li>
+                                                                        <li><p>Материалов 17</p></li>
+                                                                        <li><p>Услуг 2</p></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- L2 -->
+                                                        <div class="col-xs-12">
+                                                            <div class="company-catalog-list-item">
+                                                                <div class="col-xs-2">
+                                                                    <div class="company-catalog-list-item-logo text-center">
+                                                                        <i class="fa fa-building fa-3x text-muted"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-10">
+                                                                    <div class="company-catalog-list-item-title">
+                                                                        <a href="#">Строительство</a>
+                                                                    </div>
+                                                                    <ul class="list-inline text-muted">
+                                                                        <li><p>Товаров 5</p></li>
+                                                                        <li><p>Материалов 17</p></li>
+                                                                        <li><p>Услуг 2</p></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- L3 -->
+                                                        <div class="col-xs-12">
+                                                            <div class="company-catalog-list-item">
+                                                                <div class="col-xs-2">
+                                                                    <div class="company-catalog-list-item-logo text-center">
+                                                                        <i class="fa fa-tint fa-3x text-muted"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-10">
+                                                                    <div class="company-catalog-list-item-title">
+                                                                        <a href="#">Нефтепроизводство</a>
+                                                                    </div>
+                                                                    <ul class="list-inline text-muted">
+                                                                        <li><p>Товаров 5</p></li>
+                                                                        <li><p>Материалов 17</p></li>
+                                                                        <li><p>Услуг 2</p></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
