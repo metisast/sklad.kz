@@ -14,3 +14,28 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
+/*
+|--------------------------------------------------------------------------
+| Profile Routes
+|--------------------------------------------------------------------------
+|
+*/
+Route::group(['middleware' => 'auth'], function(){
+
+    Route::group(['as' => 'profile::'], function(){
+        /* Index profile page */
+        Route::get('/profile',[
+            'as' => 'index',
+            'uses' => 'ProfileController@index'
+        ]);
+    });
+
+    /* Create company REST*/
+    Route::resource('company', 'CompanyController');
+
+});

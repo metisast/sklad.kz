@@ -1,45 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layouts.boot')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
-        </div>
-    </body>
-</html>
+@section('content')
+    {{-- Include Best providers --}}
+    @include('includes.main.bestProviders')
+    {{-- Include Best adverts --}}
+    @include('includes.main.bestAdverts')
+    {{-- Include New companies --}}
+    @include('includes.main.newCompanies')
+    {{-- Include All companies --}}
+    @include('includes.main.allCompanies')
+    {{-- Include New adverts --}}
+    @include('includes.main.newAdverts')
+@endsection
