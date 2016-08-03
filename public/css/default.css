@@ -147,7 +147,17 @@ input[type=checkbox], input[type=radio]{
 }
 /* Bread crumb */
 .breadcrumb{
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     background: #fff;
     font-size: 12px;
+    padding: 0 0 0 15px;
+}
+/* Forms */
+.form-group p{
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+/* Text */
+.text-warning{
+    color: #ff9800;
 }

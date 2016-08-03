@@ -9,7 +9,13 @@
 
 .form-control-feedback{
     margin-top: 7px;
-    margin-right: 5px;
+    margin-right: 10px;
+}
+.add-link{
+    font-size: 12px;
+}
+.add-link .fa{
+    padding-right: 5px;
 }
 /* Header */
 #header{

@@ -17,22 +17,31 @@
                     <form action="{{route('company.store')}}" method="post" class="form-horizontal">
                         {{ csrf_field() }}
                         <div class="col-xs-12">
-                            <div class="form-group">
+                            <div class="form-group @if($errors->has('short_name')) has-error @endif">
                                 <div class="col-xs-4">
                                     <input type="text" name="short_name" value="{{ old('short_name') }}" class="form-control" placeholder="Краткое наименование">
+                                    @if($errors->has('short_name'))
+                                        <label class="control-label">{{ $errors->first('short_name') }}</label>
+                                    @endif
                                 </div>
                                 <div class="col-xs-8">
-                                    <p>Оно будет отображаться на сайте!</p>
+                                    <p class="text-warning">Оно будет отображаться на сайте!</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xs-12">
                             <div class="form-group">
-                                <div class="col-xs-4">
+                                <div class="col-xs-4 @if($errors->has('opf_id')) has-error @endif">
                                     {!! Helpers::select($opfs, 'short_name', old('opf_id'), 'Организационно правовая форма', ['class' => 'form-control', 'id' => 'opf', 'name' => 'opf_id']) !!}
+                                    @if($errors->has('opf_id'))
+                                        <label class="control-label">{{ $errors->first('opf_id') }}</label>
+                                    @endif
                                 </div>
-                                <div class="form-input col-xs-4">
+                                <div class="col-xs-4 @if($errors->has('name')) has-error @endif">
                                     <input type="text" class="form-control" value="{{ old('name') }}" name="name" placeholder="Полное наименование">
+                                    @if($errors->has('name'))
+                                        <label class="control-label">{{ $errors->first('name') }}</label>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -56,8 +65,8 @@
                                         </select>
                                     </div>
                                     <div class="col-xs-12">
-                                        <a href="#" class="add-input">
-                                            <i class="fa fa-plus"></i> Добавить еще категорию
+                                        <a href="#" class="add-link">
+                                            <i class="fa fa-plus"></i>Добавить еще категорию
                                         </a>
                                     </div>
                                 </div>
@@ -108,7 +117,7 @@
                                             <input type="text" class="form-control" name="address" placeholder="Адрес">
                                             <span class="fa fa-map-marker form-control-feedback" aria-hidden="true"></span>
                                         </div>
-                                        <div class="col-xs-4">
+                                        <div class="col-xs-4" style="padding-top: 5px;">
                                             <a href="#">Указать на карте</a>
                                         </div>
                                     </div>
@@ -121,8 +130,8 @@
                                     <div class="col-xs-4">
                                         <input type="text" name="phone1" class="form-control" placeholder="Номер телефона">
                                         <span class="fa fa-phone form-control-feedback" aria-hidden="true"></span>
-                                        <a href="#" class="add-input">
-                                            <i class="fa fa-plus"></i> Добавить еще телефон
+                                        <a href="#" class="add-link">
+                                            <i class="fa fa-plus"></i>Добавить еще телефон
                                         </a>
                                     </div>
                                     <div class="col-xs-3">
@@ -134,8 +143,8 @@
                                     <div class="col-xs-4">
                                         <input type="text" class="form-control" name="email1" placeholder="Е-мэйл">
                                         <span class="fa fa-envelope form-control-feedback" aria-hidden="true"></span>
-                                        <a href="#" class="add-input">
-                                            <i class="fa fa-plus"></i> Добавить еще емэйл
+                                        <a href="#" class="add-link">
+                                            <i class="fa fa-plus"></i>Добавить еще емэйл
                                         </a>
                                     </div>
                                     <div class="col-xs-3">
@@ -147,8 +156,8 @@
                                     <div class="col-xs-4">
                                         <input type="text" class="form-control" name="web1" placeholder="Веб-сайт">
                                         <span class="fa fa-globe form-control-feedback" aria-hidden="true"></span>
-                                        <a href="#" class="add-input">
-                                            <i class="fa fa-plus"></i> Добавить еще сайт
+                                        <a href="#" class="add-link">
+                                            <i class="fa fa-plus"></i>Добавить еще сайт
                                         </a>
                                     </div>
                                     <div class="col-xs-3">
@@ -160,8 +169,8 @@
                                     <div class="col-xs-4">
                                         <input type="text" class="form-control" name="address1" placeholder="Адрес">
                                         <span class="fa fa-map-marker form-control-feedback" aria-hidden="true"></span>
-                                        <a href="#" class="add-input">
-                                            <i class="fa fa-plus"></i> Добавить еще адрес
+                                        <a href="#" class="add-link">
+                                            <i class="fa fa-plus"></i>Добавить еще адрес
                                         </a>
                                     </div>
                                     <div class="col-xs-3">

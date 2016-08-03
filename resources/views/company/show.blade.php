@@ -1,13 +1,17 @@
 {{-- Show companies --}}
-@extends('layouts.auth')
+@extends('layouts.boot')
 
 @section('bread_crumbs')
-    <div class="bread-crumbs">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item active">
-                <a href="#">{{ $company->opf->short_name.' '.$company->name }}</a>
-            </li>
-        </ol>
+    <div class="row">
+        <div class="col-xs-9">
+            <div class="bread-crumbs">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active">
+                        <a href="#">{{ $company->opf->short_name.' '.$company->name }}</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
     </div>
 @endsection
 
@@ -16,28 +20,35 @@
         <!-- Show company screen start -->
         <div id="company">
             <div id="company-screen">
-                <div class="col-xs-12">
-                    <div class="company-screen">
-                        <div class="col-xs-6 company-screen-name">
-                            <h3>{{ $company->short_name }}</h3>
-                            <h4>Здесь строится счастье!</h4>
-                        </div>
-                        <div class="col-xs-6 text-right company-screen-info">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="company-screen">
                             <div class="col-xs-12">
-                                <h5>Строительство, Вентиляция, Отопление</h5>
+                                <div class="company-screen-img">
+                                    <img src="/img/company-bg.jpg" alt="">
+                                </div>
                             </div>
-                            <div class="col-xs-push-3 col-xs-12 text-center company-screen-info-count">
-                                <div class="col-xs-3">
-                                    <h3>15</h3>
-                                    <h4>Товаров</h4>
+                            <div class="col-xs-5 company-screen-name">
+                                <h3>{{ $company->short_name }}</h3>
+                                <h4>Здесь строится счастье!</h4>
+                            </div>
+                            <div class="col-xs-7 text-right company-screen-info">
+                                <div class="col-xs-12">
+                                    <h5>Строительство, Вентиляция, Отопление</h5>
                                 </div>
-                                <div class="col-xs-3">
-                                    <h3>10</h3>
-                                    <h4>Материалов</h4>
-                                </div>
-                                <div class="col-xs-3">
-                                    <h3>3</h3>
-                                    <h4>Услуги</h4>
+                                <div class="col-xs-push-3 col-xs-12 text-center company-screen-info-count">
+                                    <div class="col-xs-3">
+                                        <h3>15</h3>
+                                        <h4>Товаров</h4>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <h3>10</h3>
+                                        <h4>Материалов</h4>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <h3>3</h3>
+                                        <h4>Услуги</h4>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -46,7 +57,7 @@
             </div><!-- Show company screen end -->
 
             <!-- Show company info start -->
-            <div class="col-xs-9">
+            <div class="col-xs-12">
                 <div id="company-info">
                     <div class="row">
                         <div class="company-info">
@@ -396,10 +407,5 @@
                     </div>
                 </div>
             </div><!-- Show company info end -->
-
-            <!-- Side bar -->
-            <div class="col-xs-3">
-                @include('includes.guest.rightSide')
-            </div>
         </div>
 @endsection
