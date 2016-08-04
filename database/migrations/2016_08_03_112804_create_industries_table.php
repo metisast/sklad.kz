@@ -14,7 +14,6 @@ class CreateIndustriesTable extends Migration
     {
         Schema::create('industries', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('main_category_id');
             $table->string('name', 255);
             $table->timestamps();
         });

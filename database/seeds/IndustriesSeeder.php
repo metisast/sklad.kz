@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class MainCatalogSeeder extends Seeder
+class IndustriesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,31 +11,32 @@ class MainCatalogSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('main_categories')->insert([
+        DB::table('industries')->insert([
             [
-                'name' => 'Товары',
-                'styles' => 'first',
+                'name' => 'Реклама',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ],
             [
-                'name' => 'Материалы',
-                'styles' => 'second',
+                'name' => 'Связь и коммуникации',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ],
             [
-                'name' => 'Услуги',
-                'styles' => 'third',
+                'name' => 'Сельское хозяйство',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ],
             [
-                'name' => 'Компании',
-                'styles' => 'fourth',
+                'name' => 'Социальное обеспечение',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
-            ]
+            ],
+            [
+                'name' => 'Строительство',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ],
         ]);
     }
 }

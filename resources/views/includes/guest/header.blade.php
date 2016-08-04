@@ -13,10 +13,10 @@
     <div class="auth-links text-right">
         <ul class="nav nav-pills navbar-right">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="z-index: 2">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="z-index: 4">
                     <i class="fa fa-map-marker" style="padding-right: 5px;"></i>Ваш регион<i class="fa fa-angle-down" style="padding-left: 5px;"></i>
                 </a>
-                <div class="dropdown-menu" id="top-region" style="z-index: 1">
+                <div class="dropdown-menu" id="top-region" style="z-index: 3">
                     <div class="col-xs-6">
                         <ul>
                             <li><a href="#">Астана</a></li>

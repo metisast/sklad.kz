@@ -11,6 +11,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(OpfsSeeder::class);
+         /*$this->call(MainCatalogSeeder::class);
+         $this->call(IndustriesSeeder::class);
+         $this->call(CategoriesSeeder::class);
+         $this->call(ProductsSeeder::class);
+         $this->call(OpfsSeeder::class);*/
     }
 }

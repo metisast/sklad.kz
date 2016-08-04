@@ -15,6 +15,7 @@ class CreateMainCategoryTable extends Migration
         Schema::create('main_categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 255);
+            $table->string('styles', 255);
             $table->timestamps();
         });
     }

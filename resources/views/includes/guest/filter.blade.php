@@ -5,10 +5,9 @@
             <!-- Tabs start-->
             <div class="col-xs-12">
                 <ul class="tabs__caption nav-pills" data-show="false">
-                    <li class="tabs-first">Товары</li>
-                    <li class="tabs-second">Материалы</li>
-                    <li class="tabs-third">Услуги</li>
-                    <li class="tabs-fourth">Компании</li>
+                    @foreach($main_categories as $main)
+                        <li class="tabs-{{ $main->styles }}">{{ $main->name }}</li>
+                    @endforeach
                 </ul>
             </div>
             <div class="col-xs-9">

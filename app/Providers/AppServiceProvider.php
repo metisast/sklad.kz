@@ -13,7 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer(
+            'includes.guest.filter', 'App\Http\Composers\FilterComposer'
+        );
     }
 
     /**
