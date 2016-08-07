@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Добро пожаловать</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Include styles -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.min.css">

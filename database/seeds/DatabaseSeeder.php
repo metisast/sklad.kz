@@ -15,6 +15,10 @@ class DatabaseSeeder extends Seeder
          $this->call(IndustriesSeeder::class);
          $this->call(CategoriesSeeder::class);
          $this->call(ProductsSeeder::class);
-         $this->call(OpfsSeeder::class);*/
+         $this->call(OpfsSeeder::class);
+         $this->call(IndustryMainCatalogRelationSeeder::class);
+         $this->call(CategoryIndustryRelationSeeder::class);
+         $this->call(CategoryProductRelationSeeder::class);
+         */
     }
 }

@@ -133,4 +133,16 @@
     height: 40px;
     color: #333;
 }
+.filter-layer button{
+    margin: 10px 0;
+}
+.filter-open{
+    display: block;
+}
+.filter-layer-item .text-muted:hover, .filter-layer-item .text-muted:focus{
+    color: #777;
+    cursor: default;
+    border-bottom: none;
+    text-decoration: none;
+}
 /* Filter right layer */

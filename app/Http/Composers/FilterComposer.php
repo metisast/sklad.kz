@@ -21,6 +21,10 @@ class FilterComposer{
      */
     public function compose(View $view)
     {
-        $view->with('main_categories', $this->main_categories->getMainCategories());
+        $test = $this->main_categories->find(1)->industries()->get();
+        //dd($test[0]->name);
+        $view
+            ->with('main_categories', $this->main_categories->getMainCategories())
+            ->with('test', $test);
     }
 }

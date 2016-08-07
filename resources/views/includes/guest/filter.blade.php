@@ -23,43 +23,18 @@
                                     </div>
                                     <div class="col-xs-10">
                                         <div class="filter-layer-list">
-                                            <div class="filter-layer-item more-down"><a href="#" >Выбрать отрасль <i class="fa fa-angle-down"></i></a></div>
+                                            <div class="filter-layer-item more-down active-down">
+                                                <a href="#" data-status="true">Выбрать отрасль</a> <i class="fa fa-angle-down"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="filter-sub">
-                                    <div class="col-xs-4">
-                                        <a href="#">Геодезия</a>
-                                        <a href="#">Геология и разведка недр</a>
-                                        <a href="#">Гидрометеорология</a>
-                                        <a href="#">Жилищно-коммунальное хозяйство</a>
-                                        <a href="#">Здравоохранение и медицина</a>
-                                        <a href="#">Инженерия</a>
-                                        <a href="#">Информационные технологии</a>
-                                        <a href="#">Транспорт</a>
-                                        <a href="#">Тяжелая промышленность</a>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <a href="#">Консалтинг</a>
-                                        <a href="#">Культура и искусство</a>
-                                        <a href="#">Легкая промышленность</a>
-                                        <a href="#">Логистика</a>
-                                        <a href="#">Наука</a>
-                                        <a href="#">Образование и обучение</a>
-                                        <a href="#">Пищевая промышленность</a>
-                                        <a href="#">Физ. культура и спорт</a>
-                                        <a href="#">Финансы</a>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <a href="#">Реклама</a>
-                                        <a href="#">Связь и коммуникации</a>
-                                        <a href="#">Сельское хозяйство</a>
-                                        <a href="#">Социальное обеспечение</a>
-                                        <a href="#">Страхование</a>
-                                        <a href="#">Строительство</a>
-                                        <a href="#">Торговля</a>
-                                        <a href="#">Юриспруденция и право</a>
-                                    </div>
+                                <div class="filter-sub filter-open" id="filter-industry">
+                                    @foreach($test as $t)
+                                        <div class="col-xs-4">
+                                            <a href="#" class="filter-sub-link" data-type="industry" data-id="{{ $t->id }}">{{ $t->name }}</a>
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="filter-layer">
@@ -70,28 +45,11 @@
                                         </div>
                                     </div>
                                     <div class="col-xs-10">
-                                        <div class="filter-layer-list ">
-                                            <div class="filter-layer-item more-down">
-                                                <a href="#" >Выбрать категорию <i class="fa fa-angle-down"></i></a>
+                                        <div class="filter-layer-list">
+                                            <div class="filter-layer-item more-down active-down">
+                                                <a href="#" class="text-muted" data-status="true" data-hidden="Выбрать категорию">Выбрать категорию</a> <i class="fa fa-angle-down"></i>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="filter-sub">
-                                    <div class="col-xs-4">
-                                        <a href="#">Вентиляторы</a>
-                                        <a href="#">Электродвигатели</a>
-                                        <a href="#">Насосы</a>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <a href="#">Вентиляторы</a>
-                                        <a href="#">Электродвигатели</a>
-                                        <a href="#">Насосы</a>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <a href="#">Вентиляторы</a>
-                                        <a href="#">Электродвигатели</a>
-                                        <a href="#">Насосы</a>
                                     </div>
                                 </div>
                             </div>
@@ -104,33 +62,10 @@
                                     </div>
                                     <div class="col-xs-10">
                                         <div class="filter-layer-list left">
-                                            <div class="filter-layer-item more-down">
-                                                <a href="#" >Выбрать тип товара <i class="fa fa-angle-down"></i></a>
+                                            <div class="filter-layer-item more-down active-down">
+                                                <a href="#" class="text-muted" data-status="true" data-hidden="Выбрать тип товара">Выбрать тип товара</a> <i class="fa fa-angle-down"></i>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="filter-sub">
-                                    <div class="col-xs-4">
-                                        <a href="#">Приточная установка</a>
-                                        <a href="#">Вентиляторы канальные</a>
-                                        <a href="#">Вентиляторы осевые</a>
-                                        <a href="#">Вентиляторы радиальные</a>
-                                        <a href="#">Вентиляторы крышные</a>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <a href="#">Воздуховоды и фасонные части</a>
-                                        <a href="#">Воздуховоды и фасонные части</a>
-                                        <a href="#">Детали систем вентиляции</a>
-                                        <a href="#">Клапаны</a>
-                                        <a href="#">Вентиляторы дымоудаления</a>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <a href="#">Тепловентиляционное оборудование</a>
-                                        <a href="#">Щиты управления</a>
-                                        <a href="#">Дымосос</a>
-                                        <a href="#">Воздухораспределительные устройства</a>
-                                        <a href="#">Пылеуловители и фильтры</a>
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +74,7 @@
                                     <div class="col-xs-12">
                                         <div class="filter-layer-list left">
                                             <div class="filter-layer-item more-down">
-                                                <a href="#" >Расширенный поиск  <i class="fa fa-angle-down"></i></a>
+                                                <a href="#" class="text-muted" data-status="true">Расширенный поиск  <i class="fa fa-angle-down"></i></a>
                                             </div>
                                         </div>
                                     </div>
