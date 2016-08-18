@@ -21,6 +21,7 @@
     color: #007AFF;
     line-height: 28px;
     border-bottom: 3px solid transparent;
+    z-index: 5;
 }
 .tabs__caption li:hover{
     padding: 0 30px;
@@ -87,26 +88,29 @@
     margin-top: 15px;
 }
 .filter-layer-item{
-    float: left;
-    margin-right: 30px;
-    line-height: 16px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.filter-layer-item > a{
     position: relative;
+    padding: 10px;
     z-index: 3;
-}
-.filter-layer-item.more-down > a{
+    display: inline-block;
     text-decoration: none;
 }
-.filter-layer-item.more-down > a:hover{
+.filter-layer-item > a:hover span{
     border-bottom: 1px dashed #007AFF;
-    text-decoration: none;
 }
-.filter-layer-item.more-down > a i{
+.filter-layer-item > a span{
+    border-bottom: 1px dashed transparent;
+}
+.filter-layer-item > i{
     line-height: 10px;
+    color: #007AFF;
+    padding-left: 10px;
 }
-.active-down{
-    padding: 5px 5px 13px 0px;
-    background: #fff;
-    margin-top: -5px;
+.filter-layer-item .text-muted:hover{
+    border-bottom: none;
 }
 .active-filter-item{
     color: #333;
@@ -145,4 +149,8 @@
     border-bottom: none;
     text-decoration: none;
 }
+.selected{
+    border: 1px dashed #007AFF;
+}
+
 /* Filter right layer */

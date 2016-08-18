@@ -12,4 +12,10 @@ class Product extends Model
     {
         return $this->belongsToMany('App\Models\Category');
     }
+
+    /* Queries */
+    public function getProducts()
+    {
+        return parent::all();
+    }
 }

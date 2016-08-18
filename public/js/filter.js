@@ -17,7 +17,7 @@
         var textMuted = $('.filter-layer-item .text-muted');
 
         /* Filter show */
-        tabCaptionItems.click(function(){
+        /*tabCaptionItems.click(function(){
             var show = tabCaptionItems.data('show');
             if(show){
                 filterLeftBlock.hide();
@@ -30,32 +30,27 @@
                 tabCaptionItems.data('show', true);
             }
 
-        });
+        });*/
 
         /* Filter sub down */
         function filterSubDown(list){
             var status = list.data('status');
             var filterSub = list.closest('div.filter-layer').find('.filter-sub');
             if(!status){
-                //list.addClass('active-down');
                 filterSub.css({
                     display: 'block'
                 });
                 list.data('status', true);
             }
             else{
-                //list.removeClass('active-down');
                 filterSub.hide();
                 list.data('status', false);
-               //console.log('t');
             }
-            //console.log(status);
         }
 
         moreDown.click(function(e){
             e.preventDefault();
             filterSubDown($(this));
-            //console.log($(this));
         });
 
         /* Activate item */
@@ -63,7 +58,8 @@
             e.preventDefault();
             var text = $(this).text();
             var dataId = $(this).data('id');
-            $(this).parent().parent().parent().find('.filter-layer-list a').text(text).attr('data-id', dataId);
+            $(this).parent().parent().parent().find('.filter-layer-list a span').text(text).attr('data-id', dataId);
+            $(this).parent().parent().parent().find('.filter-layer-item').addClass('selected');
             filterSubDown($(this).parent().parent().parent().find(moreDown));
         });
 
@@ -78,7 +74,7 @@
             var context = $(this);
             var catFilter = context.parents('.filter-layer').next();
             var defaultText = catFilter.find('a').data('hidden');
-            var a = catFilter.find('a');
+            var a = catFilter.find('a span');
             /* Ajax */
             $.ajax({
                 url: '/xhr/filter/category',
@@ -92,8 +88,8 @@
 
                     /* Reset product type */
                     var productType = $(document).find('#filter-product-type');
-                    var productTypeTitle = productType.parent().find('.filter-layer-item a');
-                    productTypeTitle.text(productTypeTitle.data('hidden'));
+                    var defaultProductTypeText = productType.parent().find('.filter-layer-item a').data('hidden');
+                    productType.parent().find('.filter-layer-item a span').text(defaultProductTypeText);
                     productType.remove();
                 },
                 success: function(data){
@@ -118,7 +114,7 @@
                 dataType: 'html',
                 data:{cat_id: $(this).data('id')},
                 beforeSend: function(){
-                    a.text(defaultText);
+                    a.find('span').text(defaultText);
                     a.data('status', true);
                 },
                 success: function(data){

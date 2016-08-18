@@ -17,4 +17,10 @@ class Industry extends Model
     {
         return $this->belongsToMany('App\Models\Category');
     }
+
+    /* Queries */
+    public function getIndustries()
+    {
+        return parent::all();
+    }
 }

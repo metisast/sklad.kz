@@ -96,6 +96,21 @@ input[type=checkbox], input[type=radio]{
     padding-left: 30px;
     padding-right: 30px;
 }
+.btn.btn-primary:hover, .btn.btn-success:hover{
+    border: 1px solid transparent;
+}
+.btn.btn-primary:active, .btn.btn-success:active{
+    border: 1px solid transparent;
+}
+.btn.btn-primary:focus, .btn.btn-success:focus{
+    border: 1px solid transparent;
+}
+button:active, button:focus {
+    outline: none !important;
+}
+button::-moz-focus-inner {
+    border: 0;
+}
 .btn-yellow{
     border: 1px solid #ff9800;
     background: #fff;
@@ -115,8 +130,8 @@ input[type=checkbox], input[type=radio]{
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    width: 110px;
-    height: 110px;
+    width: 130px;
+    height: 130px;
     display: block;
     text-align: center;
     border: 1px solid #e0e0e0;
@@ -124,7 +139,7 @@ input[type=checkbox], input[type=radio]{
     margin-bottom: 15px;
 }
 .btn-file .fa-plus{
-    margin-top: 30px;
+    margin-top: 35px;
 }
 .btn-file p{
     padding: 0 20px;

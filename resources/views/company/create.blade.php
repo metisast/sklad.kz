@@ -198,6 +198,7 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     <button class="btn btn-primary">Добавить</button>
+                                    <a href="{{ route('profile::index') }}">Отмена</a>
                                 </div>
                             </div>
                         </div>

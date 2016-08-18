@@ -389,6 +389,9 @@
     height: 50px;
     padding-top: 10px;
 }
+.company-success-btn a{
+    padding-left: 15px;
+}
 #company-screen{
 
 }
@@ -571,7 +574,71 @@
     margin-top: 15px;
     margin-bottom: 5px;
 }
-
+.company-title-info h5{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.company-img-block{
+    float: left;
+    margin-right: 15px;
+}
+.form-space{
+    padding-top: 15px;
+}
+/* Spec */
+.spec .btn{
+    width: 110px;
+    height: 40px;
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 15px;
+    background: #aaa;
+    border: transparent;
+    text-align: center;
+    padding: 5px;
+    transition: all 0.2s ease;
+}
+.spec .btn:hover.btn-discount{
+    background: #4caf50;
+}
+.spec .btn:hover.btn-sale{
+    background: #ff9800;
+}
+.spec .btn:hover.btn-bonus{
+    background: #f44336;
+}
+.spec .btn.active{
+    text-align: left;
+    padding-left: 10px;
+}
+.spec .btn.btn-discount.active{
+    background: #4caf50;
+    box-shadow: none;
+}
+.spec .btn p{
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 11px;
+}
+.spec-input p{
+    font-size: 11px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.spec-input input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: right;
+    padding: 2px 5px;
+}
+.spec-input input:focus{
+    outline: none;
+}
+.spec-close{
+    margin-top: 16px;
+}
 
 #form-auth{
     margin-top: 70px;

@@ -38,7 +38,9 @@ Route::group(['middleware' => 'auth'], function(){
         ]);
     });
 
-    /* Create company REST*/
+    /* Company REST*/
     Route::resource('company', 'CompanyController');
+    /* AD REST*/
+    Route::resource('ad', 'AdController');
 
 });

@@ -5,6 +5,8 @@
 			$(this)
 				.addClass('active').siblings().removeClass('active')
 				.closest('div#filter').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+			$('.filter-left').show();
+			$('.filter-right').show();
 		});
 	});
 

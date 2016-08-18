@@ -67,7 +67,7 @@
         </ul>
         <div class="col-xs-12 add-advert">
             <div class="row">
-                <a href="#" class="btn btn-yellow"><i class="fa fa-plus"></i> Подать объявление</a>
+                <a href="{{ route('ad.create') }}" class="btn btn-yellow"><i class="fa fa-plus"></i> Подать объявление</a>
             </div>
         </div>
     </div><!-- Auth links end -->

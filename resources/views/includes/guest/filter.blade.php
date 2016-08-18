@@ -16,15 +16,13 @@
                         <div class="tabs__content  active">
                             <div class="filter-layer">
                                 <div class="row">
-                                    <div class="col-xs-2">
-                                        <div class="filter-layer-title">
-                                            Отрасль:
-                                        </div>
-                                    </div>
                                     <div class="col-xs-10">
                                         <div class="filter-layer-list">
-                                            <div class="filter-layer-item more-down active-down">
-                                                <a href="#" data-status="true">Выбрать отрасль</a> <i class="fa fa-angle-down"></i>
+                                            <div class="filter-layer-item more-down">
+                                                <a href="#" data-status="true">
+                                                    <span>Выбрать отрасль</span>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -39,15 +37,13 @@
                             </div>
                             <div class="filter-layer">
                                 <div class="row">
-                                    <div class="col-xs-2">
-                                        <div class="filter-layer-title">
-                                            Категория:
-                                        </div>
-                                    </div>
                                     <div class="col-xs-10">
                                         <div class="filter-layer-list">
-                                            <div class="filter-layer-item more-down active-down">
-                                                <a href="#" class="text-muted" data-status="true" data-hidden="Выбрать категорию">Выбрать категорию</a> <i class="fa fa-angle-down"></i>
+                                            <div class="filter-layer-item more-down">
+                                                <a href="#" class="text-muted" data-status="true" data-hidden="Выбрать категорию">
+                                                    <span>Выбрать категорию</span>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -55,15 +51,13 @@
                             </div>
                             <div class="filter-layer">
                                 <div class="row">
-                                    <div class="col-xs-2">
-                                        <div class="filter-layer-title left">
-                                            Тип товара:
-                                        </div>
-                                    </div>
                                     <div class="col-xs-10">
                                         <div class="filter-layer-list left">
-                                            <div class="filter-layer-item more-down active-down">
-                                                <a href="#" class="text-muted" data-status="true" data-hidden="Выбрать тип товара">Выбрать тип товара</a> <i class="fa fa-angle-down"></i>
+                                            <div class="filter-layer-item more-down">
+                                                <a href="#" class="text-muted" data-status="true" data-hidden="Выбрать тип товара">
+                                                    <span>Выбрать тип товара</span>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

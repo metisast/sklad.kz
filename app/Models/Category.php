@@ -18,4 +18,10 @@ class Category extends Model
     {
         return $this->belongsToMany('App\Models\Product');
     }
+
+    /* Queries */
+    public function getCategories()
+    {
+        return parent::all();
+    }
 }
