@@ -189,8 +189,10 @@
                         <div class="col-xs-12">
                             <ul class="nav">
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="z-index: 2">
-                                        <i class="fa fa-map-marker"></i> Выберите город <i class="fa fa-angle-down"></i>
+                                    <a href="#" class="dropdown-toggle dashed" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="z-index: 2">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span>Выберите город</span>
+                                        <i class="fa fa-angle-down"></i>
                                     </a>
                                     <div class="dropdown-menu" id="top-region-cities" style="z-index: 1">
                                         <div class="col-xs-12">

@@ -8,9 +8,6 @@
                     <div class="col-xs-6">
                         <h4><i class="fa fa-diamond"></i> Самые популярные</h4>
                     </div>
-                    <div class="col-xs-6 text-right">
-                        <p>в этом месяце</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -348,7 +345,7 @@
         </div>
         <!-- Best providers footer -->
         <div class="best-block-footer text-right">
-            <a href="#">Все популярные</a>
+            <a href="#">Все популярные в этом месяце</a>
         </div>
     </div>
 </div><!-- Best adverts end -->

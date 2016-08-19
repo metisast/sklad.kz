@@ -60,7 +60,10 @@
                             <div class="profile-cash">
                                 <div class="profile-cash-block">
                                     <h4>на счету: 5 000 тенге</h4>
-                                    <a href="#"><i class="fa fa-credit-card"></i> Пополнить кошелек</a>
+                                    <i class="fa fa-credit-card"></i>
+                                    <a href="#">
+                                        <span>Пополнить кошелек</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>

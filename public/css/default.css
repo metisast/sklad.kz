@@ -16,11 +16,24 @@ a:hover, a:active, a:focus{
     text-decoration: underline;
     color: #007AFF;
 }
+/* Special links */
+a.dashed:hover{
+    text-decoration: none !important;
+}
+a.dashed:hover span, a.dashed:active span, a.dashed:focus span{
+    border-bottom: 1px dashed #007AFF;
+}
 a.btn{
     font-size: 13px;
 }
 p{
     font-size: 13px;
+}
+textarea{
+    resize: none;
+}
+label{
+    font-weight: normal;
 }
 .btn:active{
     outline: none;
@@ -58,11 +71,12 @@ p{
 .navbar-right .dropdown-menu{
     right: 0;
 }
-.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover{
     background: transparent;
 }
 .nav>li>a:hover, .nav>li>a:focus{
     background: transparent;
+    text-decoration: underline;
 }
 .checkbox label{
     font-size: 13px;

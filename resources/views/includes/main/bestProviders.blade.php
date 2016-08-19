@@ -8,9 +8,6 @@
                     <div class="col-xs-6">
                         <h4><i class="fa fa-rocket"></i> Лучшие поставщики</h4>
                     </div>
-                    <div class="col-xs-6 text-right">
-                        <p>в этом месяце</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -137,7 +134,7 @@
         <div class="best-block-footer text-right">
             <div class="row">
                 <div class="col-xs-12">
-                    <a href="#">Все лучшие</a>
+                    <a href="#">Все лучшие в этом месяце</a>
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@
         <!-- New companies title -->
         <div class="best-block-title">
             <div class="best-block-name">
-                <h3 class="left"><i class="fa fa-newspaper-o"></i> Новые объявления</h3>
+                <h4><i class="fa fa-newspaper-o"></i> Новые объявления</h4>
             </div>
         </div>
         <!-- New companies content -->

@@ -109,7 +109,7 @@
     color: #007AFF;
     padding-left: 10px;
 }
-.filter-layer-item .text-muted:hover{
+.filter-layer-item .text-muted:hover span{
     border-bottom: none;
 }
 .active-filter-item{

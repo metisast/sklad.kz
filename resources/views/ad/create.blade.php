@@ -15,31 +15,47 @@
                     <div class="col-xs-12">
                         <div class="company-form">
                             <!-- Form company start -->
-                            <form action="{{route('ad.store')}}" method="post" class="form-horizontal">
+                            <form action="{{route('ad.store')}}" method="post" class="form-horizontal" id="ad">
                                 {{ csrf_field() }}
                                 <div class="col-xs-12">
                                     <div class="form-group @if($errors->has('short_name')) has-error @endif">
-                                        <div class="col-xs-4">
-                                            {!! Helpers::select($mainCategories, 'name', old('main_category'), 'Тип объявления', ['class' => 'form-control', 'id' => 'main_category', 'name' => 'main_category']) !!}
+                                        <div class="col-md-2">
+                                            <p class="input-description">Тип объявления</p>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default active">
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" checked>Товары
+                                                </label>
+                                                <label class="btn btn-default">
+                                                    <input type="radio" name="options" id="option2" autocomplete="off">Материалы
+                                                </label>
+                                                <label class="btn btn-default">
+                                                    <input type="radio" name="options" id="option3" autocomplete="off">Услуги
+                                                </label>
+                                            </div>
                                             @if($errors->has('main_category'))
                                                 <label class="control-label">{{ $errors->first('main_category') }}</label>
                                             @endif
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xs-12">
-                                    <div class="form-group">
-                                        <div class="col-xs-4 @if($errors->has('industry_id')) has-error @endif">
-                                            {!! Helpers::select($industries, 'name', old('industry_id'), 'Отрасль', ['class' => 'form-control', 'id' => 'industry_id', 'name' => 'industry_id']) !!}
-                                            @if($errors->has('category_id'))
-                                                <label class="control-label">{{ $errors->first('industry_id') }}</label>
-                                            @endif
-                                        </div>
-                                        <div class="col-xs-4 @if($errors->has('category_id')) has-error @endif">
-                                            {!! Helpers::select($categories, 'name', old('category_id'), 'Категория', ['class' => 'form-control', 'id' => 'category_id', 'name' => 'category_id']) !!}
-                                            @if($errors->has('category_id'))
-                                                <label class="control-label">{{ $errors->first('category_id') }}</label>
-                                            @endif
+                                    <div class="form-space">
+                                        <div class="form-group">
+                                            <div class="col-xs-4 @if($errors->has('industry_id')) has-error @endif">
+                                                {!! Helpers::select($industries, 'name', old('industry_id'), 'Отрасль', ['class' => 'form-control', 'id' => 'industry_id', 'name' => 'industry_id']) !!}
+                                                @if($errors->has('category_id'))
+                                                    <label class="control-label">{{ $errors->first('industry_id') }}</label>
+                                                @endif
+                                            </div>
+                                            <div class="col-xs-4 @if($errors->has('category_id')) has-error @endif">
+                                                {!! Helpers::select($categories, 'name', old('category_id'), 'Категория', ['class' => 'form-control', 'id' => 'category_id', 'name' => 'category_id']) !!}
+                                                @if($errors->has('category_id'))
+                                                    <label class="control-label">{{ $errors->first('category_id') }}</label>
+                                                @endif
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -88,7 +104,7 @@
                                             <p>кВт</p>
                                         </div>
                                     </div>
-                                </div><!-- AD features ens -->
+                                </div><!-- AD features end -->
                                 <div class="form-space">
                                     <div class="form-group">
                                         <div class="col-xs-12">

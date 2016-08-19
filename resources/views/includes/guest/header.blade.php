@@ -3,7 +3,7 @@
     <!-- Logo start -->
     <div class="logo">
         <a href="/">
-            <img src="/img/logo.png" alt="Склад"/>
+            <img width="200" src="/img/logo.png" alt="Склад"/>
         </a>
     </div><!-- Logo end -->
 </div>
@@ -13,8 +13,10 @@
     <div class="auth-links text-right">
         <ul class="nav nav-pills navbar-right">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="z-index: 4">
-                    <i class="fa fa-map-marker" style="padding-right: 5px;"></i>Ваш регион<i class="fa fa-angle-down" style="padding-left: 5px;"></i>
+                <a href="#" class="dropdown-toggle dashed" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="z-index: 4">
+                    <i class="fa fa-map-marker"></i>
+                    <span>Ваш регион</span>
+                    <i class="fa fa-angle-down"></i>
                 </a>
                 <div class="dropdown-menu" id="top-region" style="z-index: 3">
                     <div class="col-xs-6">
@@ -54,8 +56,10 @@
                 <li><a href="{{ url('/register') }}">Регистрация</a></li>
             @else
                 <li class="dropdown auth-user">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="z-index: 4">
-                        <i class="glyphicon glyphicon-user" style="padding-right: 5px;"></i>{{ Auth::user()->name }}<i class="fa fa-angle-down" style="padding-left: 5px;"></i>
+                    <a href="#" class="dropdown-toggle dashed" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="z-index: 4">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <span>{{ Auth::user()->name }}</span>
+                        <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu" style="z-index: 3">
                         <li><a href="#"><i class="fa fa-credit-card"></i> 1500 тг</a></li>
