@@ -11,37 +11,18 @@ class IndustryMainCatalogRelationSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('industry_main_category')->insert([
-            [
-                'industry_id' => '1',
-                'main_category_id' => '1',
-                'created_at' => \Carbon\Carbon::now(),
-                'updated_at' => \Carbon\Carbon::now(),
-            ],
-            [
-                'industry_id' => '2',
-                'main_category_id' => '1',
-                'created_at' => \Carbon\Carbon::now(),
-                'updated_at' => \Carbon\Carbon::now(),
-            ],
-            [
-                'industry_id' => '3',
-                'main_category_id' => '1',
-                'created_at' => \Carbon\Carbon::now(),
-                'updated_at' => \Carbon\Carbon::now(),
-            ],
-            [
-                'industry_id' => '4',
-                'main_category_id' => '1',
-                'created_at' => \Carbon\Carbon::now(),
-                'updated_at' => \Carbon\Carbon::now(),
-            ],
-            [
-                'industry_id' => '5',
-                'main_category_id' => '1',
-                'created_at' => \Carbon\Carbon::now(),
-                'updated_at' => \Carbon\Carbon::now(),
-            ]
-        ]);
+        DB::table('industry_main_category')->truncate();
+
+        for($i = 1; $i < 18; $i++)
+        {
+            DB::table('industry_main_category')->insert(
+                [
+                    'industry_id' => $i,
+                    'main_category_id' => '1',
+                    'created_at' => \Carbon\Carbon::now(),
+                    'updated_at' => \Carbon\Carbon::now(),
+                ]
+            );
+        }
     }
 }

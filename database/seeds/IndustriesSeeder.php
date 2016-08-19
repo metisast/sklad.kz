@@ -11,29 +11,89 @@ class IndustriesSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('industries')->truncate();
         DB::table('industries')->insert([
             [
-                'name' => 'Реклама',
+                'name' => 'Детские',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ],
             [
-                'name' => 'Связь и коммуникации',
+                'name' => 'Дом и дача',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ],
             [
-                'name' => 'Сельское хозяйство',
+                'name' => 'Досуг, развлечения',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ],
             [
-                'name' => 'Социальное обеспечение',
+                'name' => 'Инструменты',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ],
             [
-                'name' => 'Строительство',
+                'name' => 'Канцелярские товары',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ],
+            [
+                'name' => 'Красота и здоровье',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ],
+            [
+                'name' => 'Мебель',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ],
+            [
+                'name' => 'Оборудование',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ],
+            [
+                'name' => 'Одежда и аксессуары',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ],
+            [
+                'name' => 'Охрана и защита',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ],[
+                'name' => 'Программное обеспечение',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ],
+            [
+                'name' => 'Продукты питания',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ],
+            [
+                'name' => 'Сельхозпродукция',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ],
+            [
+                'name' => 'Спортинвентарь',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ],
+            [
+                'name' => 'Технические изделия',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ],
+            [
+                'name' => 'Транспорт и техника',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ],
+            [
+                'name' => 'Электротехника',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ],
