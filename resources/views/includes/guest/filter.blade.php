@@ -24,6 +24,21 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="filter-btn active empty">
+
+                        </div>
+                        <div class="filter-layer">
+                            <div class="filter-sub filter-open" id="filter-industry">
+                                <div class="row">
+                                    <div class="triangle"></div>
+                                    @foreach($test as $t)
+                                        <div class="col-xs-3">
+                                            <a href="#" class="filter-sub-link" data-type="industry" data-id="{{ $t->id }}"><i class="fa fa-volume-up"></i> {{ $t->name }}</a>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

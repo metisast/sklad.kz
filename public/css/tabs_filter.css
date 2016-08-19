@@ -74,6 +74,7 @@
 .filter-left{
     display: none;
     margin: 15px 0;
+    position: relative;
 }
 .filter-right{
     display: none;
@@ -124,11 +125,11 @@
 .filter-sub{
     display: none;
     /*margin-top: -1px;*/
-    overflow: hidden;
     padding: 10px 0;
     background: #f9f9f9;
     border-radius: 3px;
     box-shadow: 0 1px 3px rgba(0,0,0,.3);
+    position: relative;
 }
 .filter-sub a{
     display: block;
@@ -178,6 +179,10 @@
     background: #f9f9f9;
     box-shadow:inset 0 1px 2px rgba(0,0,0,.3);
 }
+.filter-btn.empty{
+    width: 120px;
+    height: 42px;
+}
 
 .filter-divider{
     display: inline-block;
@@ -186,5 +191,14 @@
     margin: 0 10px;
     color: #555;
 }
-
+.triangle{
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f6f6f6;
+    position: absolute;
+    top: -10px;
+    left: 50px;
+}
 /* Filter right layer */
