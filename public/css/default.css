@@ -17,7 +17,7 @@ a:hover, a:active, a:focus{
     color: #007AFF;
 }
 /* Special links */
-a.dashed:hover{
+a.dashed:hover, a.dashed:active, a.dashed:focus{
     text-decoration: none !important;
 }
 a.dashed:hover span, a.dashed:active span, a.dashed:focus span{
