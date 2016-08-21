@@ -13,46 +13,36 @@
             <div class="col-xs-12 filter-left">
                 <div class="tabs">
                     <div class="tabs__content">
+                        <div class="filter-tree">
+                            <!-- Put the filter btn -->
+                        </div>
                         <div class="filter-layer">
                             <div class="filter-sub filter-open" id="filter-industry">
                                 <div class="row">
-                                    @foreach($test as $t)
+                                    @foreach($industries as $ind)
                                         <div class="col-xs-3">
-                                            <a href="#" class="filter-sub-link" data-type="industry" data-id="{{ $t->id }}"><i class="fa fa-volume-up"></i> {{ $t->name }}</a>
+                                            <a href="#" class="filter-sub-link" data-type="industry" data-id="{{ $ind->id }}"><i class="fa fa-volume-up"></i> {{ $ind->name }}</a>
                                         </div>
                                     @endforeach
                                 </div>
                             </div>
                         </div>
-                        <div class="filter-btn active empty">
+                        <div class="col-xs-12">
+                            <div class="filter-catalog">
 
+                            </div>
                         </div>
-                        <div class="filter-layer">
-                            <div class="filter-sub filter-open" id="filter-industry">
+                        <!-- Search button -->
+                        <div class="col-xs-12">
+                            <div class="filter-layer">
                                 <div class="row">
-                                    <div class="triangle"></div>
-                                    @foreach($test as $t)
-                                        <div class="col-xs-3">
-                                            <a href="#" class="filter-sub-link" data-type="industry" data-id="{{ $t->id }}"><i class="fa fa-volume-up"></i> {{ $t->name }}</a>
-                                        </div>
-                                    @endforeach
+                                    <div class="col-xs-12 text-center">
+                                        <button class="btn btn-success">Найти</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-xs-12">
-                <div class="filter-btn">
-                    <i class="fa fa-bell"></i>
-                    <span>Электроника</span>
-                </div>
-                <div class="filter-divider">
-                    <i class="fa fa-angle-right fa-2x"></i>
-                </div>
-                <div class="filter-btn active">
-                    <i class="fa fa-bell"></i>
-                    <span>Электроника</span>
                 </div>
             </div>
             {{--<div class="col-xs-9">

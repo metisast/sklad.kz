@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\XHR;
 
+use App\Models\CatalogTree;
 use App\Models\Category;
 use App\Models\Industry;
 use Illuminate\Http\Request;
@@ -18,24 +19,11 @@ class FilterController extends Controller
         $this->request = $request;
     }
 
-    public function getIndustry()
+    public function getCatalogById(CatalogTree $catalogTree)
     {
-        return response()->view('xhr.filter.products.categories');
-    }
-
-    public function getCategoryByIndustry(Industry $industry)
-    {
-        $categories = $industry->find($this->request->input('ind_id'))->categories()->get();
+        $catalogs = $catalogTree->getCatalogById($this->request->input('id'));
 
         return response()
-            ->view('xhr.filter.products.categories', ['categories' => $categories]);
-    }
-
-    public function getProductCatByCategory(Category $category)
-    {
-        $productTypes = $category->find($this->request->input('cat_id'))->products()->get();
-
-        return response()
-            ->view('xhr.filter.products.productType', ['productTypes' => $productTypes]);
+            ->view('xhr.filter.products.catalog', ['lists' => $catalogs]);
     }
 }

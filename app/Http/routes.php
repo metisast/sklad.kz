@@ -18,9 +18,7 @@ Route::get('/', function () {
 Route::auth();
 
 /* XHR */
-Route::post('/xhr/filter/industry', 'XHR\FilterController@getIndustry');
-Route::post('/xhr/filter/category', 'XHR\FilterController@getCategoryByIndustry');
-Route::post('/xhr/filter/product-type', 'XHR\FilterController@getProductCatByCategory');
+Route::post('/xhr/filter/catalog', 'XHR\FilterController@getCatalogById');
 
 /*
 |--------------------------------------------------------------------------
