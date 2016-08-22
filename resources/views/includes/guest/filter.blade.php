@@ -21,7 +21,7 @@
                                 <div class="row">
                                     @foreach($industries as $ind)
                                         <div class="col-xs-3">
-                                            <a href="#" class="filter-sub-link" data-type="industry" data-id="{{ $ind->id }}"><i class="fa fa-volume-up"></i> {{ $ind->name }}</a>
+                                            <a href="#" class="filter-sub-link" data-parent="{{ $ind->parent_id }}" data-id="{{ $ind->id }}"><i class="fa fa-volume-up"></i> {{ $ind->name }}</a>
                                         </div>
                                     @endforeach
                                 </div>
@@ -29,7 +29,7 @@
                         </div>
                         <div class="col-xs-12">
                             <div class="filter-catalog">
-
+                                <!-- Put the filter catalog -->
                             </div>
                         </div>
                         <!-- Search button -->
