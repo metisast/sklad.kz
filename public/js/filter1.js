@@ -89,6 +89,9 @@
             parentBlock.hide(200);
             filterCatalog.html('');
 
+            //Remove All the active class in buttons
+            activeBtn.removeClass('active');
+
             activeBtn.each(function(index, value){
                 var activeBtnId = $(value).data('parent');
                 if(catalogParentId == activeBtnId){
@@ -114,7 +117,14 @@
         $(document).on('click.catalog', '.filter-btn', function(){
             var catalogParentId =  $(this).data('parent');
 
-            getReloadCatalogById(catalogParentId);
+            if($(this).is('.active')){
+                filterCatalog.empty();
+                $(this).removeClass('active');
+            }else{
+                $(this).addClass('active');
+                getReloadCatalogById(catalogParentId);
+            }
+
 
         });
 
