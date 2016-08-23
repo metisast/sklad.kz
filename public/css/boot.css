@@ -289,7 +289,7 @@
     transition: all 0.2s ease;
 }
 .profile-company-list-item:hover{
-    box-shadow: 1px 1px 5px rgba(0,0,0,.3);
+    box-shadow: 0 1px 3px rgba(0,0,0,.3);
 }
 .profile-company-list-img{
     height: 100px;
@@ -308,7 +308,6 @@
     margin-bottom: 3px;
 }
 .profile-company-list-status{
-    background: #aaaaaa;
     height: 120px;
     text-align: left;
     padding-top: 5px;
@@ -324,7 +323,7 @@
 }
 .profile-company-list-status p{
     margin: 0;
-    color: #fff;
+    color: #333;
 }
 .profile-company-list-status-title{
     text-align: right;
@@ -333,10 +332,10 @@
     display: inline-block;
     margin-top: 10px;
     padding: 3px 10px;
-    color: #fff;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    border-left: 1px solid #fff;
+    color: #333;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
 }
 /* View company table*/
 .profile-company-table-item{
