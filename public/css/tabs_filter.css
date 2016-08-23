@@ -3,11 +3,10 @@
 
 }
 .tabs__caption {
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: 0;
     height: 30px;
     list-style: none;
-    background: #FFF;
 }
 .tabs__caption li {
     float: left;
@@ -15,17 +14,13 @@
     margin: 0 1px -1px 0;
     padding: 0 30px;
     cursor: pointer;
-    background: #fff;
     position: relative;
     font-size: 14px;
     color: #007AFF;
-    line-height: 28px;
     border-bottom: 3px solid transparent;
-    z-index: 5;
 }
 .tabs__caption li:hover{
     padding: 0 30px;
-    line-height: 28px;
 }
 .tabs-first:hover{
     color: #4caf50;
@@ -69,7 +64,9 @@
 }
 /* Filter layer*/
 #filter{
-
+    background: #fff;
+    margin-top: 15px;
+    border: 1px solid #e0e0e0;
 }
 .filter-left{
     display: none;
@@ -86,36 +83,6 @@
 }
 .filter-layer-list{
     margin-top: 15px;
-}
-.filter-layer-item{
-    margin-bottom: 10px;
-    display: inline-block;
-}
-.filter-layer-item > a{
-    position: relative;
-    padding: 10px;
-    z-index: 3;
-    display: inline-block;
-    text-decoration: none;
-}
-.filter-layer-item > a:hover span{
-    border-bottom: 1px dashed #007AFF;
-}
-.filter-layer-item > a span{
-    border-bottom: 1px dashed transparent;
-}
-.filter-layer-item > i{
-    line-height: 10px;
-    color: #007AFF;
-    padding-left: 10px;
-}
-.filter-layer-item .text-muted:hover span{
-    border-bottom: none;
-}
-.active-filter-item{
-    color: #333;
-    font-weight: bold;
-    display: block;
 }
 .active-filter-item:hover{
     text-decoration: none;
@@ -207,4 +174,15 @@
     top: -10px;
     left: 50px;
 }
-/* Filter right layer */
+.filter-tree{
+
+}
+#advance-search{
+    margin-top: 15px;
+    display: block;
+}
+#advance-search .control-label{
+    padding-top: 5px;
+    font-size: 12px;
+    font-weight: normal;
+}

@@ -1,4 +1,4 @@
-<div class="col-xs-12">
+<div class="col-xs-12" style="border: 1px solid #e0e0e0">
 <div class="col-xs-6">
     <!-- Logo start -->
     <div class="logo">

@@ -1,6 +1,6 @@
 {{-- Filter --}}
-<div id="filter">
-    <div class="col-xs-12">
+<div class="col-xs-12" id="filter">
+    <div>
         <div class="row">
             <!-- Tabs start-->
             <div class="col-xs-12">
@@ -27,9 +27,30 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="filter-catalog">
+                                    <!-- Put the filter catalog -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Advanced search -->
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="filter-layer">
+                                    <a href="#" id="advance-search" class="dashed">
+                                        <i class="fa fa-search" style="color: #aaa"></i>
+                                        <span>Рассширенный поиск</span>
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-xs-12">
-                            <div class="filter-catalog">
-                                <!-- Put the filter catalog -->
+                            <div class="filter-layer">
+                                <div class="advance-form">
+                                    <!-- Put the advance features -->
+                                </div>
                             </div>
                         </div>
                         <!-- Search button -->

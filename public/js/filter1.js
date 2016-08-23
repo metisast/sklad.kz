@@ -49,9 +49,9 @@
                 data: {id : id},
                 success: function(data){
                     if(data){
-                        filterCatalog.empty();
-                        filterTree.append(divider());
-                        filterCatalog.append(data);
+                        filterCatalog.empty();// To clear the filter of catalog block
+                        filterTree.append(divider());// Create divider
+                        filterCatalog.append(data);// Append backend data
                     }
                 },
                 error: function(err){
@@ -67,8 +67,8 @@
                 data: {id : parentId},
                 success: function(data){
                     if(data){
-                        filterCatalog.empty();
-                        filterCatalog.append(data);
+                        filterCatalog.empty();// To clear the filter of catalog block
+                        filterCatalog.append(data);// Append backend data
                     }
                 },
                 error: function(err){
@@ -87,11 +87,11 @@
 
             //Hide parent filter
             parentBlock.hide(200);
-            filterCatalog.html('');
 
             //Remove All the active class in buttons
             activeBtn.removeClass('active');
 
+            // Inspection on data parent for reloads of filter catalogs
             activeBtn.each(function(index, value){
                 var activeBtnId = $(value).data('parent');
                 if(catalogParentId == activeBtnId){
@@ -124,9 +124,6 @@
                 $(this).addClass('active');
                 getReloadCatalogById(catalogParentId);
             }
-
-
         });
-
     });
 })(jQuery);
