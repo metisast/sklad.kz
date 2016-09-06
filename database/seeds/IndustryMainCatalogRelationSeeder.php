@@ -24,5 +24,27 @@ class IndustryMainCatalogRelationSeeder extends Seeder
                 ]
             );
         }
+        for($i = 18; $i < 38; $i++)
+        {
+            DB::table('industry_main_category')->insert(
+                [
+                    'industry_id' => $i,
+                    'main_category_id' => '2',
+                    'created_at' => \Carbon\Carbon::now(),
+                    'updated_at' => \Carbon\Carbon::now(),
+                ]
+            );
+        }
+        for($i = 38; $i < 74; $i++)
+        {
+            DB::table('industry_main_category')->insert(
+                [
+                    'industry_id' => $i,
+                    'main_category_id' => '3',
+                    'created_at' => \Carbon\Carbon::now(),
+                    'updated_at' => \Carbon\Carbon::now(),
+                ]
+            );
+        }
     }
 }

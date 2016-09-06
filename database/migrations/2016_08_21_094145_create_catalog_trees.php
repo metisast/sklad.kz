@@ -14,7 +14,7 @@ class CreateCatalogTrees extends Migration
     {
         Schema::create('catalog_trees', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->integer('industry_id')->index();
             $table->integer('parent_id')->index();
             $table->timestamps();
         });

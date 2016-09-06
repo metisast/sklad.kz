@@ -56,7 +56,6 @@
 }
 
 .tabs__content {
-    display: none;
     background: #fff;
 }
 .tabs__content.active {
@@ -69,12 +68,7 @@
     border: 1px solid #e0e0e0;
 }
 .filter-left{
-    display: none;
-    margin: 15px 0;
     position: relative;
-}
-.filter-right{
-    display: none;
 }
 .filter-layer-title{
     font-size: 13px;
@@ -90,7 +84,7 @@
 }
 /*Filter sub*/
 .filter-sub{
-    display: none;
+    display: block;
     /*margin-top: -1px;*/
     padding: 10px 0;
     background: #f9f9f9;

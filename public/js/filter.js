@@ -8,122 +8,160 @@
             type: 'post'
         });
 
-        /* Main variable */
-        var filterLeftBlock = $('.filter-left');
-        var filterRightBlock = $('.filter-right');
-        var tabCaptionItems = $('.tabs__caption li');
-        var moreDown = $('.more-down a');
-        var filterSubLink = $('.filter-sub-link');
-        var textMuted = $('.filter-layer-item .text-muted');
+        /* Main variables */
+        var mainCatalogItem = $('.tabs__caption > li');
+        var filterLeft = $('.filter-left');
 
-        /* Filter show */
-        /*tabCaptionItems.click(function(){
-            var show = tabCaptionItems.data('show');
-            if(show){
-                filterLeftBlock.hide();
-                filterRightBlock.hide();
-                tabCaptionItems.data('show', false);
-                $(this).removeClass('active');
-            }else{
-                filterLeftBlock.show();
-                filterRightBlock.show();
-                tabCaptionItems.data('show', true);
-            }
+        /* Get the main catalogs */
+        mainCatalogItem.click(function(){
+            var id = $(this).data('id');
 
-        });*/
-
-        /* Filter sub down */
-        function filterSubDown(list){
-            var status = list.data('status');
-            var filterSub = list.closest('div.filter-layer').find('.filter-sub');
-            if(!status){
-                filterSub.css({
-                    display: 'block'
-                });
-                list.data('status', true);
-            }
-            else{
-                filterSub.hide();
-                list.data('status', false);
-            }
-        }
-
-        moreDown.click(function(e){
-            e.preventDefault();
-            filterSubDown($(this));
-        });
-
-        /* Activate item */
-        $(document).on('click', '.filter-sub-link', function(e){
-            e.preventDefault();
-            var text = $(this).text();
-            var dataId = $(this).data('id');
-            $(this).parent().parent().parent().find('.filter-layer-list a span').text(text).attr('data-id', dataId);
-            $(this).parent().parent().parent().find('.filter-layer-item').addClass('selected');
-            filterSubDown($(this).parent().parent().parent().find(moreDown));
-        });
-
-        /* Stop redirect link function */
-        textMuted.click(function(){
-            return false;
-        })
-
-        /* Get catalog */
-        var getCatByInd = $('#filter-industry .filter-sub-link');
-        getCatByInd.click(function(){
-            var context = $(this);
-            var catFilter = context.parents('.filter-layer').next();
-            var defaultText = catFilter.find('a').data('hidden');
-            var a = catFilter.find('a span');
-            /* Ajax */
             $.ajax({
-                url: '/xhr/filter/category',
-                dataType: 'html',
-                data:{ind_id: $(this).data('id')},
+                url: '/xhr/filter/main_catalog',
+                data: {id: id},
                 beforeSend: function(){
-                    a.text(defaultText);
-                    a.data('status', true);
-                    catFilter.find('.filter-sub').remove();
-                    catFilter.find('.text-muted').removeClass('text-muted');
-
-                    /* Reset product type */
-                    var productType = $(document).find('#filter-product-type');
-                    var defaultProductTypeText = productType.parent().find('.filter-layer-item a').data('hidden');
-                    productType.parent().find('.filter-layer-item a span').text(defaultProductTypeText);
-                    productType.remove();
+                    filterLeft.empty();
                 },
-                success: function(data){
-                    catFilter.append(data);
-                },
-                error: function(err){
-                    console.log(err);
+                success:function(data){
+                    filterLeft.append(data);
                 }
             });
         });
 
-        /* Get product type */
-        $(document).on('click', '#filter-category .filter-sub-link', function(){
-            var context = $(this);
-            var catFilter = context.parents('.filter-layer').next();
-            var defaultText = catFilter.find('a').data('hidden');
-            var a = catFilter.find('a');
-            //console.log(context);
-            /* Ajax */
+        /* Render the filter btn */
+        var filterBtn = function(text, id, parentId){
+            var btn = $("<div>");
+            var i = $("<i>");
+            var span = $("<span>");
+
+            btn.addClass('filter-btn');
+            btn.data('id', id);
+            btn.data('parent', parentId);
+
+            i.addClass('fa fa-bell');
+            span.text(text);
+
+            btn.append([i, span]);
+
+            return btn;
+        };
+
+        /* Render the divider */
+        var divider = function(){
+            var filter = $('<div>');
+            var i = $('<i>');
+
+            filter.addClass('filter-divider');
+            i.addClass('fa fa-angle-right fa-2x');
+            filter.append(i);
+
+            return filter;
+        };
+
+        /* Get catalogs */
+        var getCatalogById = function(id){
+            var filterTree = $('.filter-tree');
+            var filterCatalog = $('.filter-catalog');
+
             $.ajax({
-                url: '/xhr/filter/product-type',
-                dataType: 'html',
-                data:{cat_id: $(this).data('id')},
-                beforeSend: function(){
-                    a.find('span').text(defaultText);
-                    a.data('status', true);
-                },
+                url: '/xhr/filter/catalog',
+                data: {id : id},
                 success: function(data){
-                    catFilter.find('.filter-sub').remove();
-                    catFilter.find('.text-muted').removeClass('text-muted');
-                    catFilter.append(data);
+                    if(data){
+                        filterCatalog.empty();// To clear the filter of catalog block
+                        filterTree.append(divider());// Create divider
+                        filterCatalog.append(data);// Append backend data
+                    }
                 },
                 error: function(err){
-                    console.log(err);
+                    console.log();
+                }
+            });
+        };
+
+        /* Get reload catalogs on click button */
+        var getReloadCatalogById = function(parentId, mainCatalog){
+            var filterCatalog = $('.filter-catalog');
+
+            $.ajax({
+                url: '/xhr/filter/catalog',
+                data: {id : parentId},
+                success: function(data){
+                    if(data){
+                        filterCatalog.empty();// To clear the filter of catalog block
+                        filterCatalog.append(data);// Append backend data
+                    }
+                },
+                error: function(err){
+                    console.log();
+                }
+            });
+        };
+
+        /* Load catalogs */
+        $(document).on('click', '.filter-sub-link', function(){
+            //Parent block
+            var parentBlock = $(this).closest('.filter-sub');
+            var catalogId = $(this).data('id');
+            var catalogParentId = $(this).data('parent');
+            var activeBtn = $('.filter-btn');
+            var filterTree = $('.filter-tree');
+
+            //Hide parent filter
+            parentBlock.hide(200);
+
+            //Remove All the active class in buttons
+            activeBtn.removeClass('active');
+
+            // Inspection on data parent for reloads of filter catalogs
+            activeBtn.each(function(index, value){
+                var activeBtnId = $(value).data('parent');
+                if(catalogParentId == activeBtnId){
+
+                    filterTree.append(filterBtn($(this).text(), catalogId, catalogParentId));
+                    getReloadCatalogById(catalogId);
+
+                    $(value).nextAll().remove();
+                    $(value).remove();
+
+                    return false;
+                }
+            });
+
+            //Call filter button with params
+            filterTree.append(filterBtn($(this).text(), catalogId, catalogParentId));
+            getCatalogById(catalogId);
+
+            return false;
+        });
+
+        /* Reload catalog by to click button */
+        $(document).on('click.catalog', '.filter-btn', function(){
+            var filterCatalog = $('.filter-catalog');
+            var catalogParentId =  $(this).data('parent');
+
+            if($(this).is('.active')){
+                filterCatalog.empty();
+                $(this).removeClass('active');
+            }else{
+                $(this).addClass('active');
+
+                getReloadCatalogById(catalogParentId);
+            }
+        });
+
+        /* Get the reload first button */
+        $(document).on('click.catalog', '.filter-btn:first-child', function(){
+            var activeMainCatalogItem = $('.tabs__caption > li.active').data('id');
+
+            $.ajax({
+                url: '/xhr/filter/main_catalog',
+                data: {id: activeMainCatalogItem},
+                beforeSend: function(){
+                    filterLeft.empty();
+                },
+                success:function(data){
+                    filterLeft.append(data);
                 }
             });
         });

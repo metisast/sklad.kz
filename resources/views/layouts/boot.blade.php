@@ -56,7 +56,7 @@
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/js/tabs.js"></script>
 {{--<script src="/js/filter.js"></script>--}}
-<script src="/js/filter1.js"></script>
+<script src="/js/filter.js"></script>
 <script src="/bower_components/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
 <script src="/bower_components/FilmRoll/js/jquery.film_roll.min.js"></script>
 <script src="/js/carousel.js"></script>

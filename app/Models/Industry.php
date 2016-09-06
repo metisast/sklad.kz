@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Industry extends Model
 {
-    /* Relation: belongs to many  main categories*/
-    public function mainCategories()
+    /* Relation: has many to trees*/
+    public function catalogTree()
     {
-        return $this->belongsToMany('App\Models\MainCategories');
+        return $this->hasMany('App\Models\CatalogTree');
     }
 
-    /* Relation: belongs to many categories*/
-    public function categories()
+    /* Relation: belongs to many  Main category*/
+    public function mainCategories()
     {
-        return $this->belongsToMany('App\Models\Category');
+        return $this->belongsToMany('App\Models\MainCategory');
     }
 
     /* Queries */
