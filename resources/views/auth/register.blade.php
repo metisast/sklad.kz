@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="form-group @if($errors->has('password')) has-error @endif">
                                     <div class="col-xs-6">
-                                        <input type="password" name="password" class="form-control" value="{{ old('password') }}" placeholder="Пароль">
+                                        <input type="password" name="password" class="form-control" value="" placeholder="Пароль">
                                     </div>
                                     @if($errors->has('password'))
                                         <label class="control-label"><i class="fa fa-close"></i> {{ $errors->first('password') }}</label>
@@ -42,7 +42,7 @@
                                 </div>
                                 <div class="form-group @if($errors->has('password_confirmation')) has-error @endif">
                                     <div class="col-xs-6">
-                                        <input type="password" name="password_confirmation" class="form-control" value="{{ old('password') }}" placeholder="Повторите пароль">
+                                        <input type="password" name="password_confirmation" class="form-control" value="" placeholder="Повторите пароль">
                                     </div>
                                     @if($errors->has('password_confirmation'))
                                         <label class="control-label"><i class="fa fa-close"></i> {{ $errors->first('password_confirmation') }}</label>
