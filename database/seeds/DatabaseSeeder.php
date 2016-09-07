@@ -11,19 +11,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         /*$this->call(MainCatalogSeeder::class);
-         $this->call(IndustriesSeeder::class);
-         $this->call(CategoriesSeeder::class);
-         $this->call(ProductsSeeder::class);
-         $this->call(OpfsSeeder::class);
-         $this->call(IndustryMainCatalogRelationSeeder::class);
-         $this->call(CategoryIndustryRelationSeeder::class);
-         $this->call(CategoryProductRelationSeeder::class);
-         $this->call(RegionsTableSeeder::class);
-         $this->call(RegionsCitiesTableSeeder::class);
-         $this->call(CatalogTreesSeeder::class);
-         */
-        //$this->call(IndustriesSeeder::class);
+        /*$this->call(IndustriesSeeder::class);
         $this->call(CatalogTreesSeeder::class);
+        $this->call(MainCatalogSeeder::class);
+        $this->call(IndustriesSeeder::class);
+        $this->call(ProductsSeeder::class);
+        $this->call(OpfsSeeder::class);
+        $this->call(IndustryMainCatalogRelationSeeder::class);
+        $this->call(RegionsTableSeeder::class);
+        $this->call(RegionsCitiesTableSeeder::class);
+        $this->call(CatalogTreesSeeder::class);*/
     }
 }

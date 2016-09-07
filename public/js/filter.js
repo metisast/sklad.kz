@@ -14,16 +14,21 @@
 
         /* Get the main catalogs */
         mainCatalogItem.click(function(){
+            /* If tab activate don't go request*/
+            if($(this).is('.active')) return false;
+
             var id = $(this).data('id');
 
             $.ajax({
                 url: '/xhr/filter/main_catalog',
                 data: {id: id},
                 beforeSend: function(){
+                    filterLeft.find('div').fadeOut('fast');
                     filterLeft.empty();
                 },
                 success:function(data){
-                    filterLeft.append(data);
+                    filterLeft.hide('fast').append(data);
+                    filterLeft.show('fast');
                 }
             });
         });
