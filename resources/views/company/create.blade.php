@@ -95,19 +95,10 @@
                             <div class="company-city">
                                     <div class="form-group">
                                         <div class="col-xs-4">
-                                            <select name="industry-category" class="form-control" id="city">
-                                                <option value="0">Выберите город</option>
-                                                <option value="1">Астана</option>
-                                                <option value="2">Алматы</option>
-                                                <option value="3">Караганда</option>
-                                            </select>
+                                            {!! Helpers::select($regions, 'name', 0, 'Выберите область', ['class' => 'form-control', 'name' => 'regions', 'id' => 'regions']) !!}
                                         </div>
                                         <div class="col-xs-4">
-                                            <input type="text" class="form-control" name="address" placeholder="Адрес">
-                                            <span class="fa fa-map-marker form-control-feedback" aria-hidden="true"></span>
-                                        </div>
-                                        <div class="col-xs-4" style="padding-top: 5px;">
-                                            <a href="#">Указать на карте</a>
+                                            <select name="cities" id="cities" class="form-control" disabled></select>
                                         </div>
                                     </div>
                             </div>

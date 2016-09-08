@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Company;
 use App\Models\Opf;
+use App\Models\Region;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -32,12 +33,13 @@ class CompanyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Opf $opf)
+    public function create(Opf $opf, Region $region)
     {
-        $opfs = $opf->getAllOpfs();
 
-        return view('company.create')
-            ->with('opfs', $opfs);
+        return view('company.create',[
+            'opfs' => $opf->getAllOpfs(),
+            'regions' => $region::getAllRegions()
+        ]);
     }
 
     /**

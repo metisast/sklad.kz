@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/tabs_filter.css">
     <link rel="stylesheet" href="/css/carousel.css">
     <link rel="stylesheet" href="/css/modal.css">
+    <link rel="stylesheet" href="/css/jquery.formstyler.css">
 </head>
 <body>
 <div class="container">
@@ -63,8 +64,21 @@
 <script src="/js/tabs.js"></script>
 <script src="/js/filter.js"></script>
 <script src="/js/company-features.js"></script>
+<script src="/js/regions.js"></script>
 <script src="/bower_components/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
 <script src="/bower_components/FilmRoll/js/jquery.film_roll.min.js"></script>
 <script src="/js/carousel.js"></script>
+<script src="/js/jquery.formstyler.min.js"></script>
+
+<script>
+    (function($) {
+        $(function() {
+
+            $('select').styler();
+
+        });
+    })(jQuery);
+</script>
+
 </body>
 </html>
