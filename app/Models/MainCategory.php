@@ -17,4 +17,14 @@ class MainCategory extends Model
     {
         return parent::all();
     }
+
+    public function getMainCategoriesByCount($i)
+    {
+        return parent::limit($i)->get();
+    }
+
+    public static function getAllIndustriesByMainCategoryId($id)
+    {
+        return parent::findOrFail($id)->industries()->get();
+    }
 }

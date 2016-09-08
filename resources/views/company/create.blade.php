@@ -46,28 +46,17 @@
                             </div>
                         </div>
                         <div class="col-xs-12">
-                            <div class="industry">
-                                <div class="form-group">
-                                    <div class="col-xs-4">
-                                        <select name="industry" class="form-control" id="industry">
-                                            <option value="0">Выберите отрасль</option>
-                                            <option value="1">ИП</option>
-                                            <option value="2">ТОО</option>
-                                            <option value="3">АО</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <select name="industry-category" class="form-control" id="industry-category1">
-                                            <option value="0">Выберите категорию</option>
-                                            <option value="1">ИП</option>
-                                            <option value="2">ТОО</option>
-                                            <option value="3">АО</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xs-12">
-                                        <a href="#" class="add-link">
-                                            <i class="fa fa-plus"></i>Добавить еще категорию
-                                        </a>
+                            <div class="form-group">
+                                <div class="col-xs-4">
+                                    <a href="#" id="features" data-toggle="modal" data-target="#modal">
+                                        Выберите деятельность компании
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <div id="industries-catalog">
+                                        <!-- Put the company industries -->
                                     </div>
                                 </div>
                             </div>

@@ -57,7 +57,6 @@
                                     @if($errors->has('licence'))
                                         <label class="control-label"><i class="fa fa-close"></i> {{ $errors->first('licence') }}</label>
                                     @endif
-                                    </div>
                                 </div>
                             </form>
                             <div class="form-group">
