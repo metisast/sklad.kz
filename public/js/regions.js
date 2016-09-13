@@ -5,7 +5,8 @@
         var cities = $('#cities');
 
         regions.change(function () {
-            var region_id =$(this).val();
+            var region_id = $(this).val();
+            console.log($(this).val());
 
             $.ajax({
                 url: '/xhr/city',
@@ -16,6 +17,7 @@
                 success: function (data) {
                     cities.attr('disabled', false);
                     cities.append(data);
+                    cities.trigger('refresh');
                 },
                 error: function (err) {
                     cities.attr('disabled', true);

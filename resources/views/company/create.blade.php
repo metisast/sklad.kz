@@ -32,7 +32,7 @@
                         <div class="col-xs-12">
                             <div class="form-group">
                                 <div class="col-xs-4 @if($errors->has('opf_id')) has-error @endif">
-                                    {!! Helpers::select($opfs, 'short_name', old('opf_id'), 'Организационно правовая форма', ['class' => 'form-control', 'id' => 'opf', 'name' => 'opf_id']) !!}
+                                    {!! Helpers::select($opfs, 'short_name', old('opf_id'), 'Организационно правовая форма', ['id' => 'opf', 'name' => 'opf_id']) !!}
                                     @if($errors->has('opf_id'))
                                         <label class="control-label">{{ $errors->first('opf_id') }}</label>
                                     @endif
@@ -95,10 +95,10 @@
                             <div class="company-city">
                                     <div class="form-group">
                                         <div class="col-xs-4">
-                                            {!! Helpers::select($regions, 'name', 0, 'Выберите область', ['class' => 'form-control', 'name' => 'regions', 'id' => 'regions']) !!}
+                                            {!! Helpers::select($regions, 'name', 0, 'Выберите область', ['name' => 'regions', 'id' => 'regions', 'data-search' => 'true']) !!}
                                         </div>
                                         <div class="col-xs-4">
-                                            <select name="cities" id="cities" class="form-control" disabled></select>
+                                            <select name="cities" id="cities"  data-search="true"></select>
                                         </div>
                                     </div>
                             </div>
