@@ -67,10 +67,10 @@
                                     <div class="col-xs-2">
                                         <div class="company-img">
                                             <div class="company-img-block">
-                                            <span class="img-thumbnail btn-file">
-                                                <i class="fa fa-plus"></i><input type="file">
-                                                <p>Добавить логотип</p>
-                                            </span>
+                                                <span class="img-thumbnail btn-file">
+                                                    <i class="fa fa-plus"></i><input type="file" class="company-photo-upload">
+                                                    <p>Добавить логотип</p>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>

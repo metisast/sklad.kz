@@ -22,6 +22,7 @@ Route::post('/xhr/filter/catalog', 'XHR\FilterController@getCatalogById');
 Route::post('/xhr/filter/main_catalog', 'XHR\FilterController@getMainCatalogById');
 Route::post('/xhr/company_features', 'XHR\CompanyController@getCompanyFeatures');
 Route::post('/xhr/city', 'XHR\RegionCityController@getCitiesByRegionId');
+Route::post('/xhr/company-photo-upload', 'XHR\ImageUploadController@companyUploadImage');
 
 /*
 |--------------------------------------------------------------------------

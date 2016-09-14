@@ -6,7 +6,6 @@
 
         regions.change(function () {
             var region_id = $(this).val();
-            console.log($(this).val());
 
             $.ajax({
                 url: '/xhr/city',
