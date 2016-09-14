@@ -37,7 +37,7 @@
                     console.log(data);
                 },
                 error: function(err){
-                    console.log(err.responseText);
+                    console.log(err);
                 },
                 complete: function(){
                     /*self.find('.loader').remove();*/

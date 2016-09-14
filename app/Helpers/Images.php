@@ -80,7 +80,8 @@ class Images
      */
     public function setProductImages()
     {
-        $this->pathImage = public_path().'/images/tmp/products-images/thumbs/';
+        //$this->pathImage = public_path().'/images/tmp/products-images/thumbs/';
+        $this->pathImage = 'http://static.esen-group.kz/';
         Image::make($this->file)->fit(140, 90)->save($this->renderImage(), 100);
         $this->pathImage = public_path().'/images/tmp/products-images/normal/';
         Image::make($this->file)->widen(800)->save($this->renderImage(), 100);
