@@ -63,27 +63,29 @@
                         </div>
                         <div class="col-xs-12">
                             <div class="company-logo">
-                                <div class="col-xs-2">
-                                    <div class="company-img">
-                                        <div class="company-img-block">
-                                        <span class="img-thumbnail btn-file">
-                                            <i class="fa fa-plus"></i><input type="file">
-                                            <p>Добавить логотип</p>
-                                        </span>
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <div class="company-img">
+                                            <div class="company-img-block">
+                                            <span class="img-thumbnail btn-file">
+                                                <i class="fa fa-plus"></i><input type="file">
+                                                <p>Добавить логотип</p>
+                                            </span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-xs-10">
-                                    <div class="company-info">
-                                        <div class="form-group col-xs-12">
-                                            <div class="col-xs-5">
-                                                <input type="text" class="form-control" name="slogan" placeholder="Слоган">
-                                            </div>
+                                    <div class="col-xs-9">
+                                        <div class="company-info">
+                                            <div class="form-group col-xs-12">
+                                                <div class="col-xs-5">
+                                                    <input type="text" class="form-control" name="slogan" placeholder="Слоган">
+                                                </div>
 
-                                        </div>
-                                        <div class="form-group col-xs-12">
-                                            <div class="col-xs-5">
-                                                <input type="text" class="form-control" name="descriptor" placeholder="Дескриптор">
+                                            </div>
+                                            <div class="form-group col-xs-12">
+                                                <div class="col-xs-5">
+                                                    <input type="text" class="form-control" name="descriptor" placeholder="Дескриптор">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

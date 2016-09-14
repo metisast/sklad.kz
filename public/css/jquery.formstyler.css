@@ -251,9 +251,9 @@
 	text-shadow: 1px 1px #FFF;
 }
 .jq-selectbox__select:hover {
-	background: #E6E6E6;
+	/*background: #E6E6E6;
 	background: -webkit-linear-gradient(#F6F6F6, #E6E6E6);
-	background:         linear-gradient(#F6F6F6, #E6E6E6);
+	background:         linear-gradient(#F6F6F6, #E6E6E6);*/
 }
 .jq-selectbox__select:active {
 	background: #F5F5F5;
