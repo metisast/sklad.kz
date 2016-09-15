@@ -3,7 +3,7 @@
 /**
  * Image manipulation Main class
  */
-class Image
+class MainImage
 {
     protected $tmpCompanyImageSavePath;
     protected $companyImagePath;

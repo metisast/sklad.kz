@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\XHR;
 
 use Illuminate\Http\Request;
-use Helpers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
