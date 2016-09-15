@@ -190,3 +190,6 @@ button::-moz-focus-inner {
 .text-warning{
     color: #ff9800;
 }
+.img-thumbnail{
+    padding: 0;
+}

@@ -570,6 +570,19 @@
 .company-img-block{
     float: left;
 }
+.company-photo-ready{
+    display: none;
+    position: relative;
+}
+.company-photo-ready .fa-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #ff2d55;
+    color: #fff;
+    display: block;
+    padding: 5px;
+}
 .form-space{
     padding-top: 15px;
 }

@@ -68,8 +68,15 @@
                                         <div class="company-img">
                                             <div class="company-img-block">
                                                 <span class="img-thumbnail btn-file">
-                                                    <i class="fa fa-plus"></i><input type="file" class="company-photo-upload">
-                                                    <p>Добавить логотип</p>
+                                                    <section class="company-photo-prepare">
+                                                        <i class="fa fa-plus"></i><input type="file" class="company-photo-upload">
+                                                        <p>Добавить логотип</p>
+                                                    </section>
+                                                    <section class="company-photo-ready">
+                                                        <img src="" alt="">
+                                                        <div class="company-photo-close"><i class="fa fa-close"></i></div>
+                                                        <input type="hidden" name="company-logo">
+                                                    </section>
                                                 </span>
                                             </div>
                                         </div>
@@ -77,16 +84,15 @@
                                     <div class="col-xs-9">
                                         <div class="company-info">
                                             <div class="form-group col-xs-12">
-                                                <div class="col-xs-5">
+                                                <div class="col-xs-8">
                                                     <input type="text" class="form-control" name="slogan" placeholder="Слоган">
                                                 </div>
-
                                             </div>
-                                            <div class="form-group col-xs-12">
+                                            {{--<div class="form-group col-xs-12">
                                                 <div class="col-xs-5">
                                                     <input type="text" class="form-control" name="descriptor" placeholder="Дескриптор">
                                                 </div>
-                                            </div>
+                                            </div>--}}
                                         </div>
                                     </div>
                                 </div>

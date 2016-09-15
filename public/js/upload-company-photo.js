@@ -4,6 +4,9 @@
     $(function(){
 
         var btnCompanyPhotoUpload = $('.company-photo-upload');
+        var companyPhotoPrepare = $('.company-photo-prepare');
+        var companyPhotoReady = $('.company-photo-ready');
+        var btnReadyImageDelete = companyPhotoReady.find('.fa-close');
         var files;
 
         btnCompanyPhotoUpload.change(function(event){
@@ -31,9 +34,8 @@
                     self.empty().append(loader());*/
                 },
                 success: function(data){
-                    /*console.log(data.productImage);
-                    showImage(self, data);
-                    deleteImage();*/
+                    companyPhotoPrepare.hide();
+                    renderImageTag(data.name, data.companyImagePath);
                     console.log(data);
                 },
                 error: function(err){
@@ -44,6 +46,23 @@
                 }
             });
         };
+
+        /* Render Image Tag */
+        var renderImageTag = function(name, path){
+            var img = companyPhotoReady.find('img');
+            var input = companyPhotoReady.find('input');
+
+            img.attr('src', path + '/' + name);
+            input.val(name);
+
+            companyPhotoReady.fadeIn('fast');
+        }
+
+        /* Delete image */
+        btnReadyImageDelete.click(function(){
+            companyPhotoReady.hide();
+            companyPhotoPrepare.fadeIn('fast');
+        });
 
     });
 })(jQuery);

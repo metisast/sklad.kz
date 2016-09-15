@@ -78,14 +78,19 @@ class Images
      * Make product images
      * @return \Illuminate\Http\JsonResponse
      */
-    public function setProductImages()
+    public function setCompanyLogoImage()
     {
-        $this->pathImage = new \MainImage();
-        Image::make($this->file)->fit(140, 90)->save($this->renderImage(), 100);
-        $this->pathImage = public_path().'/images/tmp/products-images/normal/';
-        Image::make($this->file)->widen(800)->save($this->renderImage(), 100);
+        $path =  new MainImageUpload();
+
+        $this->pathImage = $path->getTmpCompanyImageSavePath();
+        $this->mimeSave = '.png';
+        Image::make($this->file)->fit(130, 130)->save($this->renderImage(), 100);
+
         return response()
-            ->json(['productImage' => $this->nameImage . $this->mimeSave]);
+            ->json([
+                'name' => $this->nameImage . $this->mimeSave,
+                'companyImagePath' => $path->getPublicTmpCompanyImageViewPath()
+            ]);
     }
     /**
      * Delete tmp product images

@@ -13,6 +13,6 @@ class ImageUploadController extends Controller
     public function companyUploadImage(Request $request)
     {
         $image = new \Images($request->file());
-        return $image->setProductImages();
+        return $image->setCompanyLogoImage();
     }
 }
