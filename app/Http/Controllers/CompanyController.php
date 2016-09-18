@@ -51,7 +51,7 @@ class CompanyController extends Controller
      */
     public function store(Request $request, Requests\CompaniesPublishRequest $cpr)
     {
-        //dd($request->all());
+        dd($request->all());
         $create = $this->company->createCompany($request);
 
         return redirect(route('company.show',  $create->id));

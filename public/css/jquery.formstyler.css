@@ -228,8 +228,6 @@
 .jq-number.disabled .jq-number__spin.minus:after {
 	border-top-color: #AAA;
 }
-
-
 .jq-selectbox {
 	vertical-align: middle;
 	cursor: pointer;
@@ -380,7 +378,9 @@
 .jq-selectbox li.option {
 	padding-left: 25px;
 }
-
+.has-error .jq-selectbox__select{
+	border: 1px solid #a94442;
+}
 
 .jq-select-multiple {
 	box-sizing: border-box;

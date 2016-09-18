@@ -125,8 +125,8 @@ return [
     |
     */
 
-    'attributes'           => [
-        //
+    'attributes' => [
+        'phone' => 'Телефонный номер'
     ],
 
 ];

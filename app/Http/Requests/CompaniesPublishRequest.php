@@ -23,10 +23,24 @@ class CompaniesPublishRequest extends Request
      */
     public function rules()
     {
-        return [
+        $rules = [
             'short_name' => 'required|max:60',
-            'opf_id' => 'required',
-            'name' => 'required|max:255'
+            'opf_id' => 'required|max:255',
+            'name' => 'required|max:255',
+            'features' => 'required',
+            'regions' => 'required',
+            'cities' => 'required',
+            'phone' => [
+                'required',
+                'regex:/^( +)?((\+?7|8) ?)?((\(\d{3}\))|(\d{3}))?( )?(\d{3}[\- ]?\d{2}[\- ]?\d{2})( +)?$/'
+            ],
+            'email' => 'required|email',
+            'web-site' => 'max:255',
+            'address' => 'required|max:255',
+            'description' => 'required|max:255',
+            'licence' => 'present'
         ];
+
+        return $rules;
     }
 }

@@ -65,11 +65,14 @@
 
         $(document).on('click', '#company-features .btn-primary', function () {
             var industriesCat = $('#industries-catalog');
+            var inputFeatures = $('#company-publish input[name="features"]');
+            var str = [];
 
             if(i == 0){
                 modal.modal('hide');
                 industriesCat.empty();
                 console.log(i);
+                inputFeatures.val('');
                 return false;
             }
             industriesCat.empty();
@@ -77,8 +80,14 @@
             var industryActive = $('.catalog-industry.active').clone();
             industriesCat.append(industryActive);
 
-            modal.modal('hide');
+            /* Put industries index in hidden input */
+            industryActive.each(function(index, elem){
+                var id = $(elem).data('industry-id');
+                str.push(id);
+            });
+            inputFeatures.val(str);
 
+            modal.modal('hide');
 
         });
     });

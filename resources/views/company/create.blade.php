@@ -14,15 +14,12 @@
             <div class="col-xs-12">
                 <div class="company-form">
                     <!-- Form company start -->
-                    <form action="{{route('company.store')}}" method="post" class="form-horizontal">
+                    <form action="{{route('company.store')}}" method="post" class="form-horizontal" id="company-publish" data-path="{{ route('company.store') }}">
                         {{ csrf_field() }}
                         <div class="col-xs-12">
-                            <div class="form-group @if($errors->has('short_name')) has-error @endif">
-                                <div class="col-xs-4">
+                            <div class="form-group">
+                                <div class="col-xs-4 input-required">
                                     <input type="text" name="short_name" value="{{ old('short_name') }}" class="form-control" placeholder="Краткое наименование">
-                                    @if($errors->has('short_name'))
-                                        <label class="control-label">{{ $errors->first('short_name') }}</label>
-                                    @endif
                                 </div>
                                 <div class="col-xs-8">
                                     <p class="text-warning">Оно будет отображаться на сайте!</p>
@@ -31,26 +28,21 @@
                         </div>
                         <div class="col-xs-12">
                             <div class="form-group">
-                                <div class="col-xs-4 @if($errors->has('opf_id')) has-error @endif">
+                                <div class="col-xs-4 input-required">
                                     {!! Helpers::select($opfs, 'short_name', old('opf_id'), 'Организационно правовая форма', ['id' => 'opf', 'name' => 'opf_id']) !!}
-                                    @if($errors->has('opf_id'))
-                                        <label class="control-label">{{ $errors->first('opf_id') }}</label>
-                                    @endif
                                 </div>
-                                <div class="col-xs-4 @if($errors->has('name')) has-error @endif">
+                                <div class="col-xs-4 input-required">
                                     <input type="text" class="form-control" value="{{ old('name') }}" name="name" placeholder="Полное наименование">
-                                    @if($errors->has('name'))
-                                        <label class="control-label">{{ $errors->first('name') }}</label>
-                                    @endif
                                 </div>
                             </div>
                         </div>
                         <div class="col-xs-12">
                             <div class="form-group">
-                                <div class="col-xs-4">
+                                <div class="col-xs-4 input-required">
                                     <a href="#" id="features" data-toggle="modal" data-target="#modal">
                                         Выберите деятельность компании
                                     </a>
+                                    <input type="hidden" name="features">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -101,79 +93,78 @@
 
                         <div class="col-xs-12">
                             <div class="company-city">
-                                    <div class="form-group">
-                                        <div class="col-xs-4">
-                                            {!! Helpers::select($regions, 'name', 0, 'Выберите область', ['name' => 'regions', 'id' => 'regions', 'data-search' => 'true']) !!}
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <select name="cities" id="cities"  data-search="true"></select>
-                                        </div>
+                                <div class="form-group">
+                                    <div class="col-xs-4 input-required">
+                                        {!! Helpers::select($regions, 'name', 0, 'Выберите область', ['name' => 'regions', 'id' => 'regions', 'data-search' => 'true']) !!}
                                     </div>
+                                    <div class="col-xs-4 input-required">
+                                        <select name="cities" id="cities"  data-search="true"></select>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="col-xs-12">
                             <div class="company-contacts">
                                 <div class="form-group">
-                                    <div class="col-xs-4">
-                                        <input type="text" name="phone1" class="form-control" placeholder="Номер телефона">
+                                    <div class="col-xs-4 input-required">
+                                        <input type="text" name="phone"  value="{{ old('phone') }}" class="form-control" placeholder="Номер телефона">
                                         <span class="fa fa-phone form-control-feedback" aria-hidden="true"></span>
-                                        <a href="#" class="add-link">
-                                            <i class="fa fa-plus"></i>Добавить еще телефон
-                                        </a>
                                     </div>
                                     <div class="col-xs-3">
-                                        <input type="text" name="phone1-description" class="form-control" placeholder="Описание">
+                                        <input type="text" name="phone-description" class="form-control" placeholder="Описание">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <div class="col-xs-4">
-                                        <input type="text" class="form-control" name="email1" placeholder="Е-мэйл">
+                                    <div class="col-xs-4 input-required">
+                                        <input type="text" class="form-control" name="email" placeholder="Е-мэйл">
                                         <span class="fa fa-envelope form-control-feedback" aria-hidden="true"></span>
-                                        <a href="#" class="add-link">
+                                        {{--<a href="#" class="add-link">
                                             <i class="fa fa-plus"></i>Добавить еще емэйл
-                                        </a>
+                                        </a>--}}
                                     </div>
                                     <div class="col-xs-3">
-                                        <input type="text" class="form-control" name="email1-description" placeholder="Описание">
+                                        <input type="text" class="form-control" name="email-description" placeholder="Описание">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <div class="col-xs-4">
-                                        <input type="text" class="form-control" name="web1" placeholder="Веб-сайт">
+                                    <div class="col-xs-4 input-required">
+                                        <input type="text" class="form-control" name="web-site" placeholder="Веб-сайт">
                                         <span class="fa fa-globe form-control-feedback" aria-hidden="true"></span>
-                                        <a href="#" class="add-link">
+                                        {{--<a href="#" class="add-link">
                                             <i class="fa fa-plus"></i>Добавить еще сайт
-                                        </a>
+                                        </a>--}}
                                     </div>
                                     <div class="col-xs-3">
-                                        <input type="text" class="form-control" name="email1-description" placeholder="Описание">
+                                        <input type="text" class="form-control" name="web-site-description" placeholder="Описание">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <div class="col-xs-4">
-                                        <input type="text" class="form-control" name="address1" placeholder="Адрес">
+                                    <div class="col-xs-4 input-required">
+                                        <input type="text" class="form-control" name="address" placeholder="Адрес">
                                         <span class="fa fa-map-marker form-control-feedback" aria-hidden="true"></span>
-                                        <a href="#" class="add-link">
+                                        {{--<a href="#" class="add-link">
                                             <i class="fa fa-plus"></i>Добавить еще адрес
-                                        </a>
+                                        </a>--}}
                                     </div>
                                     <div class="col-xs-3">
-                                        <input type="text" class="form-control" name="email1-description" placeholder="Описание">
+                                        <input type="text" class="form-control" name="address-description" placeholder="Описание">
                                     </div>
                                 </div>
+                                <br>
+
                                 <div class="form-group">
-                                    <div class="col-xs-12">
+                                    <div class="col-xs-12 input-required">
                                         <textarea name="description" class="form-control" id="" cols="100" rows="10" placeholder="Опишите свою компанию"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-12">
-                                        <div class="checkbox">
-                                            <label>
+                                        <div class="checkbox input-required">
+                                            <label class="licence">
                                                 <input type="checkbox" name="licence">
                                                 Я соглашаюсь с <a href="#">правилами использования сервисом</a>, а также с передачей и обработкой моих данных. Я подтверждаю  своё совершеннолетие и ответственность за размещение объявления
                                             </label>
@@ -185,7 +176,7 @@
                         <div class="company-success-btn text-center">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <button class="btn btn-primary">Добавить</button>
+                                    <button class="btn btn-primary" data-loading-text="Загрузка..." autocomplete="off">Добавить</button>
                                     <a href="{{ route('profile::index') }}">Отмена</a>
                                 </div>
                             </div>

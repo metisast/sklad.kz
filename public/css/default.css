@@ -186,6 +186,12 @@ button::-moz-focus-inner {
     margin-top: 5px;
     margin-bottom: 0;
 }
+.has-error label.licence{
+    color: #333;
+}
+.has-error .control-label{
+    text-align: left;
+}
 /* Text */
 .text-warning{
     color: #ff9800;

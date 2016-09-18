@@ -7,6 +7,7 @@
         var companyPhotoPrepare = $('.company-photo-prepare');
         var companyPhotoReady = $('.company-photo-ready');
         var btnReadyImageDelete = companyPhotoReady.find('.fa-close');
+        var inputCompanyLogo = companyPhotoReady.find('input[name="company-logo"]');
         var files;
 
         btnCompanyPhotoUpload.change(function(event){
@@ -36,7 +37,7 @@
                 success: function(data){
                     companyPhotoPrepare.hide();
                     renderImageTag(data.name, data.companyImagePath);
-                    console.log(data);
+                    insertValue(data.name);
                 },
                 error: function(err){
                     console.log(err);
@@ -62,7 +63,18 @@
         btnReadyImageDelete.click(function(){
             companyPhotoReady.hide();
             companyPhotoPrepare.fadeIn('fast');
+            deleteValue();
         });
+
+        /* Insert value in the hidden input */
+        var insertValue = function(value){
+            inputCompanyLogo.val(value);
+        }
+
+        /* Delete value in the hidden input */
+        var deleteValue = function(){
+            inputCompanyLogo.val('');
+        }
 
     });
 })(jQuery);
