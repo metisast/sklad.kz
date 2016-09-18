@@ -11,6 +11,8 @@ class RegionsTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('regions')->truncate();
+
         $regions = [
             'Акмолинская',
             'Актюбинская',

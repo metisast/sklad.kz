@@ -20,6 +20,9 @@ class DatabaseSeeder extends Seeder
         $this->call(IndustryMainCatalogRelationSeeder::class);
         $this->call(RegionsTableSeeder::class);
         $this->call(RegionsCitiesTableSeeder::class);
-        $this->call(CatalogTreesSeeder::class);*/
+        $this->call(CatalogTreesSeeder::class);
+        $this->call(CompanyStatusPublishSeeder::class);
+        $this->call(CompanyStatusActiveSeeder::class);
+        */
     }
 }

@@ -11,6 +11,8 @@ class OpfsSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('opfs')->truncate();
+
         DB::table('opfs')->insert([
             [
                 'short_name' => 'ИП',
