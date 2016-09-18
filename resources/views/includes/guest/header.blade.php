@@ -3,7 +3,7 @@
     <!-- Logo start -->
     <div class="logo">
         <a href="/">
-            <img width="200" src="/img/logo.png" alt="Склад"/>
+            <h1><span>С</span>клад</h1>
         </a>
     </div><!-- Logo end -->
 </div>

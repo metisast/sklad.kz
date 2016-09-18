@@ -7,6 +7,7 @@
     <!-- Include styles -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/font.css">
     <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/css/boot.css">
     <link rel="stylesheet" href="/css/tabs_filter.css">
