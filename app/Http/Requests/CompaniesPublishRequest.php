@@ -24,9 +24,8 @@ class CompaniesPublishRequest extends Request
     public function rules()
     {
         $rules = [
-            'short_name' => 'required|max:60',
-            'opf_id' => 'required|max:255',
             'name' => 'required|max:255',
+            'opf_id' => 'required|max:255',
             'features' => 'required',
             'regions' => 'required',
             'cities' => 'required',
