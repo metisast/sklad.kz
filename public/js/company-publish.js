@@ -8,7 +8,7 @@
 
         btnPublish.click(function(){
             /* Show loading action */
-            $(this).button('loading');
+            //$(this).button('loading');
 
             var data = formInputs.serialize();
             var path = formInputs.data('path');

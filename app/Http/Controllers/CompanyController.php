@@ -67,6 +67,10 @@ class CompanyController extends Controller
             $companyFeature::createCompanyFeatures($create->id, $arr_feat[$i]);
         }
 
+        /* Move image after save */
+        $image = new \Images();
+        $image->moveImage($request->get('company_logo'), $create->id);
+
         $companyPhone::createCompanyPhone($create->id, $request->get('phone'), $request->get('phone_description'));
         $companyEmail::createCompanyEmail($create->id, $request->get('email'), $request->get('email_description'));
         if($request->get('web_site') != '') $companySite::createCompanySite($create->id, $request->get('web_site'), $request->get('web_site_description'));

@@ -18,10 +18,13 @@ class Images
     protected $nameImage;
     protected $pathImage;
     protected $file;
+    protected $mainImageUploadPath;
     public $response;
     public function __construct($file = null)
     {
         $this->nameImage = str_random(32);
+        $this->mainImageUploadPath = new \MainImageUpload();
+
         if($file) $this->fileValidate($file);
     }
     /**
@@ -80,16 +83,14 @@ class Images
      */
     public function setCompanyLogoImage()
     {
-        $path =  new MainImageUpload();
-
-        $this->pathImage = $path->getTmpCompanyImageSavePath();
+        $this->pathImage = $this->mainImageUploadPath->getTmpCompanyImageSavePath();
         $this->mimeSave = '.png';
         Image::make($this->file)->fit(130, 130)->save($this->renderImage(), 100);
 
         return response()
             ->json([
                 'name' => $this->nameImage . $this->mimeSave,
-                'companyImagePath' => $path->getPublicTmpCompanyImageViewPath()
+                'companyImagePath' => $this->mainImageUploadPath->getPublicTmpCompanyImageViewPath()
             ]);
     }
     /**
@@ -99,32 +100,32 @@ class Images
      */
     public function deleteCompanyLogoImage($src)
     {
-        $path =  new MainImageUpload();
-
-        $this->pathImage = $path->getTmpCompanyImageSavePath().$src;
+        $this->pathImage = $this->mainImageUploadPath->getTmpCompanyImageSavePath().$src;
         if(file_exists($this->pathImage))
         {
             unlink($this->pathImage);
         }
     }
     /**
-     * Move five after save in DB
-     * @param $src
+     * Move company logo image after save in DB
+     * @param $name
      * @return void
      */
-    public function moveImage($src)
+    public function moveImage($name, $folder_id)
     {
-        $this->pathImage = public_path()."/images/tmp/products-images/thumbs/$src";
-        $newPath = public_path()."/images/products-images/thumbs/$src";
+        $this->pathImage = $this->mainImageUploadPath->getTmpCompanyImageSavePath().$name;
+        $savePath = $this->mainImageUploadPath->getCompanyImageSavePath();
         if(file_exists($this->pathImage))
         {
-            if(!File::move($this->pathImage, $newPath)) die("Couldn't rename file");
-        }
-        $this->pathImage = public_path()."/images/tmp/products-images/normal/$src";
-        $newPath = public_path()."/images/products-images/normal/$src";
-        if(file_exists($this->pathImage))
-        {
-            if(!File::move($this->pathImage, $newPath)) die("Couldn't rename file");
+            if(!file_exists($savePath.$folder_id))
+            {
+                mkdir($savePath.$folder_id);
+            }
+
+            if(file_exists($savePath.$folder_id))
+            {
+                if(!File::move($this->pathImage, $savePath.$folder_id.'/'.$name)) die("Couldn't rename file");
+            }
         }
     }
 }
