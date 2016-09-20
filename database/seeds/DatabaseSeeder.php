@@ -24,5 +24,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CompanyStatusPublishSeeder::class);
         $this->call(CompanyStatusActiveSeeder::class);
         */
+        //$this->call(GlobalTruncateCompanySeeder::class);
     }
 }

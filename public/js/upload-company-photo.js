@@ -63,6 +63,16 @@
         btnReadyImageDelete.click(function(){
             companyPhotoReady.hide();
             companyPhotoPrepare.fadeIn('fast');
+            $.ajax({
+                url: '/xhr/company-photo-delete',
+                data: {name: inputCompanyLogo.val()},
+                success: function(){
+
+                },
+                error: function(err){
+                    console.log(err);
+                }
+            });
             deleteValue();
         });
 

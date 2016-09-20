@@ -97,14 +97,11 @@ class Images
      * @param $src
      * @return void
      */
-    public function deleteProductImage($src)
+    public function deleteCompanyLogoImage($src)
     {
-        $this->pathImage = public_path()."/images/tmp/products-images/thumbs/$src";
-        if(file_exists($this->pathImage))
-        {
-            unlink($this->pathImage);
-        }
-        $this->pathImage = public_path()."/images/tmp/products-images/normal/$src";
+        $path =  new MainImageUpload();
+
+        $this->pathImage = $path->getTmpCompanyImageSavePath().$src;
         if(file_exists($this->pathImage))
         {
             unlink($this->pathImage);
