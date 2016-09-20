@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class Company extends Model
 {
-    protected $fillable = ['user_id', 'short_name', 'opf_id', 'name'];
+    protected $fillable = ['user_id', 'short_name', 'opf_id', 'name', 'slogan', 'logo', 'city_id', 'description', 'status_publish_id', 'status_activate_id'];
 
     /* Relation belong to opfs */
     public function opf()
@@ -20,9 +20,14 @@ class Company extends Model
     {
         return parent::create([
             'user_id' => Auth::user()->id,
-            'short_name' => $request->short_name,
             'opf_id' => $request->opf_id,
-            'name' => $request->name
+            'name' => $request->name,
+            'slogan' => $request->slogan,
+            'logo' => $request->company_logo,
+            'city_id' => $request->cities,
+            'description' => $request->description,
+            'status_publish_id' => 1, // added
+            'status_activate_id' => 2 // disabled
         ]);
     }
 

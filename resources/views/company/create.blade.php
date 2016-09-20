@@ -61,7 +61,7 @@
                                                     <section class="company-photo-ready">
                                                         <img src="" alt="">
                                                         <div class="company-photo-close"><i class="fa fa-close"></i></div>
-                                                        <input type="hidden" name="company-logo">
+                                                        <input type="hidden" name="company_logo">
                                                     </section>
                                                 </span>
                                             </div>
@@ -92,7 +92,7 @@
                                         {!! Helpers::select($regions, 'name', 0, 'Выберите область', ['name' => 'regions', 'id' => 'regions', 'data-search' => 'true']) !!}
                                     </div>
                                     <div class="col-xs-4 input-required">
-                                        <select name="cities" id="cities"  data-search="true"></select>
+                                        <select name="cities" id="cities" data-search="true"></select>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                                         <span class="fa fa-phone form-control-feedback" aria-hidden="true"></span>
                                     </div>
                                     <div class="col-xs-3">
-                                        <input type="text" name="phone-description" class="form-control" placeholder="Описание">
+                                        <input type="text" name="phone_description" class="form-control" placeholder="Описание">
                                     </div>
                                 </div>
 
@@ -119,20 +119,20 @@
                                         </a>--}}
                                     </div>
                                     <div class="col-xs-3">
-                                        <input type="text" class="form-control" name="email-description" placeholder="Описание">
+                                        <input type="text" class="form-control" name="email_description" placeholder="Описание">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <div class="col-xs-4 input-required">
-                                        <input type="text" class="form-control" name="web-site" placeholder="Веб-сайт">
+                                        <input type="text" class="form-control" name="web_site" placeholder="Веб-сайт">
                                         <span class="fa fa-globe form-control-feedback" aria-hidden="true"></span>
                                         {{--<a href="#" class="add-link">
                                             <i class="fa fa-plus"></i>Добавить еще сайт
                                         </a>--}}
                                     </div>
                                     <div class="col-xs-3">
-                                        <input type="text" class="form-control" name="web-site-description" placeholder="Описание">
+                                        <input type="text" class="form-control" name="web_site_description" placeholder="Описание">
                                     </div>
                                 </div>
 
@@ -145,7 +145,7 @@
                                         </a>--}}
                                     </div>
                                     <div class="col-xs-3">
-                                        <input type="text" class="form-control" name="address-description" placeholder="Описание">
+                                        <input type="text" class="form-control" name="address_description" placeholder="Описание">
                                     </div>
                                 </div>
                                 <br>

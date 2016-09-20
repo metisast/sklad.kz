@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Company;
+use App\Models\CompanyAddress;
+use App\Models\CompanyEmail;
+use App\Models\CompanyFeature;
+use App\Models\CompanyPhone;
+use App\Models\CompanySite;
 use App\Models\Opf;
 use App\Models\Region;
 use Illuminate\Http\Request;
@@ -49,12 +54,24 @@ class CompanyController extends Controller
      * @param  Requests\CompaniesPublishRequest $cpr
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Requests\CompaniesPublishRequest $cpr)
+    public function store(Request $request, Requests\CompaniesPublishRequest $cpr, CompanyPhone $companyPhone, CompanyEmail $companyEmail, CompanySite $companySite, CompanyAddress $companyAddress, CompanyFeature $companyFeature)
     {
-        dd($request->all());
+        //dd($request->get('features'));
+
         $create = $this->company->createCompany($request);
 
-        return redirect(route('company.show',  $create->id));
+        /* Create features */
+        $arr_feat = explode(',', $request->get('features'));
+        for($i = 0; $i < count($arr_feat); $i++)
+        {
+            $companyFeature::createCompanyFeatures($create->id, $arr_feat[$i]);
+        }
+
+        $companyPhone::createCompanyPhone($create->id, $request->get('phone'), $request->get('phone_description'));
+        $companyEmail::createCompanyEmail($create->id, $request->get('email'), $request->get('email_description'));
+        if($request->get('web_site') != '') $companySite::createCompanySite($create->id, $request->get('web_site'), $request->get('web_site_description'));
+        $companyAddress::createCompanyAddress($create->id, $request->get('address'), $request->get('address_description'));
+
     }
 
     /**
