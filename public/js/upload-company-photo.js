@@ -65,25 +65,31 @@
             companyPhotoPrepare.fadeIn('fast');
             $.ajax({
                 url: '/xhr/company-photo-delete',
-                data: {name: inputCompanyLogo.val()},
-                success: function(){
-
+                data: {name: getValue()},
+                success: function(data){
+                    console.log(data);
                 },
                 error: function(err){
                     console.log(err);
                 }
             });
-            deleteValue();
         });
 
         /* Insert value in the hidden input */
         var insertValue = function(value){
             inputCompanyLogo.val(value);
-        }
+        };
 
         /* Delete value in the hidden input */
         var deleteValue = function(){
             inputCompanyLogo.val('');
+        };
+
+        /* Get value */
+        var getValue = function(){
+            var value = companyPhotoReady.find('input').val();
+
+            return value;
         }
 
     });
