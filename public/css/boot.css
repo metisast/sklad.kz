@@ -398,10 +398,18 @@
 #company-screen{
 
 }
+.company-screen-img img{
+    width: 100%;
+}
 .company-screen{
     background: #aaaaaa;
     height: 225px;
     color: #fff;
+    position: relative;
+}
+.company-screen-info-block{
+    position: absolute;
+    top: 0;
 }
 .company-screen-info{
     margin-top: 100px;
