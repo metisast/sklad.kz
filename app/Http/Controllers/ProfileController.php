@@ -13,9 +13,12 @@ class ProfileController extends Controller
     public function index(Company $company)
     {
         $companies = $company->getCompaniesByUser();
+        $companyLogoImagePath = new \MainImageUpload();
 
-        return view('profile.index')
-            ->with('companies', $companies);
+        return view('profile.index', [
+            'companies' => $companies,
+            'companyLogoImagePath' => $companyLogoImagePath->getCompanyImageViewPath()
+        ]);
     }
 
     public function create()

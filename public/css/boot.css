@@ -290,12 +290,13 @@
 }
 /* View company list*/
 .profile-company-list-item{
-    height: 280px;
+    height: 278px;
     border: 1px solid #e0e0e0;
     border-radius: 3px;
     text-align: center;
     overflow: hidden;
     transition: all 0.2s ease;
+    margin-bottom: 15px;
 }
 .profile-company-list-item:hover{
     box-shadow: 0 1px 3px rgba(0,0,0,.3);
@@ -336,15 +337,15 @@
 }
 .profile-company-list-status-title{
     text-align: right;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 2px;
+    background: #ff2d55;
+    height: 175px;
 }
 .profile-company-list-status-title p{
-    display: inline-block;
-    margin-top: 10px;
-    padding: 3px 10px;
-    color: #333;
-    border-top: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
-    border-left: 1px solid #e0e0e0;
+    padding: 0 10px;
+    color: #fff;
+    margin-bottom: 0;
 }
 /* View company table*/
 .profile-company-table-item{

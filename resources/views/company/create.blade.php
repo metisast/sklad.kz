@@ -170,7 +170,7 @@
                         <div class="company-success-btn text-center">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <button class="btn btn-primary" data-loading-text="Загрузка..." autocomplete="off">Добавить</button>
+                                    <button class="btn btn-primary" data-loading-text="Загрузка..." autocomplete="off" data-redirect="{{ route('profile::index') }}">Добавить</button>
                                     <a href="{{ route('profile::index') }}">Отмена</a>
                                 </div>
                             </div>

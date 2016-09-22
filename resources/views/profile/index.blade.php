@@ -103,45 +103,51 @@
                 <!-- View list company start -->
                 <div class="profile-company-block">
                     <div class="row">
-                @foreach($companies as $company)
+                        @foreach($companies as $company)
                             <div class="col-xs-3">
                                 <!-- list 1 -->
-                                <div class="profile-company-list-item">
-                                    <div class="profile-company-list-img">
-                                        <a href="#">
-                                            <img src="/img/bi.jpg" alt="bi">
-                                        </a>
-                                    </div>
-                                    <div class="profile-company-list-name">
-                                        <h5><strong><a href="{{ route('company.show', $company->id) }}">{{ $company->short_name }}</a></strong></h5>
-                                    </div>
-                                    <div class="profile-company-list-city">
-                                        <p><i class="fa fa-map-marker"></i> Астана</p>
-                                    </div>
-                                    <div class="profile-company-list-status">
-                                        <table>
-                                            <tbody>
-                                            <tr>
-                                                <td><p>Товаров</p></td>
-                                                <td><p>215</p></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Материалов</p></td>
-                                                <td><p>80</p></td>
-                                            </tr>
-                                            <tr>
-                                                <td><p>Услуг</p></td>
-                                                <td><p>15</p></td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="profile-company-list-status-title">
-                                            <p>Статус: Продавец</p>
+                                    <div class="profile-company-list-item">
+                                        <div class="profile-company-list-img">
+                                            @if(!$company->logo)
+                                                <img src="/img/bi.jpg" alt="bi">
+                                            @else
+                                                <img width="100" src="{{ $companyLogoImagePath.$company->id.'/'.$company->logo }}">
+                                            @endif
+                                        </div>
+                                        <div class="profile-company-list-name">
+                                            <h5><strong><a href="{{ route('company.show', $company->id) }}">{{ $company->name }}</a></strong></h5>
+                                        </div>
+                                        <div class="profile-company-list-city">
+                                            <p><i class="fa fa-map-marker"></i> {{ $company->city->name }}</p>
+                                        </div>
+                                        <div class="profile-company-list-status">
+                                            <table>
+                                                <tbody>
+                                                <tr>
+                                                    <td><p>Товаров</p></td>
+                                                    <td><p>215</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Материалов</p></td>
+                                                    <td><p>80</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Услуг</p></td>
+                                                    <td><p>15</p></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="profile-company-list-status-title">
+                                                @if($company->status_activate_id == 2 && $company->status_publish_id == 1)
+                                                    <p>Статус: {{ $company->companyActivities->name }}</p>
+                                                    <p>на проверке</p>
+                                                @endif
+
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                             </div>
-                @endforeach
+                        @endforeach
                     </div>
                 </div><!-- View list company end -->
             @else

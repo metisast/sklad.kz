@@ -12,7 +12,7 @@
 
             var data = formInputs.serialize();
             var path = formInputs.data('path');
-            //console.log(data);
+            var redirectPath = $(this).data('redirect');
 
             $.ajax({
                 url: path,
@@ -21,10 +21,8 @@
                     $('.has-error').removeClass('has-error');
                     $('.control-label').remove();
                     $('#error-fields').remove();
-                    console.log(data);
-                    //successModal();
-                    //publish[0].reset();
-                    //clearImages();
+
+                    window.location.href = redirectPath + '?n=' + new Date().getTime();
                 },
                 error: function(err){
                     errorTopMessage();

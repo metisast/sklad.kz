@@ -76,6 +76,10 @@ class CompanyController extends Controller
         if($request->get('web_site') != '') $companySite::createCompanySite($create->id, $request->get('web_site'), $request->get('web_site_description'));
         $companyAddress::createCompanyAddress($create->id, $request->get('address'), $request->get('address_description'));
 
+        return response()->json([
+            'success'
+        ]);
+
     }
 
     /**

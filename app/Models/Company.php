@@ -15,6 +15,18 @@ class Company extends Model
         return $this->belongsTo('App\Models\Opf');
     }
 
+    /* Relation belong to company activities */
+    public function companyActivities()
+    {
+        return $this->belongsTo('App\Models\CompanyStatusActivity', 'status_activate_id');
+    }
+
+    /* Relation belong to company activities */
+    public function city()
+    {
+        return $this->belongsTo('App\Models\RegionsCity');
+    }
+
     /* Queries */
     public function createCompany($request)
     {
