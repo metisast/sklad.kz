@@ -14,10 +14,15 @@
     display: inline-block;
     width: 100%;
     background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
 }
 /* Logo */
 .logo h1{
     font-size: 44px;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 .logo a{
     color: #333;
