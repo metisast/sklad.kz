@@ -245,7 +245,7 @@
 }
 /* Profile */
 .profile-title{
-    margin: 30px 0;
+    margin: 0 0 30px 0;
 }
 .profile-info table{
     width: 100%;
@@ -664,7 +664,7 @@
 }
 /*Right side bar*/
 #right-side{
-    margin-top: 30px;
+    /*margin-top: 30px;*/
 }
 .side-bar{
     height: 380px;

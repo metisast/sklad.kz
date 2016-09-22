@@ -1,6 +1,20 @@
 {{-- User profile --}}
 @extends('layouts.boot')
 
+@section('bread_crumbs')
+    <div class="row">
+        <div class="col-xs-9">
+            <div class="bread-crumbs">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active">
+                        <a href="#"></a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+@endsection
+
 @section('content')
     <!-- User profile start -->
     <div id="profile">
@@ -108,11 +122,13 @@
                                 <!-- list 1 -->
                                     <div class="profile-company-list-item">
                                         <div class="profile-company-list-img">
-                                            @if(!$company->logo)
-                                                <img src="/img/bi.jpg" alt="bi">
-                                            @else
-                                                <img width="100" src="{{ $companyLogoImagePath.$company->id.'/'.$company->logo }}">
-                                            @endif
+                                            <a href="{{ route('company.show', $company->id) }}">
+                                                @if(!$company->logo)
+                                                    <img src="/img/bi.jpg" alt="bi">
+                                                @else
+                                                    <img width="100" src="{{ $companyLogoImagePath.$company->id.'/'.$company->logo }}">
+                                                @endif
+                                            </a>
                                         </div>
                                         <div class="profile-company-list-name">
                                             <h5><strong><a href="{{ route('company.show', $company->id) }}">{{ $company->name }}</a></strong></h5>

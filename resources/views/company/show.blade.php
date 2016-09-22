@@ -7,7 +7,9 @@
             <div class="bread-crumbs">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item active">
-                        <a href="#">{{ $company->opf->short_name.' '.$company->name }}</a>
+                        <a href="{{route('profile::index') }}">Профиль</a>
+                        <i class="fa fa-angle-right"></i>
+                        <span>{{ $company->opf->short_name.' '.$company->name }}</span>
                     </li>
                 </ol>
             </div>

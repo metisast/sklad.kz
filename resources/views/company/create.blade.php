@@ -1,6 +1,22 @@
 {{-- Company create --}}
 @extends('layouts.boot')
 
+@section('bread_crumbs')
+    <div class="row">
+        <div class="col-xs-9">
+            <div class="bread-crumbs">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active">
+                        <a href="{{route('profile::index') }}">Профиль</a>
+                        <i class="fa fa-angle-right"></i>
+                        <span>Добавить компанию</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+@endsection
+
 @section('content')
     <!-- Create company start -->
     <div id="company">
