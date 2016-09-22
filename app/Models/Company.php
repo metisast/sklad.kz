@@ -48,7 +48,7 @@ class Company extends Model
         return parent::where('user_id', '=', Auth::user()->id)->get();
     }
 
-    public function getCompanyByUser($id)
+    static public function getCompanyByUser($id)
     {
         return parent::where('id', '=', $id)->firstOrFail();
     }

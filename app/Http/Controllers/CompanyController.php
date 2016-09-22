@@ -13,6 +13,7 @@ use App\Models\Region;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Gate;
 
 class CompanyController extends Controller
 {
@@ -90,6 +91,8 @@ class CompanyController extends Controller
      */
     public function show($id)
     {
+        $this->authorize('update', $this->company->getCompanyByUser($id));
+
         return view('company.show')
             ->with('company', $this->company->getCompanyByUser($id));
     }
