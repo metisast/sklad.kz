@@ -89,12 +89,29 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, CompanyFeature $companyFeature, \MainImageUpload $logoPath, CompanyPhone $companyPhone, CompanyEmail $companyEmail, CompanySite $companySite, CompanyAddress $companyAddress)
     {
-        $this->authorize('update', $this->company->getCompanyByUser($id));
+        $company = $this->company->getCompanyByUser($id);
 
-        return view('company.show')
-            ->with('company', $this->company->getCompanyByUser($id));
+        /* Check permission */
+        $this->authorize('showCompany', $company);
+
+        $features = $companyFeature->getFeaturesByCompanyId($company->id);
+        $logoPath = $logoPath->getCompanyImageViewPath();
+        $phones = $companyPhone->getPhonesByCompanyId($company->id);
+        $emails = $companyEmail->getEmailByCompanyId($company->id);
+        $sites = $companySite->getSitesByCompanyId($company->id);
+        $addresses = $companyAddress->getAddressesByCompanyId($company->id);
+
+        return view('company.show', [
+            'company' => $company,
+            'features' => $features,
+            'logoPath' => $logoPath,
+            'phones' => $phones,
+            'emails' => $emails,
+            'sites' => $sites,
+            'addresses' => $addresses
+        ]);
     }
 
     /**

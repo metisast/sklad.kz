@@ -17,4 +17,9 @@ class CompanyEmail extends Model
             'description' => $description
         ]);
     }
+
+    static public function getEmailByCompanyId($id)
+    {
+        return parent::where('company_id', '=', $id)->get();
+    }
 }

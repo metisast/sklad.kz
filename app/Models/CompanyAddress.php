@@ -17,4 +17,9 @@ class CompanyAddress extends Model
             'description' => $description
         ]);
     }
+
+    static public function getAddressesByCompanyId($id)
+    {
+        return parent::where('company_id', '=', $id)->get();
+    }
 }

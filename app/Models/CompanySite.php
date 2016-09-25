@@ -17,4 +17,9 @@ class CompanySite extends Model
             'description' => $description
         ]);
     }
+
+    static public function getSitesByCompanyId($id)
+    {
+        return parent::where('company_id', '=', $id)->get();
+    }
 }

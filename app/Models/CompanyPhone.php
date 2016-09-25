@@ -17,4 +17,9 @@ class CompanyPhone extends Model
             'description' => $description
         ]);
     }
+
+    static public function getPhonesByCompanyId($id)
+    {
+        return parent::where('company_id', '=', $id)->get();
+    }
 }

@@ -12,7 +12,7 @@ class ProfilePolicy
     use HandlesAuthorization;
 
 
-    public function update(User $user, Company $company)
+    public function showCompany(User $user, Company $company)
     {
         return $user->id === $company->user_id;
     }
