@@ -3,7 +3,7 @@
 (function($) {
     $(function () {
 
-        var btnPublish = $('.btn-primary');
+        var btnPublish = $('#btn-company-publish');
         var formInputs = $('#company-publish');
 
         btnPublish.click(function(){

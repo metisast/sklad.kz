@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/* AD REST*/
+Route::resource('ad', 'AdController');
+
 Route::auth();
 
 /* XHR */
@@ -43,7 +46,5 @@ Route::group(['middleware' => 'auth'], function(){
 
     /* Company REST*/
     Route::resource('company', 'CompanyController');
-    /* AD REST*/
-    Route::resource('ad', 'AdController');
 
 });

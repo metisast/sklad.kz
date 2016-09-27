@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Industry;
 use App\Models\MainCategory;
 use App\Models\Product;
+use App\Models\Region;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -28,18 +29,14 @@ class AdController extends Controller
      * @param MainCategory $mainCategory
      * @return \Illuminate\Http\Response
      */
-    public function create(MainCategory $mainCategory, Category $category, Product $product, Industry $industry)
+    public function create(Industry $industry, Region $region)
     {
-        $mainCategories = $mainCategory->getMainCategories();
         $industries = $industry->getIndustries();
-        $categories = $category->getCategories();
-        $products = $product->getProducts();
+        $regions = $region->getAllRegions();
 
         return view('ad.create', [
-            'mainCategories' => $mainCategories,
             'industries' => $industries,
-            'categories' =>  $categories,
-            'products' => $products
+            'regions' => $regions,
         ]);
     }
 

@@ -49,7 +49,7 @@
                         <div class="col-xs-12">
                             <div class="form-group">
                                 <div class="col-xs-4 input-required">
-                                    <a href="#" id="features" data-toggle="modal" data-target="#modal">
+                                    <a href="#" id="features" class="btn btn-primary" data-toggle="modal" data-target="#modal">
                                         Выберите деятельность компании
                                     </a>
                                     <input type="hidden" name="features">
@@ -186,7 +186,7 @@
                         <div class="company-success-btn text-center">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <button class="btn btn-primary" data-loading-text="Загрузка..." autocomplete="off" data-redirect="{{ route('profile::index') }}">Добавить</button>
+                                    <button class="btn btn-primary" id="btn-company-publish" data-loading-text="Загрузка..." autocomplete="off" data-redirect="{{ route('profile::index') }}">Добавить</button>
                                     <a href="{{ route('profile::index') }}">Отмена</a>
                                 </div>
                             </div>

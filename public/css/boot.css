@@ -598,6 +598,7 @@
 }
 .company-img-block{
     float: left;
+    margin-right: 10px;
 }
 .company-photo-ready{
     display: none;

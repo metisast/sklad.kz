@@ -35,6 +35,9 @@ textarea{
 label{
     font-weight: normal;
 }
+hr{
+    margin: 10px 0;
+}
 .btn:active{
     outline: none;
 }
@@ -99,6 +102,9 @@ input[type=checkbox], input[type=radio]{
 .fa-phone{
     color: #4cb034;
 }
+.fa-user{
+    color: #3F51B5;
+}
 .fa-envelope{
     color: #24bfb6;
 }
@@ -138,6 +144,10 @@ button::-moz-focus-inner {
     color: #ff9800;
 }
 .btn-yellow:hover .fa{
+    color: #fff;
+}
+.btn-yellow-fill{
+    background: #ff9800;
     color: #fff;
 }
 .btn-file {
