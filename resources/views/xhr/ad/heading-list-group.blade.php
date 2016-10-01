@@ -6,7 +6,7 @@
                 @foreach($lists as $ind)
                     <a href="#" class="list-group-item"
                        data-parent="{{ $ind->parent_id }}"
-                       data-id="{{ $ind->id }}">
+                       data-id="{{ $ind->industry_id }}">
                         <span class="badge"><i class="fa fa-angle-right"></i></span>
                         {{ $ind->industry->name }}
                     </a>

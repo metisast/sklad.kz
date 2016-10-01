@@ -2,6 +2,7 @@
 
     $(function(){
 
+        var formPublish = $('#ad-publish');
         var btnHeading = $('#btn-heading');
         var modal = $('#modal');
         var adHeadingBreacrumb = $('    #ad-heading-breadcrumb');
@@ -63,7 +64,6 @@
                 data: {parent_id: id, listTitle: listTitle},
                 success: function(data){
                     if(data.status == 'end') {
-                        console.log(data.status);
                         self.closest('.col-xs-3').next().remove();//remove next group-list
                         adHeadingComplete();
                         return false;
@@ -91,8 +91,9 @@
             modal.modal('hide');
             var adHeadingWrapper = $('.ad-heading-wrapper');
             var activities = adHeadingWrapper.find('.list-group-item.active');
-            breadCrumb(activities);
-            console.log(activities);
+            var lastIndex = $(activities[activities.size()-1]).data('id');
+            breadCrumb(activities);// create breadcrumb
+            insertValue(lastIndex);// insert hidden values
         };
 
         /* Render breadcrumb for ad headings */
@@ -105,7 +106,14 @@
                 adHeadingBreacrumb.append($(item).text());
                 (index < $(lists).size()-1) ? adHeadingBreacrumb.append(angle) : '';
             });
-        }
+        };
+
+        /* Insert values in hidden input */
+        var insertValue = function(value){
+            var hiddenHeadingInput = formPublish.find("[name='industry_id']");
+            hiddenHeadingInput.val(value);
+            console.log(hiddenHeadingInput.val());
+        };
 
     });
 

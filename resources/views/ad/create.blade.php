@@ -31,7 +31,7 @@
                     <div class="col-xs-12">
                         <div class="company-form">
                             <!-- Form company start -->
-                            <form method="post" class="form-horizontal" id="ad">
+                            <form method="post" class="form-horizontal" id="ad-publish">
                                 {{ csrf_field() }}
 
                                 <div class="col-xs-8">
@@ -49,6 +49,7 @@
                                             <button class="btn btn-primary btn-sm" id="btn-heading">
                                                 <i class="fa fa-folder-open-o"></i> Выберите рубрику
                                             </button>
+                                            <input type="hidden" name="industry_id">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -172,7 +173,7 @@
                                 <div class="col-xs-12">
                                     <div class="form-group">
                                         <div class="col-xs-4">
-                                            {!! Helpers::select($regions, 'name', old('industry_id'), 'Регион', ['id' => 'regions', 'name' => 'industry_id', 'data-search' => 'true']) !!}
+                                            {!! Helpers::select($regions, 'name', old('region_id'), 'Регион', ['id' => 'regions', 'name' => 'region_id', 'data-search' => 'true']) !!}
                                         </div>
                                         <div class="col-xs-4">
                                             <select name="cities" id="cities" data-search="true"></select>
@@ -202,50 +203,53 @@
                                     <hr>
                                 </div>
 
-                                <div class="col-xs-12 text-center">
+                                {{--<div class="col-xs-12 text-center">
                                     <div class="company-title-info">
                                         <h5>Специальные предложения</h5>
                                     </div>
-                                </div>
+                                </div>--}}
+
                                 <!-- Spec start -->
-                                <div class="col-xs-12">
-                                    <div class="form-group">
-                                        <div class="spec">
-                                            <div class="col-xs-2">
-                                                <button class="btn btn-discount active">Скидка <p>15% процентов</p></button>
-                                            </div>
-                                            <div class="col-xs-3">
-                                                <div class="spec-input">
-                                                    <p class="text-muted">Процент скидки</p>
-                                                    <input type="text" class="spec-input" value="15">
+                                {{--<div id="spec">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <div class="spec">
+                                                <div class="col-xs-2">
+                                                    <button class="btn btn-discount active">Скидка <p>15% процентов</p></button>
+                                                </div>
+                                                <div class="col-xs-3">
+                                                    <div class="spec-input">
+                                                        <p class="text-muted">Процент скидки</p>
+                                                        <input type="text" class="spec-input" value="15">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-1">
+                                                    <div class="spec-close text-muted">
+                                                        <i class="fa fa-close"></i>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xs-1">
-                                                <div class="spec-close text-muted">
-                                                    <i class="fa fa-close"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <div class="spec">
+                                                <div class="col-xs-2">
+                                                    <button class="btn btn-sale"><i class="fa fa-plus"></i> Распродажа <p></p></button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-xs-12">
-                                    <div class="form-group">
-                                        <div class="spec">
-                                            <div class="col-xs-2">
-                                                <button class="btn btn-sale"><i class="fa fa-plus"></i> Распродажа <p></p></button>
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <div class="spec">
+                                                <div class="col-xs-2">
+                                                    <button class="btn btn-bonus"><i class="fa fa-plus"></i> Бонус <p></p></button>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12">
-                                    <div class="form-group">
-                                        <div class="spec">
-                                            <div class="col-xs-2">
-                                                <button class="btn btn-bonus"><i class="fa fa-plus"></i> Бонус <p></p></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- Spec end -->
+                                    </div><!-- Spec end -->
+                                </div>  --}}
                                 <!-- Licence -->
                                 <div class="col-xs-12">
                                     <div class="form-space">
