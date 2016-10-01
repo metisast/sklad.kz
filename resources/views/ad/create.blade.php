@@ -42,27 +42,38 @@
                                     </div>
                                 </div>
 
+                                <!-- Heading start -->
                                 <div class="col-xs-12">
                                     <div class="form-group">
                                         <div class="col-xs-3">
-                                            <button class="btn btn-primary">
+                                            <button class="btn btn-primary btn-sm" id="btn-heading">
                                                 <i class="fa fa-folder-open-o"></i> Выберите рубрику
                                             </button>
                                         </div>
                                     </div>
-                                </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <div id="ad-heading-breadcrumb">
+                                                <!-- Put here -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- Heading end -->
+
+                                <!-- Heading insert block -->
 
                                 <div class="col-xs-12">
                                     <hr>
                                 </div>
 
+                                <!-- Description start -->
                                 <div class="col-xs-12">
                                     <div class="form-group">
                                         <div class="col-xs-12">
                                             <textarea class="form-control" value="{{ old('name') }}" name="name" placeholder="Опишите свой товар" rows="7"></textarea>
                                         </div>
                                     </div>
-                                </div>
+                                </div><!-- Description end -->
 
                                 <!-- Add photo start -->
                                 <div class="col-xs-12">

@@ -15,9 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/* AD REST*/
-Route::resource('ad', 'AdController');
-
 Route::auth();
 
 /* XHR */
@@ -25,8 +22,13 @@ Route::post('/xhr/filter/catalog', 'XHR\FilterController@getCatalogById');
 Route::post('/xhr/filter/main_catalog', 'XHR\FilterController@getMainCatalogById');
 Route::post('/xhr/company_features', 'XHR\CompanyController@getCompanyFeatures');
 Route::post('/xhr/city', 'XHR\RegionCityController@getCitiesByRegionId');
+
 Route::post('/xhr/company-photo-upload', 'XHR\ImageUploadController@companyUploadLogoImage');
 Route::post('/xhr/company-photo-delete', 'XHR\ImageUploadController@companyDeleteLogoImage');
+
+Route::post('/xhr/ad-list/modal', 'XHR\AdController@showModal');
+Route::post('/xhr/ad-list/heading', 'XHR\AdController@getIndustriesByMainCatalog');
+Route::post('/xhr/ad-list/heading/catalog', 'XHR\AdController@getCatalogByParentId');
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +45,9 @@ Route::group(['middleware' => 'auth'], function(){
             'uses' => 'ProfileController@index'
         ]);
     });
+
+    /* AD REST*/
+    Route::resource('ad', 'AdController');
 
     /* Company REST*/
     Route::resource('company', 'CompanyController');

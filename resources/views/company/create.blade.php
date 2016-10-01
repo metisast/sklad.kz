@@ -49,8 +49,8 @@
                         <div class="col-xs-12">
                             <div class="form-group">
                                 <div class="col-xs-4 input-required">
-                                    <a href="#" id="features" class="btn btn-primary" data-toggle="modal" data-target="#modal">
-                                        Выберите деятельность компании
+                                    <a href="#" id="features" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal">
+                                        <i class="fa fa-folder-open-o"></i> Выберите деятельность компании
                                     </a>
                                     <input type="hidden" name="features">
                                 </div>

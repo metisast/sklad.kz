@@ -686,7 +686,20 @@
     background: #e0e0e0;
     margin-bottom: 15px;
 }
+/* Ad heading */
+#ad-heading{
 
+    overflow: auto;
+}
+.ad-heading-wrapper{
+
+}
+.ad-heading-wrapper .col-xs-3{
+    width: 280px;
+}
+.ad-heading-result{
+    float: left;
+}
 /* Socials */
 #socials{
     margin-top: 30px;

@@ -213,3 +213,28 @@ button::-moz-focus-inner {
 .img-thumbnail{
     padding: 0;
 }
+#ad-heading .badge{
+    background-color: transparent;
+    color: #e0e0e0;
+}
+
+/* Panels */
+.ad-heading-wrapper .panel-heading{
+    padding: 5px 10px;
+    font-size: 13px;
+}
+.ad-heading-wrapper .list-group-item{
+    padding: 5px 10px;
+    font-size: 12px;
+}
+.ad-heading-wrapper .list-group{
+    max-height: 300px;
+    overflow: auto
+}
+.ad-heading-wrapper .list-group-item.active{
+    background: #ff9800;
+    border-color: transparent;
+}
+.ad-heading-wrapper .list-group-item.active i{
+    color: #FFFFFF;
+}
