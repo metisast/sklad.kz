@@ -12,7 +12,7 @@ class CreateAdStatusPublishTable extends Migration
      */
     public function up()
     {
-        Schema::create('ad_status_publish', function (Blueprint $table) {
+        Schema::create('ad_status_publishes', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('name');
             $table->timestamps();
@@ -26,6 +26,6 @@ class CreateAdStatusPublishTable extends Migration
      */
     public function down()
     {
-        Schema::drop('ad_status_publish');
+        Schema::drop('ad_status_publishes');
     }
 }

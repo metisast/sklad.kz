@@ -12,7 +12,7 @@ class CreateAdStatusBelongTable extends Migration
      */
     public function up()
     {
-        Schema::create('ad_status_belong', function (Blueprint $table) {
+        Schema::create('ad_status_belongs', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('name');
             $table->timestamps();
@@ -26,6 +26,6 @@ class CreateAdStatusBelongTable extends Migration
      */
     public function down()
     {
-        Schema::drop('ad_status_belong');
+        Schema::drop('ad_status_belongs');
     }
 }
