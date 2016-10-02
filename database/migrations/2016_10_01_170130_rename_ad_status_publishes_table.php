@@ -12,7 +12,7 @@ class RenameAdStatusPublishesTable extends Migration
      */
     public function up()
     {
-        //Schema::rename('ad_status_publish', 'ad_status_publishes');
+        Schema::rename('ad_status_publish', 'ad_status_publishes');
         Schema::rename('ad_status_belong', 'ad_status_belongs');
     }
 
