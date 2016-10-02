@@ -26,6 +26,6 @@ class CreateRegionsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('create_regions');
+        Schema::drop('regions');
     }
 }
