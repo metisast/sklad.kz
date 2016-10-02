@@ -26,6 +26,9 @@ Route::post('/xhr/city', 'XHR\RegionCityController@getCitiesByRegionId');
 Route::post('/xhr/company-photo-upload', 'XHR\ImageUploadController@companyUploadLogoImage');
 Route::post('/xhr/company-photo-delete', 'XHR\ImageUploadController@companyDeleteLogoImage');
 
+Route::post('/xhr/ad-image-upload', 'XHR\ImageUploadController@adUploadImage');
+Route::post('/xhr/ad-image-delete', 'XHR\ImageUploadController@adDeleteImage');
+
 Route::post('/xhr/ad-list/modal', 'XHR\AdController@showModal');
 Route::post('/xhr/ad-list/heading', 'XHR\AdController@getIndustriesByMainCatalog');
 Route::post('/xhr/ad-list/heading/catalog', 'XHR\AdController@getCatalogByParentId');

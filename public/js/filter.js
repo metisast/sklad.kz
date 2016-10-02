@@ -1,12 +1,5 @@
 (function($) {
     $(function() {
-        /*Global ajax config*/
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            type: 'post'
-        });
 
         /* Main variables */
         var mainCatalogItem = $('.tabs__caption > li');

@@ -596,15 +596,15 @@
     padding-top: 20px;
     padding-bottom: 10px;
 }
-.company-img-block{
+.company-img-block, .ad-image-block{
     float: left;
     margin-right: 10px;
 }
-.company-photo-ready{
+.company-photo-ready, .ad-image-ready{
     display: none;
     position: relative;
 }
-.company-photo-ready .fa-close{
+.company-photo-ready .fa-close, .ad-image-ready .fa-close,{
     position: absolute;
     right: 0;
     top: 0;
@@ -612,6 +612,10 @@
     color: #fff;
     display: block;
     padding: 5px;
+}
+.btn-delete-image{
+    padding: 3px 5px;
+    border-radius: 0 3px 0 3px;
 }
 .form-space{
     padding-top: 15px;
@@ -688,7 +692,6 @@
 }
 /* Ad heading */
 #ad-heading{
-
     overflow: auto;
 }
 .ad-heading-wrapper{

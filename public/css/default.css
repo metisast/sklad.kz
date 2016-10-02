@@ -151,6 +151,7 @@ button::-moz-focus-inner {
     color: #fff;
 }
 .btn-file {
+    line-height: 129px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -161,6 +162,9 @@ button::-moz-focus-inner {
     border: 1px solid #e0e0e0;
     border-radius: 3px;
     margin-bottom: 15px;
+}
+.btn-file img{
+    vertical-align: middle;
 }
 .btn-file .fa-plus{
     margin-top: 35px;

@@ -128,4 +128,49 @@ class Images
             }
         }
     }
+
+    /**
+     * Make ad images
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function setAdImage()
+    {
+        /* Make thumb image */
+        $this->pathImage = $this->mainImageUploadPath->getTmpThumbsAdImageSavePath();
+        $this->mimeSave = '.jpg';
+        Image::make($this->file)->widen(130)->save($this->renderImage(), 100);
+
+        /* Make normal image */
+        $this->pathImage = $this->mainImageUploadPath->getTmpNormalAdImageSavePath();
+        $this->mimeSave = '.jpg';
+        Image::make($this->file)->widen(800)->save($this->renderImage(), 100);
+
+        return response()
+            ->json([
+                'name' => $this->nameImage . $this->mimeSave,
+                'adTmpImagePath' => $this->mainImageUploadPath->getPublicTmpThumbsAdImageViewPath()
+            ]);
+    }
+
+    /**
+     * Delete ad images
+     * @param src
+     * @return void
+     */
+    public function deleteAdImages($src)
+    {
+        /* Delete thumb image */
+        $this->pathImage = $this->mainImageUploadPath->getTmpThumbsAdImageSavePath().$src;
+        if(file_exists($this->pathImage))
+        {
+            unlink($this->pathImage);
+        }
+
+        /* Delete normal image */
+        $this->pathImage = $this->mainImageUploadPath->getTmpNormalAdImageSavePath().$src;
+        if(file_exists($this->pathImage))
+        {
+            unlink($this->pathImage);
+        }
+    }
 }

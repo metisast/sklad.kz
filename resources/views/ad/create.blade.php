@@ -31,13 +31,13 @@
                     <div class="col-xs-12">
                         <div class="company-form">
                             <!-- Form company start -->
-                            <form method="post" class="form-horizontal" id="ad-publish">
+                            <form method="post" class="form-horizontal" id="ad-publish" data-path="{{ route('ad.store') }}">
                                 {{ csrf_field() }}
 
                                 <div class="col-xs-8">
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <input type="text" class="form-control" value="{{ old('name') }}" name="name" placeholder="Заголовок">
+                                            <input type="text" class="form-control" value="{{ old('title') }}" name="title" placeholder="Заголовок">
                                         </div>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@
                                 <div class="col-xs-12">
                                     <div class="form-group">
                                         <div class="col-xs-12">
-                                            <textarea class="form-control" value="{{ old('name') }}" name="name" placeholder="Опишите свой товар" rows="7"></textarea>
+                                            <textarea class="form-control" value="{{ old('description') }}" name="description" placeholder="Опишите свой товар" rows="7"></textarea>
                                         </div>
                                     </div>
                                 </div><!-- Description end -->
@@ -79,41 +79,47 @@
                                 <!-- Add photo start -->
                                 <div class="col-xs-12">
                                     <div class="form-space">
-                                        <div class="company-img">
+                                        <div class="ad-images">
                                             <!-- F1 -->
-                                            <div class="company-img-block">
-                                                        <span class="img-thumbnail btn-file">
-                                                            <i class="fa fa-plus"></i><input type="file">
-                                                            <p class="text-center">Добавить изображение</p>
-                                                        </span>
+                                            <div class="ad-image-block">
+                                                <span class="img-thumbnail btn-file">
+                                                    <section class="ad-image-prepare">
+                                                        <i class="fa fa-plus"><p>Добавить основное изображение</p></i><input type="file" class="ad-image-upload" name="ad_image">
+                                                    </section>
+                                                </span>
                                             </div>
                                             <!-- F2 -->
-                                            <div class="company-img-block">
-                                                        <span class="img-thumbnail btn-file">
-                                                            <i class="fa fa-plus"></i><input type="file">
-                                                            <p class="text-center">Добавить изображение</p>
-                                                        </span>
+                                            <div class="ad-image-block">
+                                                <span class="img-thumbnail btn-file">
+                                                    <section class="ad-image-prepare">
+                                                        <i class="fa fa-plus"><p>Добавить изображение</p></i><input type="file" class="ad-image-upload" name="ad_image">
+
+                                                    </section>
+                                                </span>
                                             </div>
                                             <!-- F3 -->
-                                            <div class="company-img-block">
-                                                        <span class="img-thumbnail btn-file">
-                                                            <i class="fa fa-plus"></i><input type="file">
-                                                            <p class="text-center">Добавить изображение</p>
-                                                        </span>
+                                            <div class="ad-image-block">
+                                                <span class="img-thumbnail btn-file">
+                                                    <section class="ad-image-prepare">
+                                                        <i class="fa fa-plus"><p>Добавить изображение</p></i><input type="file" class="ad-image-upload" name="ad_image">
+                                                    </section>
+                                                </span>
                                             </div>
                                             <!-- F4 -->
-                                            <div class="company-img-block">
-                                                        <span class="img-thumbnail btn-file">
-                                                            <i class="fa fa-plus"></i><input type="file">
-                                                            <p class="text-center">Добавить изображение</p>
-                                                        </span>
+                                            <div class="ad-image-block">
+                                                <span class="img-thumbnail btn-file">
+                                                    <section class="ad-image-prepare">
+                                                        <i class="fa fa-plus"><p>Добавить изображение</p></i><input type="file" class="ad-image-upload" name="ad_image">
+                                                    </section>
+                                                </span>
                                             </div>
                                             <!-- F5 -->
-                                            <div class="company-img-block">
-                                                        <span class="img-thumbnail btn-file">
-                                                            <i class="fa fa-plus"></i><input type="file">
-                                                            <p class="text-center">Добавить изображение</p>
-                                                        </span>
+                                            <div class="ad-image-block">
+                                                <span class="img-thumbnail btn-file">
+                                                    <section class="ad-image-prepare">
+                                                        <i class="fa fa-plus"><p>Добавить изображение</p></i><input type="file" class="ad-image-upload" name="ad_image">
+                                                    </section>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -128,14 +134,14 @@
                                     <div class="form-group">
                                         <div class="col-xs-12">
                                             <div class="col-xs-4">
-                                                <input type="text" class="form-control" value="{{ old('name') }}" name="name" placeholder="Цена">
+                                                <input type="text" class="form-control" value="{{ old('price') }}" name="price" placeholder="Цена">
                                             </div>
                                             <p>Тенге</p>
                                         </div>
                                     </div>
                                 </div><!-- Price end -->
 
-                                <div class="col-xs-12 text-center">
+                                {{--<div class="col-xs-12 text-center">
                                     <div class="company-title-info">
                                         <h5>Характеристики</h5>
                                     </div>
@@ -158,7 +164,7 @@
                                             <p>кВт</p>
                                         </div>
                                     </div>
-                                </div><!-- AD features end -->
+                                </div><!-- AD features end -->--}}
 
                                 <div class="col-xs-12">
                                     <hr>
@@ -176,24 +182,24 @@
                                             {!! Helpers::select($regions, 'name', old('region_id'), 'Регион', ['id' => 'regions', 'name' => 'region_id', 'data-search' => 'true']) !!}
                                         </div>
                                         <div class="col-xs-4">
-                                            <select name="cities" id="cities" data-search="true"></select>
+                                            <select name="city_id" id="cities" data-search="true"></select>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-xs-4">
-                                            <input type="text" name="name" placeholder="Контактное лицо" class="form-control">
+                                            <input type="text" name="user_name" placeholder="Контактное лицо" class="form-control">
                                             <span class="fa fa-user form-control-feedback" aria-hidden="true"></span>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-xs-4">
-                                            <input type="text" name="name" placeholder="Email-адрес" class="form-control">
+                                            <input type="text" name="email" placeholder="Email-адрес" class="form-control">
                                             <span class="fa fa-envelope form-control-feedback" aria-hidden="true"></span>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-xs-4">
-                                            <input type="text" name="name" placeholder="Номер телефона" class="form-control">
+                                            <input type="text" name="phone" placeholder="Номер телефона" class="form-control">
                                             <span class="fa fa-phone form-control-feedback" aria-hidden="true"></span>
                                         </div>
                                     </div>
@@ -266,7 +272,7 @@
                                 <div class="company-success-btn text-center">
                                     <div class="row">
                                         <div class="col-xs-12">
-                                            <button class="btn btn-primary">Опубликовать</button>
+                                            <button class="btn btn-primary" id="btn-ad-publish" data-loading-text="Загрузка..." data-redirect="{{ route('profile::index') }}">Опубликовать</button>
                                             <a href="#">Предпросмотр</a>
                                             <a href="{{ route('profile::index') }}">Отмена</a>
                                         </div>
