@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ad;
 use App\Models\Category;
 use App\Models\Industry;
 use App\Models\MainCategory;
@@ -44,11 +45,12 @@ class AdController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
+     * @param Requests\AdPublishRequest $adPublishRequest
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Ad $ad, Requests\AdPublishRequest $adPublishRequest)
     {
-        dd($request->all());
+        $ad = $ad->createAd($request);
     }
 
     /**

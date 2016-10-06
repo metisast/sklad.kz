@@ -5,6 +5,9 @@
 
         var btnPublish = $('#btn-ad-publish');
         var formInputs = $('#ad-publish');
+        var adCompanyRadios = $('#ad-company-radios').find('input');
+        var adCompanySelectBlock = $('#ad-company-select');
+        var adCompanySelect = $('#ad-company-select select');
 
         btnPublish.click(function(){
             /* Show loading action */
@@ -65,6 +68,23 @@
                 scrollTop: 100
             }, 1000);
         };
+
+        /* Create companies select */
+        adCompanyRadios.change(function(){
+            $(this).val() == 2 ? getCompaniesSelect() : clearCompanies();
+            adCompanySelect.trigger('refresh');
+        });
+
+        /* Query and render companies */
+        var getCompaniesSelect = function(){
+            adCompanySelectBlock.show();
+            ajaxSelect('/xhr/ad-list/companies', '', adCompanySelect);
+        }
+
+        /* Clear companies block */
+        var clearCompanies = function(){
+            adCompanySelectBlock.hide();
+        }
 
     });
 })(jQuery);

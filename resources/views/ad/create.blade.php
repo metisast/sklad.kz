@@ -36,7 +36,7 @@
 
                                 <div class="col-xs-8">
                                     <div class="form-group">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 input-required">
                                             <input type="text" class="form-control" value="{{ old('title') }}" name="title" placeholder="Заголовок">
                                         </div>
                                     </div>
@@ -45,7 +45,7 @@
                                 <!-- Heading start -->
                                 <div class="col-xs-12">
                                     <div class="form-group">
-                                        <div class="col-xs-3">
+                                        <div class="col-xs-3 input-required">
                                             <button class="btn btn-primary btn-sm" id="btn-heading">
                                                 <i class="fa fa-folder-open-o"></i> Выберите рубрику
                                             </button>
@@ -62,6 +62,27 @@
                                 </div><!-- Heading end -->
 
                                 <!-- Heading insert block -->
+                                <!-- Ad type start -->
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <div class="col-xs-12 input-required">
+                                            <div class="btn-group" data-toggle="buttons" id="ad-company-radios">
+                                                <label class="btn btn-primary btn-sm active">
+                                                    <input type="radio" name="ad_type" value="1" autocomplete="off" checked>Частное объявление
+                                                </label>
+                                                <label class="btn btn-primary btn-sm">
+                                                    <input type="radio" name="ad_type" value="2" autocomplete="off"> Объявление компании
+                                                </label>
+                                            </div>
+                                            <span>Нет компании, </span><a href="{{ route('company.create') }}">создать</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-4 input-required" id="ad-company-select">
+                                            <select name="company"><!-- Insert companies --></select>
+                                        </div>
+                                    </div>
+                                </div><!-- Ad type end -->
 
                                 <div class="col-xs-12">
                                     <hr>
@@ -70,7 +91,7 @@
                                 <!-- Description start -->
                                 <div class="col-xs-12">
                                     <div class="form-group">
-                                        <div class="col-xs-12">
+                                        <div class="col-xs-12 input-required">
                                             <textarea class="form-control" value="{{ old('description') }}" name="description" placeholder="Опишите свой товар" rows="7"></textarea>
                                         </div>
                                     </div>
@@ -133,7 +154,7 @@
                                 <div class="form-space">
                                     <div class="form-group">
                                         <div class="col-xs-12">
-                                            <div class="col-xs-4">
+                                            <div class="col-xs-4 input-required">
                                                 <input type="text" class="form-control" value="{{ old('price') }}" name="price" placeholder="Цена">
                                             </div>
                                             <p>Тенге</p>
@@ -178,27 +199,27 @@
                                 <!-- Contacts start -->
                                 <div class="col-xs-12">
                                     <div class="form-group">
-                                        <div class="col-xs-4">
-                                            {!! Helpers::select($regions, 'name', old('region_id'), 'Регион', ['id' => 'regions', 'name' => 'region_id', 'data-search' => 'true']) !!}
+                                        <div class="col-xs-4 input-required">
+                                            {!! Helpers::select($regions, 'name', old('region_id'), 'Область', ['id' => 'regions', 'name' => 'region_id', 'data-search' => 'true']) !!}
                                         </div>
-                                        <div class="col-xs-4">
+                                        <div class="col-xs-4 input-required">
                                             <select name="city_id" id="cities" data-search="true"></select>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <div class="col-xs-4">
+                                        <div class="col-xs-4 input-required">
                                             <input type="text" name="user_name" placeholder="Контактное лицо" class="form-control">
                                             <span class="fa fa-user form-control-feedback" aria-hidden="true"></span>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <div class="col-xs-4">
+                                        <div class="col-xs-4 input-required">
                                             <input type="text" name="email" placeholder="Email-адрес" class="form-control">
                                             <span class="fa fa-envelope form-control-feedback" aria-hidden="true"></span>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <div class="col-xs-4">
+                                        <div class="col-xs-4 input-required">
                                             <input type="text" name="phone" placeholder="Номер телефона" class="form-control">
                                             <span class="fa fa-phone form-control-feedback" aria-hidden="true"></span>
                                         </div>
@@ -258,12 +279,12 @@
                                 </div>  --}}
                                 <!-- Licence -->
                                 <div class="col-xs-12">
-                                    <div class="form-space">
-                                        <div class="form-group">
-                                            <div class="col-xs-12 checkbox">
-                                                <label>
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <div class="checkbox input-required">
+                                                <label class="licence">
                                                     <input type="checkbox" name="licence">
-                                                    Я соглашаюсь с <a href="#">правилами размещения объявлений,</a> а также с передачей и обработкой моих данных
+                                                    Я соглашаюсь с <a href="#">правилами использования сервисом</a>, а также с передачей и обработкой моих данных. Я подтверждаю  своё совершеннолетие и ответственность за размещение объявления
                                                 </label>
                                             </div>
                                         </div>

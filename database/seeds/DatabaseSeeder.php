@@ -23,7 +23,10 @@ class DatabaseSeeder extends Seeder
         $this->call(CatalogTreesSeeder::class);
         $this->call(CompanyStatusPublishSeeder::class);
         $this->call(CompanyStatusActiveSeeder::class);
+        $this->call(AdStatusActiveSeeder::class);
+        $this->call(AdStatusBelongSeeder::class);
+        $this->call(AdStatusPublishSeeder::class);
         */
-        $this->call(GlobalTruncateCompanySeeder::class);
+        //$this->call(GlobalTruncateCompanySeeder::class);
     }
 }

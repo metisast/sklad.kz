@@ -52,4 +52,13 @@ class Company extends Model
     {
         return parent::where('id', '=', $id)->firstOrFail();
     }
+
+    static public function getActiveCompaniesByUserId()
+    {
+        return parent::where([
+            ['user_id', '=', Auth::user()->id],
+            ['status_publish_id', '=', 2],
+            ['status_activate_id', '=', 1]
+        ])->get();
+    }
 }

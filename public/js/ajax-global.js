@@ -25,6 +25,8 @@
                 data: data,
                 success: function (data) {
                     response.html(data).attr('disabled', false);
+                    console.log(data);
+                    $('select').trigger('refresh');
                 },
                 error: function (err) {
                     console.log(err);

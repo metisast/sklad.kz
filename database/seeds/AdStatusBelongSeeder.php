@@ -15,12 +15,12 @@ class AdStatusBelongSeeder extends Seeder
 
         DB::table('ad_status_belongs')->insert([
             [
-                'name' => 'enabled',
+                'name' => 'user',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ],
             [
-                'name' => 'disabled',
+                'name' => 'company',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ]

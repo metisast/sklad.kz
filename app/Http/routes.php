@@ -32,6 +32,7 @@ Route::post('/xhr/ad-image-delete', 'XHR\ImageUploadController@adDeleteImage');
 Route::post('/xhr/ad-list/modal', 'XHR\AdController@showModal');
 Route::post('/xhr/ad-list/heading', 'XHR\AdController@getIndustriesByMainCatalog');
 Route::post('/xhr/ad-list/heading/catalog', 'XHR\AdController@getCatalogByParentId');
+Route::post('/xhr/ad-list/companies', 'XHR\AdController@getCompaniesByUserId');
 
 /*
 |--------------------------------------------------------------------------

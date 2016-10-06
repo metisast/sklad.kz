@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\XHR;
 
 use App\Models\CatalogTree;
+use App\Models\Company;
 use App\Models\MainCategory;
 use Illuminate\Http\Request;
 
@@ -68,5 +69,15 @@ class AdController extends Controller
         }
 
 
+    }
+
+    public function getCompaniesByUserId(Company $company)
+    {
+        $companies = $company->getActiveCompaniesByUserId();
+
+        return response()->view('xhr.forms.options',[
+            'lists' => $companies,
+            'first_option' => 'Выберите компанию'
+        ]);
     }
 }
