@@ -30,9 +30,6 @@
                 url: '/xhr/ad-image-upload',
                 contentType: false,
                 processData: false,
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
                 data: data,
                 beforeSend: function(){
                     console.log(self.attr('class'));
@@ -41,7 +38,7 @@
                 success: function(data){
                     console.log(data.name);
                     showImage(self, data);
-                    deleteImage();
+                    //deleteImage();
                 },
                 error: function(err){
                     console.log(err.responseText);
@@ -79,30 +76,30 @@
         };
 
         /*Delete image*/
-        var deleteImage = function(){
-            $('.btn-file').on('click', '.btn-delete-image', function(){
-                var src = $(this).prev().attr('src');
-                var a = src.split('/');
-                var imageName = a[a.length-1];
-                var self = $(this).parent();
-                $.ajax({
-                    url: '/xhr/ad-image-delete',
-                    data: {imageName: imageName},
-                    success: function(data){
-                        var plus = $('<i>').addClass('fa fa-plus');
-                        var input = $('<input>').attr('type', 'file');
-                        self.empty().append(plus,[input]);
-                    },
-                    error: function(err){
-                        console.log(err);
-                    },
-                    complete: function(){
+        $(document).delegate('.btn-delete-image', 'click', function(e){
+            e.preventDefault();
+            e.stopPropagation();
 
-                    }
-                });
-                return false;
+            var src = $(this).prev().attr('src');
+            var a = src.split('/');
+            var imageName = a[a.length-1];
+            var self = $(this).parent();
+            $.ajax({
+                url: '/xhr/ad-image-delete',
+                data: {imageName: imageName},
+                success: function(data){
+                    var plus = $('<i>').addClass('fa fa-picture-o fa-3x');
+                    var input = $('<input>').attr('type', 'file');
+                    self.empty().append(plus,[input]);
+                },
+                error: function(err){
+                    console.log(err);
+                },
+                complete: function(){
+
+                }
             });
-        };
 
+        });
     });
 })(jQuery);

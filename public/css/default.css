@@ -169,8 +169,8 @@ button::-moz-focus-inner {
 .btn-file img{
     vertical-align: middle;
 }
-.btn-file .fa-plus{
-    margin-top: 35px;
+.btn-file.main{
+    border: 1px solid #4caf50;
 }
 .btn-file p{
     padding: 0 20px;
@@ -179,6 +179,10 @@ button::-moz-focus-inner {
 .btn-file a{
     color: #333;
     display: block;
+}
+.btn-file i.fa-3x{
+    vertical-align: middle;
+    color: #aaa;
 }
 .btn-file input[type=file] {
     position: absolute;

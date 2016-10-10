@@ -50,7 +50,7 @@ class AdController extends Controller
      */
     public function store(Request $request, Ad $ad, Requests\AdPublishRequest $adPublishRequest)
     {
-        $ad = $ad->createAd($request);
+        //$ad = $ad->createAd($request);
     }
 
     /**

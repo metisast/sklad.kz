@@ -68,10 +68,10 @@
                                         <div class="col-xs-12 input-required">
                                             <div class="btn-group" data-toggle="buttons" id="ad-company-radios">
                                                 <label class="btn btn-primary btn-sm active">
-                                                    <input type="radio" name="ad_type" value="1" autocomplete="off" checked>Частное объявление
+                                                    <input type="radio" name="ad_relation" value="1" autocomplete="off" checked>Частное объявление
                                                 </label>
                                                 <label class="btn btn-primary btn-sm">
-                                                    <input type="radio" name="ad_type" value="2" autocomplete="off"> Объявление компании
+                                                    <input type="radio" name="ad_relation" value="2" autocomplete="off"> Объявление компании
                                                 </label>
                                             </div>
                                             <span>Нет компании, </span><a href="{{ route('company.create') }}">создать</a>
@@ -79,7 +79,7 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-xs-4 input-required" id="ad-company-select">
-                                            <select name="company"><!-- Insert companies --></select>
+                                            <select name=""><!-- Insert companies --></select>
                                         </div>
                                     </div>
                                 </div><!-- Ad type end -->
@@ -103,9 +103,9 @@
                                         <div class="ad-images">
                                             <!-- F1 -->
                                             <div class="ad-image-block">
-                                                <span class="img-thumbnail btn-file">
+                                                <span class="img-thumbnail btn-file main">
                                                     <section class="ad-image-prepare">
-                                                        <i class="fa fa-plus"><p>Добавить основное изображение</p></i><input type="file" class="ad-image-upload" name="ad_image">
+                                                        <i class="fa fa-picture-o fa-3x"></i><input type="file" class="ad-image-upload" name="ad_image">
                                                     </section>
                                                 </span>
                                             </div>
@@ -113,7 +113,7 @@
                                             <div class="ad-image-block">
                                                 <span class="img-thumbnail btn-file">
                                                     <section class="ad-image-prepare">
-                                                        <i class="fa fa-plus"><p>Добавить изображение</p></i><input type="file" class="ad-image-upload" name="ad_image">
+                                                        <i class="fa fa-picture-o fa-3x"></i><input type="file" class="ad-image-upload" name="ad_image">
 
                                                     </section>
                                                 </span>
@@ -122,7 +122,7 @@
                                             <div class="ad-image-block">
                                                 <span class="img-thumbnail btn-file">
                                                     <section class="ad-image-prepare">
-                                                        <i class="fa fa-plus"><p>Добавить изображение</p></i><input type="file" class="ad-image-upload" name="ad_image">
+                                                        <i class="fa fa-picture-o fa-3x"></i><input type="file" class="ad-image-upload" name="ad_image">
                                                     </section>
                                                 </span>
                                             </div>
@@ -130,7 +130,7 @@
                                             <div class="ad-image-block">
                                                 <span class="img-thumbnail btn-file">
                                                     <section class="ad-image-prepare">
-                                                        <i class="fa fa-plus"><p>Добавить изображение</p></i><input type="file" class="ad-image-upload" name="ad_image">
+                                                        <i class="fa fa-picture-o fa-3x"></i><input type="file" class="ad-image-upload" name="ad_image">
                                                     </section>
                                                 </span>
                                             </div>
@@ -138,7 +138,7 @@
                                             <div class="ad-image-block">
                                                 <span class="img-thumbnail btn-file">
                                                     <section class="ad-image-prepare">
-                                                        <i class="fa fa-plus"><p>Добавить изображение</p></i><input type="file" class="ad-image-upload" name="ad_image">
+                                                        <i class="fa fa-picture-o fa-3x"></i><input type="file" class="ad-image-upload" name="ad_image">
                                                     </section>
                                                 </span>
                                             </div>

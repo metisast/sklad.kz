@@ -72,17 +72,18 @@
         /* Create companies select */
         adCompanyRadios.change(function(){
             $(this).val() == 2 ? getCompaniesSelect() : clearCompanies();
-            adCompanySelect.trigger('refresh');
         });
 
         /* Query and render companies */
         var getCompaniesSelect = function(){
             adCompanySelectBlock.show();
+            adCompanySelect.attr('name', 'company_id');
             ajaxSelect('/xhr/ad-list/companies', '', adCompanySelect);
         }
 
         /* Clear companies block */
         var clearCompanies = function(){
+            adCompanySelect.attr('name', '');
             adCompanySelectBlock.hide();
         }
 
