@@ -105,7 +105,7 @@
                                             <div class="ad-image-block">
                                                 <span class="img-thumbnail btn-file main">
                                                     <section class="ad-image-prepare">
-                                                        <i class="fa fa-picture-o fa-3x"></i><input type="file" class="ad-image-upload" name="ad_image">
+                                                        <i class="fa fa-picture-o fa-3x"></i><input type="file" class="ad-image-upload">
                                                     </section>
                                                 </span>
                                             </div>
@@ -113,7 +113,7 @@
                                             <div class="ad-image-block">
                                                 <span class="img-thumbnail btn-file">
                                                     <section class="ad-image-prepare">
-                                                        <i class="fa fa-picture-o fa-3x"></i><input type="file" class="ad-image-upload" name="ad_image">
+                                                        <i class="fa fa-picture-o fa-3x"></i><input type="file" class="ad-image-upload">
 
                                                     </section>
                                                 </span>
@@ -122,7 +122,7 @@
                                             <div class="ad-image-block">
                                                 <span class="img-thumbnail btn-file">
                                                     <section class="ad-image-prepare">
-                                                        <i class="fa fa-picture-o fa-3x"></i><input type="file" class="ad-image-upload" name="ad_image">
+                                                        <i class="fa fa-picture-o fa-3x"></i><input type="file" class="ad-image-upload">
                                                     </section>
                                                 </span>
                                             </div>
@@ -130,7 +130,7 @@
                                             <div class="ad-image-block">
                                                 <span class="img-thumbnail btn-file">
                                                     <section class="ad-image-prepare">
-                                                        <i class="fa fa-picture-o fa-3x"></i><input type="file" class="ad-image-upload" name="ad_image">
+                                                        <i class="fa fa-picture-o fa-3x"></i><input type="file" class="ad-image-upload">
                                                     </section>
                                                 </span>
                                             </div>
@@ -138,7 +138,7 @@
                                             <div class="ad-image-block">
                                                 <span class="img-thumbnail btn-file">
                                                     <section class="ad-image-prepare">
-                                                        <i class="fa fa-picture-o fa-3x"></i><input type="file" class="ad-image-upload" name="ad_image">
+                                                        <i class="fa fa-picture-o fa-3x"></i><input type="file" class="ad-image-upload">
                                                     </section>
                                                 </span>
                                             </div>

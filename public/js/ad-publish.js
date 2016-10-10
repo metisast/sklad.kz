@@ -25,7 +25,7 @@
                     $('.control-label').remove();
                     $('#error-fields').remove();
 
-                    //window.location.href = redirectPath + '?n=' + new Date().getTime();
+                    window.location.href = redirectPath + '?n=' + new Date().getTime();
                 },
                 error: function(err){
                     errorTopMessage();
@@ -79,6 +79,7 @@
             adCompanySelectBlock.show();
             adCompanySelect.attr('name', 'company_id');
             ajaxSelect('/xhr/ad-list/companies', '', adCompanySelect);
+            console.log(adCompanySelect.val());
         }
 
         /* Clear companies block */

@@ -18,7 +18,6 @@ class Ad extends Model
             'description' => $request->get('description'),
             'price' => $request->get('price'),
             'city_id' => $request->get('city_id'),
-            'main_image' => $request->get('images')[0],
             'user_name' => $request->get('user_name'),
             'email' => $request->get('email'),
             'phone' => $request->get('phone'),

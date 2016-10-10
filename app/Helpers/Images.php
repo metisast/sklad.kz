@@ -153,6 +153,50 @@ class Images
     }
 
     /**
+     * Move ad images
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function moveAdImage($images, $folder_id)
+    {
+        for($i = 0; $i < count($images); $i++)
+        {
+            /* Move normal size */
+            $this->pathImage = $this->mainImageUploadPath->getTmpNormalAdImageSavePath().$images[$i];
+            $savePath = $this->mainImageUploadPath->getAdNormalImageSavePath();
+
+            if(file_exists($this->pathImage))
+            {
+                if(!file_exists($savePath.$folder_id))
+                {
+                    mkdir($savePath.$folder_id);
+                }
+
+                if(file_exists($savePath.$folder_id))
+                {
+                    if(!File::move($this->pathImage, $savePath.$folder_id.'/'.$images[$i])) die("Couldn't rename file");
+                }
+            }
+
+            /* Move thumbs size */
+            $this->pathImage = $this->mainImageUploadPath->getTmpThumbsAdImageSavePath().$images[$i];
+            $savePath = $this->mainImageUploadPath->getAdThumbsImageSavePath();
+
+            if(file_exists($this->pathImage))
+            {
+                if(!file_exists($savePath.$folder_id))
+                {
+                    mkdir($savePath.$folder_id);
+                }
+
+                if(file_exists($savePath.$folder_id))
+                {
+                    if(!File::move($this->pathImage, $savePath.$folder_id.'/'.$images[$i])) die("Couldn't rename file");
+                }
+            }
+        }
+    }
+
+    /**
      * Delete ad images
      * @param src
      * @return void

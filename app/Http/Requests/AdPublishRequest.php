@@ -25,7 +25,7 @@ class AdPublishRequest extends Request
     {
         $rules =  [
             'company_id' => 'sometimes|required',
-            /*'title' => 'required|max:255',
+            'title' => 'required|max:255',
             'industry_id' => 'required',
             'ad_relation' => 'required',
             'description' => 'required|max:2000',
@@ -38,7 +38,7 @@ class AdPublishRequest extends Request
                 'required',
                 'regex:/^( +)?((\+?7|8) ?)?((\(\d{3}\))|(\d{3}))?( )?(\d{3}[\- ]?\d{2}[\- ]?\d{2})( +)?$/'
             ],
-            'licence' => 'present'*/
+            'licence' => 'present'
         ];
 
         return $rules;
