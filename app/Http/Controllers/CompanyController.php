@@ -57,7 +57,7 @@ class CompanyController extends Controller
      */
     public function store(Request $request, Requests\CompaniesPublishRequest $cpr, CompanyPhone $companyPhone, CompanyEmail $companyEmail, CompanySite $companySite, CompanyAddress $companyAddress, CompanyFeature $companyFeature)
     {
-        //dd($request->get('features'));
+        //dd($request->all());
 
         $create = $this->company->createCompany($request);
 
@@ -69,8 +69,11 @@ class CompanyController extends Controller
         }
 
         /* Move image after save */
-        $image = new \Images();
-        $image->moveImage($request->get('company_logo'), $create->id);
+        if(isset($request->images))
+        {
+            $image = new \Images();
+            $image->moveImage($request->get('images')[0], $create->id);
+        }
 
         $companyPhone::createCompanyPhone($create->id, $request->get('phone'), $request->get('phone_description'));
         $companyEmail::createCompanyEmail($create->id, $request->get('email'), $request->get('email_description'));

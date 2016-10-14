@@ -65,7 +65,7 @@
 
         $(document).on('click', '#company-features .btn-primary', function () {
             var industriesCat = $('#industries-catalog');
-            var inputFeatures = $('#company-publish input[name="features"]');
+            var inputFeatures = $('#publish input[name="features"]');
             var str = [];
 
             if(i == 0){

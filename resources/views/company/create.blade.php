@@ -30,7 +30,7 @@
             <div class="col-xs-12">
                 <div class="company-form">
                     <!-- Form company start -->
-                    <form action="{{route('company.store')}}" method="post" class="form-horizontal" id="company-publish" data-path="{{ route('company.store') }}">
+                    <form action="{{route('company.store')}}" method="post" class="form-horizontal" id="publish" data-path="{{ route('company.store') }}">
                         {{ csrf_field() }}
                         <div class="col-xs-12">
                             <div class="form-group">
@@ -68,18 +68,14 @@
                                 <div class="row">
                                     <div class="col-xs-2">
                                         <div class="company-img">
-                                            <div class="company-img-block">
-                                                <span class="img-thumbnail btn-file">
-                                                    <section class="company-photo-prepare">
-                                                        <i class="fa fa-plus"></i><input type="file" class="company-photo-upload">
-                                                        <p>Добавить логотип</p>
-                                                    </section>
-                                                    <section class="company-photo-ready">
-                                                        <img src="" alt="">
-                                                        <div class="company-photo-close"><i class="fa fa-close"></i></div>
-                                                        <input type="hidden" name="company_logo">
+                                            <div class="company-img-block" id="publish-images" data-path="/xhr/company-photo-upload" data-delete="/xhr/company-photo-delete">
+                                                <div class="ad-image-block">
+                                                <span class="img-thumbnail btn-file main">
+                                                    <section class="ad-image-prepare">
+                                                        <i class="fa fa-picture-o fa-3x"></i><input type="file" class="ad-image-upload">
                                                     </section>
                                                 </span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -186,7 +182,7 @@
                         <div class="company-success-btn text-center">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <button class="btn btn-primary" id="btn-company-publish" data-loading-text="Загрузка..." autocomplete="off" data-redirect="{{ route('profile::index') }}">Добавить</button>
+                                    <button class="btn btn-primary" id="btn-publish" data-loading-text="Загрузка..." autocomplete="off" data-redirect="{{ route('profile::index') }}">Добавить</button>
                                     <a href="{{ route('profile::index') }}">Отмена</a>
                                 </div>
                             </div>

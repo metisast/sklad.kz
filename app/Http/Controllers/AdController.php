@@ -59,7 +59,7 @@ class AdController extends Controller
      */
     public function store(Ad $ad, Requests\AdPublishRequest $adPublishRequest, AdUser $adUser,  AdCompany $adCompany, AdImage $adImage)
     {
-        //dd($this->request->all());
+        dd($this->request->all());
 
         /* ad publish */
         $ad = $ad->createAd($this->request);

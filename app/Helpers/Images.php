@@ -90,7 +90,7 @@ class Images
         return response()
             ->json([
                 'name' => $this->nameImage . $this->mimeSave,
-                'companyImagePath' => $this->mainImageUploadPath->getPublicTmpCompanyImageViewPath()
+                'tmpImagePath' => $this->mainImageUploadPath->getPublicTmpCompanyImageViewPath()
             ]);
     }
     /**
@@ -148,7 +148,7 @@ class Images
         return response()
             ->json([
                 'name' => $this->nameImage . $this->mimeSave,
-                'adTmpImagePath' => $this->mainImageUploadPath->getPublicTmpThumbsAdImageViewPath()
+                'tmpImagePath' => $this->mainImageUploadPath->getPublicTmpThumbsAdImageViewPath()
             ]);
     }
 

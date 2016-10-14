@@ -67,11 +67,9 @@
 <script src="/js/filter.js"></script>
 <script src="/js/company-features.js"></script>
 <script src="/js/regions.js"></script>
-<script src="/js/upload-company-logo.js"></script>
-<script src="/js/company-publish.js"></script>
-<script src="/js/ad-publish.js"></script>
+<script src="/js/publish.js"></script>
 <script src="/js/ad-heading.js"></script>
-<script src="/js/upload-ad-images.js"></script>
+<script src="/js/upload-images.js"></script>
 <script src="/bower_components/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
 <script src="/bower_components/FilmRoll/js/jquery.film_roll.min.js"></script>
 <script src="/js/carousel.js"></script>

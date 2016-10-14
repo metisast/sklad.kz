@@ -3,8 +3,8 @@
 (function($) {
     $(function () {
 
-        var btnPublish = $('#btn-ad-publish');
-        var formInputs = $('#ad-publish');
+        var btnPublish = $('#btn-publish');
+        var formInputs = $('#publish');
         var adCompanyRadios = $('#ad-company-radios').find('input');
         var adCompanySelectBlock = $('#ad-company-select');
         var adCompanySelect = $('#ad-company-select select');
@@ -25,7 +25,7 @@
                     $('.control-label').remove();
                     $('#error-fields').remove();
 
-                    window.location.href = redirectPath + '?n=' + new Date().getTime();
+                    //window.location.href = redirectPath + '?n=' + new Date().getTime();
                 },
                 error: function(err){
                     errorTopMessage();

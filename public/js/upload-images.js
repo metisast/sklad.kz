@@ -6,6 +6,8 @@
         /*---------- Upload images ----------*/
         var btnFile = $('.btn-file');
         var image = $('.btn-file img');
+        var imagesPath = $('#publish-images').data('path');
+        var imageDelete = $('#publish-images').data('delete');
         var files;
 
         btnFile.on('change.upload','input', function(event){
@@ -21,24 +23,22 @@
                 $.each(files, function(key, value){
                     data.append(key, value);
                 });
-                setProductImage(self, data);
+                setImage(self, data);
             }
         });
 
-        var setProductImage = function(self, data){
+        var setImage = function(self, data){
             $.ajax({
-                url: '/xhr/ad-image-upload',
+                url: imagesPath,
                 contentType: false,
                 processData: false,
                 data: data,
                 beforeSend: function(){
-                    console.log(self.attr('class'));
                     self.empty().append(loader());
                 },
                 success: function(data){
                     console.log(data.name);
                     showImage(self, data);
-                    //deleteImage();
                 },
                 error: function(err){
                     console.log(err.responseText);
@@ -51,7 +51,7 @@
 
         var showImage = function(self, data){
             var img = $('<img>');
-            img.attr('src', data.adTmpImagePath + data.name);
+            img.attr('src', data.tmpImagePath + data.name);
             self.empty().append(img);
 
             var btnClose = $('<button>');
@@ -67,7 +67,7 @@
             var images = $('<input>').attr({
                 type: 'hidden',
                 name: 'images[]',
-                form: 'ad-publish',
+                form: 'publish',
                 value: data.name
             });
 
@@ -85,7 +85,7 @@
             var imageName = a[a.length-1];
             var self = $(this).parent();
             $.ajax({
-                url: '/xhr/ad-image-delete',
+                url: imageDelete,
                 data: {imageName: imageName},
                 success: function(data){
                     var plus = $('<i>').addClass('fa fa-picture-o fa-3x');

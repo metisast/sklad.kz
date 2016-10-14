@@ -31,7 +31,7 @@
                     <div class="col-xs-12">
                         <div class="company-form">
                             <!-- Form company start -->
-                            <form method="post" class="form-horizontal" id="ad-publish" data-path="{{ route('ad.store') }}">
+                            <form method="post" class="form-horizontal" id="publish" data-path="{{ route('ad.store') }}">
                                 {{ csrf_field() }}
 
                                 <div class="col-xs-8">
@@ -100,7 +100,7 @@
                                 <!-- Add photo start -->
                                 <div class="col-xs-12">
                                     <div class="form-space">
-                                        <div class="ad-images">
+                                        <div class="ad-images" id="publish-images" data-path="/xhr/ad-image-upload" data-delete="/xhr/ad-image-delete">
                                             <!-- F1 -->
                                             <div class="ad-image-block">
                                                 <span class="img-thumbnail btn-file main">
@@ -293,7 +293,7 @@
                                 <div class="company-success-btn text-center">
                                     <div class="row">
                                         <div class="col-xs-12">
-                                            <button class="btn btn-primary" id="btn-ad-publish" data-loading-text="Загрузка..." data-redirect="{{ route('profile::index') }}">Опубликовать</button>
+                                            <button class="btn btn-primary" id="btn-publish" data-loading-text="Загрузка..." data-redirect="{{ route('profile::index') }}">Опубликовать</button>
                                             <a href="#">Предпросмотр</a>
                                             <a href="{{ route('profile::index') }}">Отмена</a>
                                         </div>

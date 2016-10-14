@@ -30,12 +30,15 @@ class Company extends Model
     /* Queries */
     public function createCompany($request)
     {
+        /* Image existence check */
+        (isset($request->images[0])) ? $logo = $request->images[0] : $logo = '';
+
         return parent::create([
             'user_id' => Auth::user()->id,
             'opf_id' => $request->opf_id,
             'name' => $request->name,
             'slogan' => $request->slogan,
-            'logo' => $request->company_logo,
+            'logo' => $logo,
             'city_id' => $request->cities,
             'description' => $request->description,
             'status_publish_id' => 1, // added

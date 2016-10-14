@@ -26,7 +26,7 @@ class ImageUploadController extends Controller
     public function companyDeleteLogoImage()
     {
         $delete = new \Images();
-        $delete->deleteCompanyLogoImage($this->request->get('name'));
+        $delete->deleteCompanyLogoImage($this->request->get('imageName'));
     }
 
     /* Ad images upload */
